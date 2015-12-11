@@ -1,0 +1,9 @@
+tags:
+  - sinatra
+  - activerecord
+  - assessment
+  - singe-page
+languages:
+  - ruby
+resources:
+live_assessment: true
