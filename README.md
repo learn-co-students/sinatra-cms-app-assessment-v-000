@@ -63,5 +63,5 @@ If you are unsure about a domain or can't come up with an idea, feel free to rea
 
 ## Resources
 
-[Deploying Rack Apps to Heroku](https://devcenter.heroku.com/articles/rack)
-[Get Started with Sinatra on Heroku](http://www.sitepoint.com/get-started-with-sinatra-on-heroku/)
+ - [Deploying Rack Apps to Heroku](https://devcenter.heroku.com/articles/rack)
+ - [Get Started with Sinatra on Heroku](http://www.sitepoint.com/get-started-with-sinatra-on-heroku/)
