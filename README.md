@@ -1,32 +1,31 @@
-# Sinatra One Page App Project
+# Sinatra Content Management System App
 
 ## Overview
 
-For this assessment you're going to build a Sinatra Application that can answer a simple question for a user using no more than 1 or 2 views. The answer to the question must come from a local ActiveRecord domain. You can seed the domain with data from a local task that can use an external source of data for the initial data dump. The root of the site should provide the user with a form to fill in and upon submission, the application should render a view that answers the user's submission with data from the database.
+For this assessment you'll be creating any sort of CRUD app. The app should be a custom app that is created to track something important to you. Whether that's your golf club collection, or your blog posts is up to you. These types of apps are generally referred to as CRUD or Content Management Systems.
 
 ## Requirements
 
 1. Build an MVC Sinatra Application.
 2. Use ActiveRecord with Sinatra.
-3. Create a class that can query an external data source and persist that data locally through ActiveRecord.
-4. Use db/seeds.rb to pre-seed the database using your external data class.
-5. Build a form that submits to a Sinatra controller action.
-6. Use the form submission data to query ActiveRecord.
-7. Render ActiveRecord instances in a view.
-8. Deploy your application to Heroku.
+3. Use Multiple Models.
+4. Use at least one `has_many` relationship
+5. Must have user accounts. The user the created the content should be the only person who can modify that content
+6. Models must have validations to ensure that bad data isn't created
+7. Any validation failures must be shown to user with an error message
 
 ### Example Domains
 
-- [What Should I Watch]() - Enter a zipcode and see what movies are playing near you. [Source](https://github.com/learn-co-curriculum/what-should-i-watch-sinatra) **This is the prefered example application to model your application after**
-- What Should I Listen To - Enter a genre and return the top 10 tracks of that genre.
-- [Octomaps](http://octomaps.com/) - Enter a repository from GitHub and see where the the contributors to that repository live (this example application uses Javascript and some other technologies you don't need to use however it is a similar example). [Source on GitHub](https://github.com/JohnKellyFerguson/octomaps)
-- Baby Name Picker - Use a list of popular baby names and have the user enter their last name and send back a random name from your database.
+ - [Golf Club Organizer](https://github.com/learn-co-curriculum/example-sinatra-assessment)
+ - Blog App. Posts can have multiple tags or categories
+ - Todo List. Each task is part of a list
+ - Collection of useful Ruby resources
 
 If you are unsure about a domain or can't come up with an idea, feel free to reach out to support@learn.co for some advice.
 
 ## Instructions
 
-1. Create a new repository on GitHub for your Sinatra Application, ie: `what-should-i-watch-sinatra`.
+1. Create a new repository on GitHub for your Sinatra Application.
 2. On Learn, use the textbox in the right rail to submit the URL of your repo.
 3. Build your application. Make sure to commit early and commit often.
 4. While you're working on it, record a 30 min coding session with your favorite screen capture tool. During the session, either think out loud or not. It's up to you. You don't need to submit the video, but we may ask for it at a later time.
@@ -60,8 +59,3 @@ If you are unsure about a domain or can't come up with an idea, feel free to rea
 - You won't be yelled at, belittled, or scolded
 - You won't be put on the spot without support
 - There's nothing you can do to instantly fail or blow it.
-
-## Resources
-
- - [Deploying Rack Apps to Heroku](https://devcenter.heroku.com/articles/rack)
- - [Get Started with Sinatra on Heroku](http://www.sitepoint.com/get-started-with-sinatra-on-heroku/)
