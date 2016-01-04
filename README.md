@@ -10,7 +10,7 @@ For this assessment you'll be creating any sort of CRUD app. The app should be a
 2. Use ActiveRecord with Sinatra.
 3. Use Multiple Models.
 4. Use at least one `has_many` relationship
-5. Must have user accounts. The user the created the content should be the only person who can modify that content
+5. Must have user accounts. The user that created the content should be the only person who can modify that content
 6. Models must have validations to ensure that bad data isn't created
 7. Any validation failures must be shown to user with an error message
 
@@ -59,3 +59,5 @@ If you are unsure about a domain or can't come up with an idea, feel free to rea
 - You won't be yelled at, belittled, or scolded
 - You won't be put on the spot without support
 - There's nothing you can do to instantly fail or blow it.
+
+<a href='https://learn.co/lessons/sinatra-one-page-app-project' data-visibility='hidden'>View this lesson on Learn.co</a>
