@@ -26,13 +26,12 @@ If you are unsure about a domain or can't come up with an idea, feel free to rea
 ## Instructions
 
 1. Create a new repository on GitHub for your Sinatra Application.
-2. On Learn, use the textbox in the right rail to submit the URL of your repo.
-3. Build your application. Make sure to commit early and commit often.
-4. While you're working on it, record a 30 min coding session with your favorite screen capture tool. During the session, either think out loud or not. It's up to you. You don't need to submit the video, but we may ask for it at a later time.
-5. Prepare a video demo (narration helps!) describing how a user would interact with your working application.
-6. Write a blog post about the project and process.
-7. When done, e-mail both your video demo and link to your blog post to assessments@learn.co and hit "I'm done" in the right rail to wrap it up.
-8. We'll reach out to you soon to schedule a pairing process. If you don't hear from us in 48 hours after submission, get in touch!
+2. Build your application. Make sure to commit early and commit often.
+3. While you're working on it, record a 30 min coding session with your favorite screen capture tool. During the session, either think out loud or not. It's up to you. You don't need to submit the video, but we may ask for it at a later time.
+4. Prepare a video demo (narration helps!) describing how a user would interact with your working application.
+5. Write a blog post about the project and process.
+6. When done, submit your Github repo's url, a link to your video demo, and a link to your blog post in the corresponding text boxes in the right rail. Hit "I'm done" to wrap it up.
+7. We'll send an email to you soon to schedule a pairing process. If you don't hear from us in 48 hours after submission, get in touch!
 
 ### Be Prepared to:
 
