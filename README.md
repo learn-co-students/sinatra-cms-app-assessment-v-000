@@ -31,7 +31,10 @@ If you are unsure about a domain or can't come up with an idea, feel free to rea
 4. Prepare a video demo (narration helps!) describing how a user would interact with your working application.
 5. Write a blog post about the project and process.
 6. When done, submit your Github repo's url, a link to your video demo, and a link to your blog post in the corresponding text boxes in the right rail. Hit "I'm done" to wrap it up.
-7. We'll send an email to you soon to schedule a pairing process. If you don't hear from us in 48 hours after submission, get in touch!
+
+## If you're a Learn-Verified Premium student:
+
+We'll send an email to you soon to schedule a pairing process. If you don't hear from us in 48 hours after submission, get in touch!
 
 ### Be Prepared to:
 
