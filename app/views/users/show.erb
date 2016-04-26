@@ -1,0 +1,6 @@
+<p> Here are your Cruise Ships, <%= @user.username %>
+<% @user.cruise_ships.each do |ship| %>
+  <ul>
+    <li><a href="/ships/<%=ship.id%>"><%= ship.name %></a></li>
+  </ul>
+<% end %>
