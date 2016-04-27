@@ -1,6 +1,6 @@
 class CruiseShipsController < ApplicationController 
 
-  get "/ship" do
+  get "/ships" do
     redirect_if_not_logged_in
     @ships = CruiseShip.all
     erb :'cruise_ships/index'
