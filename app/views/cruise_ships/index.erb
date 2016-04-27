@@ -1,0 +1,6 @@
+<% @ships.each do |ship| %>
+  <%= ship.name %><br />
+  <%= ship.capacity %> <br />
+  <a href="/ships/<%=ship.id%>/edit">Edit</a>
+  <br>
+<% end %>

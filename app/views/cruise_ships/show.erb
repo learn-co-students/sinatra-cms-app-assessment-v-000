@@ -1,0 +1,12 @@
+  <%= @ship.name %><br />
+  <%= @ship.capacity %> <br />
+
+  <h2>Passengers</h2>
+  <ul>
+  <% @ship.tourists.each do |tourist| %>
+    <li><a href="/tourists/<%=tourist.id%>"><%= tourist.name %></a></li>
+  <% end%>
+  </ul>
+  <a href="/ships/<%=@ship.id%>/edit">Edit</a>
+  <br />
+  <br />

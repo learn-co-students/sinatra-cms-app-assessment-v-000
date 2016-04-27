@@ -1,0 +1,7 @@
+<% @tourists.each do |tourist| %>
+  <%= tourist.name %><br />
+  <%= tourist.nationality %> <br />
+  <a href="/tourists/<%=tourist.id%>/edit">Edit</a>
+  <br />
+  <br />
+<% end %>
