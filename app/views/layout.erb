@@ -13,13 +13,15 @@
         <p>Welcome, <%=current_user.username %></p>
 
       <% else %>
+      <div style="text-align:center; font-size:1.5em">
         <a href="/signup">Sign Up</a>
         <a href="/login"> Sign In </a>
+      </div>
       <%end %>
 
     </nav>
     <div class="container">
-      <h1>Travel Operator</h1>
+      <h1 style="text-align:center">Sinatra Travel Operator</h1>
       <% if !@error_message.nil? %>
       <div class="alert alert-warning">
         <%= @error_message %>
@@ -30,4 +32,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
   </body>
+
+  <script>
+$('document').ready(function() {
+  var options = { videoId: 'e4Is32W-ppk', start: 3 };
+  $('#wrapper').tubular(options);
+  // f-UGhWj1xww cool sepia hd
+  // 49SKbS7Xwf4 beautiful barn sepia
+});
+  </script>
 </html>

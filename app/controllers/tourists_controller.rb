@@ -15,6 +15,7 @@ class TouristsController < ApplicationController
     redirect_if_not_logged_in 
     @error_message = params[:error]
     @tourist = Tourist.find(params[:id])
+    #binding.pry
     erb :'tourists/edit'
   end
 
@@ -22,7 +23,7 @@ class TouristsController < ApplicationController
     redirect_if_not_logged_in 
     @tourist = Tourist.find(params[:id])
     unless Tourist.valid_params?(params)
-      redirect "/tourists/#{@tourist.id}/edit?error=invalid entry"
+      redirect "/tourists/#{@tourist.id}/edit"
     end
     @tourist.update(params.select{|k|k=="name" || k=="nationality" || k=="cruise_ship_id"})
     redirect "/tourists/#{@tourist.id}"
@@ -37,9 +38,11 @@ class TouristsController < ApplicationController
   post "/tourists" do
     redirect_if_not_logged_in 
     unless Tourist.valid_params?(params)
-      redirect "/tourists/new?error=invalid entry"
+      redirect "/tourists/new"
     end
-    Tourist.create(params)
+    # @user = User.find(params[:id])
+
+    @tourist = Tourist.create(params)
     redirect "/tourists"
   end
 end

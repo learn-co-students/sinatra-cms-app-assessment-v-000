@@ -1,6 +1,9 @@
-<% @ships.each do |ship| %>
-  <%= ship.name %><br />
-  <%= ship.capacity %> <br />
-  <a href="/ships/<%=ship.id%>/edit">Edit</a>
-  <br>
-<% end %>
+<div style="text-align:center">
+<h2>Ships</h2>
+  <% @ships.each do |ship| %>
+    <%= ship.name %><br />
+    <%= ship.capacity %> <br />
+    <a href="/ships/<%=ship.id%>/edit">Edit</a>
+    <br>
+  <% end %>
+</div>

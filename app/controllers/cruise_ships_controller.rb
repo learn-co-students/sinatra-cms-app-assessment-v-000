@@ -7,6 +7,7 @@ class CruiseShipsController < ApplicationController
   end
 
   get "/ships/new" do
+    binding.pry
     redirect_if_not_logged_in
     @error_message = params[:error]
     erb :'cruise_ships/new'
@@ -23,7 +24,7 @@ class CruiseShipsController < ApplicationController
     redirect_if_not_logged_in
     @ship = CruiseShip.find(params[:id])
     unless CruiseShip.valid_params?(params)
-      redirect "/ships/#{@ship.id}/edit?error=invalid cruise ship"
+      redirect "/ships/#{@ship.id}/edit"
     end
     @ship.update(params.select{|k|k=="name" || k=="capacity"})
     redirect "/ships/#{@ship.id}"
@@ -37,11 +38,15 @@ class CruiseShipsController < ApplicationController
 
   post "/ships" do
     redirect_if_not_logged_in
-
+    # binding.pry
     unless CruiseShip.valid_params?(params)
-      redirect "/ships/new?error=invalid cruise ship"
+      redirect "/ships/new"
     end
-    CruiseShip.create(params)
+
+    # CruiseShip.create(params)
+    current_user.cruise_ships.create(params)
     redirect "/ships"
   end
+
+ 
 end

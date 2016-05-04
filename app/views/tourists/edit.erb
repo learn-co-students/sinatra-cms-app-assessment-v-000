@@ -9,8 +9,10 @@
 
   <label> Which Tourist does this belong in? </label>
   <select name="cruise_ship_id">
+
     <% current_user.cruise_ships.each do |cruise_ship| %>
-      <option value=<%=cruise_ship.id %> <%= "selected" if cruise_ship.id==@tourist.cruise_ship.id %> ><%= ship.name %></option>
+      <option value=<%=cruise_ship.id %> <%= "selected" if cruise_ship.id==@tourist.cruise_ship.id %> ><%= cruise_ship.name %></option>
+
     <% end %>
   </select>
 
