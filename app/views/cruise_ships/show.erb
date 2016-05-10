@@ -2,11 +2,11 @@
   <%= @ship.capacity %> <br />
 
   <h2>Passengers</h2>
-  <ul>
+  <ol>
   <% @ship.tourists.each do |tourist| %>
     <li><a href="/tourists/<%=tourist.id%>"><%= tourist.name %></a></li>
   <% end%>
-  </ul>
+  </ol>
   <a href="/ships/<%=@ship.id%>/edit">Edit</a>
   <br />
   <br />

@@ -7,7 +7,6 @@ class CruiseShipsController < ApplicationController
   end
 
   get "/ships/new" do
-    binding.pry
     redirect_if_not_logged_in
     @error_message = params[:error]
     erb :'cruise_ships/new'
@@ -38,7 +37,6 @@ class CruiseShipsController < ApplicationController
 
   post "/ships" do
     redirect_if_not_logged_in
-    # binding.pry
     unless CruiseShip.valid_params?(params)
       redirect "/ships/new"
     end

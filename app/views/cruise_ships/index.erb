@@ -1,9 +1,10 @@
-<div style="text-align:center">
-<h2>Ships</h2>
-  <% @ships.each do |ship| %>
-    <%= ship.name %><br />
-    <%= ship.capacity %> <br />
-    <a href="/ships/<%=ship.id%>/edit">Edit</a>
-    <br>
-  <% end %>
+<div class="container"  style="text-align:center;">
+  <h2>Inventory</h2><br>
+  <p>The following vessels are used for Pure Life Cruises.</p><br>
+    <% @ships.each do |ship| %>
+      <%= ship.name %><br />
+      <%= ship.capacity %> <br />
+      <a href="/ships/<%=ship.id%>/edit">Edit</a>
+      <br><br>
+    <% end %>
 </div>

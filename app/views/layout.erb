@@ -3,31 +3,90 @@
   <head>
     <title>Travel Operator</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700italic' rel='stylesheet' type='text/css'>
+    <style>
+    body {
+      background-image:url('boat.jpg')
+    }
+    .signup {
+      text-align:center; 
+      font-size:1.5em; 
+      position: relative; 
+      left: -50%; 
+      border: solid gray 4px; 
+      margin-top:50px; 
+      padding:5px; 
+      z-index:1;
+    }
+    .signup a {
+            color:red;
+            padding:10px;
+    }
+    .post {
+      text-align:center; 
+      font-size:1.5em; 
+      position: relative; 
+      left: 0%; 
+      margin-top:100px; 
+      padding:5px; 
+      color:gray;
+      font-size:4em;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: white;
+    }
+    .loggedin {
+      z-index:1;
+      position:absolute;
+      right:0;
+    }
+      .loggedin a {
+      padding:20px;
+    }
+    *{
+      font-family: "Droid Serif"
+    }
+    </style>
   </head>
   <body>
+
     <nav>
       <% if logged_in? %>
-
-        <a href="/tourists/new"> Create Passenger </a>
-        <a href="/logout"> Log Out </a>
-        <p>Welcome, <%=current_user.username %></p>
+      <div class="navbar" style="background-color:black">
+        <div class="navlogo">
+          <img src="http://webdesignerfan.com/wp-content/uploads/2013/05/Feel-the-Magic-Charters-Logo.jpg" class="img-circle" style="position:absolute;width:50px; margin-left:15px; margin-top:10px; ">
+        </div>
+        <div class="loggedin">
+          <a href="/tourists"> Passengers </a>
+          <a href="/tourists/new"> Add Passenger </a>
+          <a href="/ships"> Ships </a>
+          <a href="/ships/new"> Add Ship </a>
+          <a href="/logout"> Log Out </a>
+          <p style="color:white; margin-left:210px">Welcome, <%=current_user.username %></p>
+        </div>
+      </div>
 
       <% else %>
-      <div style="text-align:center; font-size:1.5em">
+      <div style="position: absolute; left: 50%;">
+      <div class="signup" style="">
         <a href="/signup">Sign Up</a>
         <a href="/login"> Sign In </a>
+      </div>
       </div>
       <%end %>
 
     </nav>
     <div class="container">
-      <h1 style="text-align:center">Sinatra Travel Operator</h1>
+      <div style="position:absolute">
+      <h1 class="post">Sinatra Travel Operator</h1>
       <% if !@error_message.nil? %>
       <div class="alert alert-warning">
         <%= @error_message %>
       </div>
+      </div>
     <% end %>
+    <div class="container" style="text-align:center">
       <%= yield %> 
+    </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>

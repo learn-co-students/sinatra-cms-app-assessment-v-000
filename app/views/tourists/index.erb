@@ -1,8 +1,14 @@
-<% @tourists.each do |tourist| %>
-  <%= tourist.name %><br />
-  <%= tourist.nationality %> <br />
-  <%= tourist.cruise_ship %>
-  <a href="/tourists/<%=tourist.id%>/edit">Edit</a>
-  <br />
-  <br />
-<% end %>
+<div class="container" style="text-align:center">
+  <div class="info">
+    <h2>Passenger Roster</h2>
+  </div>
+  <% @tourists.each do |tourist| %>
+    Name: <b><%= tourist.name %></b><br />
+    Nationality: <b><%= tourist.nationality %></b> <br />
+    Cruise Ship: <b><%= tourist.cruise_ship.name %></b><br />
+    Ship Capacity: <b><%= tourist.cruise_ship.capacity %></b><br />
+    <a href="/tourists/<%=tourist.id%>/edit">Edit</a>
+    <br />
+    <br />
+  <% end %>
+</div>
