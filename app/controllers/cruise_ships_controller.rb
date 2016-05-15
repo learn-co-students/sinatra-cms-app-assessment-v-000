@@ -40,8 +40,6 @@ class CruiseShipsController < ApplicationController
     unless CruiseShip.valid_params?(params)
       redirect "/ships/new"
     end
-
-    # CruiseShip.create(params)
     current_user.cruise_ships.create(params)
     redirect "/ships"
   end

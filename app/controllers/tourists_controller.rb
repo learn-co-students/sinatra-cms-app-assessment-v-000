@@ -39,8 +39,6 @@ class TouristsController < ApplicationController
     unless Tourist.valid_params?(params)
       redirect "/tourists/new"
     end
-    # @user = User.find(params[:id])
-
     @tourist = Tourist.create(params)
     redirect "/tourists"
   end
