@@ -24,7 +24,7 @@ class TouristsController < ApplicationController
     unless Tourist.valid_params?(params)
       redirect "/tourists/#{@tourist.id}/edit"
     end
-    @tourist.update(params.select{|k|k=="name" || k=="nationality" || k=="cruise_ship_id"})
+    @tourist.update(params.select{|t| t=="name" || t=="nationality" || t=="cruise_ship_id"})
     redirect "/tourists/#{@tourist.id}"
   end
 

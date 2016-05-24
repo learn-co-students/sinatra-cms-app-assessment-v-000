@@ -25,7 +25,7 @@ class CruiseShipsController < ApplicationController
     unless CruiseShip.valid_params?(params)
       redirect "/ships/#{@ship.id}/edit"
     end
-    @ship.update(params.select{|k|k=="name" || k=="capacity"})
+    @ship.update(params.select{|s| s=="name" || s=="capacity"})
     redirect "/ships/#{@ship.id}"
   end
 
