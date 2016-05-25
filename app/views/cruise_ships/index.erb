@@ -2,7 +2,8 @@
   <h2>Inventory</h2><br>
   <p>The following vessels are used for Pure Life Cruises.</p><br>
     <% @ships.each do |ship| %>
-      <%= ship.name %><br />
+    
+      <a href="/ships/<%=ship.id%>"><%= ship.name %></a><br />
       <%= ship.capacity %> <br />
       <a href="/ships/<%=ship.id%>/edit">Edit</a>
       <br><br>
