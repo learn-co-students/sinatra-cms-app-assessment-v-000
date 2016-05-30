@@ -1,0 +1,11 @@
+<h1>Edit <%= @ship.name %></h1>
+
+<form action="/ships/<%=@ship.id %>" method="POST">
+  <label> Ship Name </label>
+  <input type="text" name="name" value="<%=@ship.name %>"> </br>
+
+  <label> Ship Capacity </label>
+  <input type="number" name="capacity" value="<%=@ship.capacity %>"> </br>
+
+  <input type="submit" value="Update">
+</form>
