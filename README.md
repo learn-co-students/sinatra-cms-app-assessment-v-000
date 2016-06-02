@@ -61,5 +61,3 @@ We'll send an email to you soon to schedule a pairing process. If you don't hear
 - You won't be yelled at, belittled, or scolded
 - You won't be put on the spot without support
 - There's nothing you can do to instantly fail or blow it.
-
-<a href='https://learn.co/lessons/sinatra-one-page-app-project' data-visibility='hidden'>View this lesson on Learn.co</a>
