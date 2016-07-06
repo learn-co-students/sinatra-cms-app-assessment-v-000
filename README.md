@@ -21,7 +21,7 @@ For this assessment you'll be creating any sort of CRUD app. The app should be a
  - Todo List. Each task is part of a list
  - Collection of useful Ruby resources
 
-If you are unsure about a domain or can't come up with an idea, feel free to reach out to support@learn.co for some advice.
+If you are unsure about a domain or can't come up with an idea, feel free to reach out to fullstack@learn.co for some advice.
 
 ## Instructions
 
