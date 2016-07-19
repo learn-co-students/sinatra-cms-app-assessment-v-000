@@ -18,7 +18,7 @@ For this assessment you'll be creating any sort of CRUD app. The app should be a
 
  - [Golf Club Organizer](https://github.com/learn-co-curriculum/example-sinatra-assessment)
  - Blog App. Posts can have multiple tags or categories
- - Todo List. Each task is part of a list
+ - [Todo List](http://todomvc.com). Each task is part of a list
  - Collection of useful Ruby resources
 
 If you are unsure about a domain or can't come up with an idea, feel free to reach out to fullstack@learn.co for some advice.
@@ -61,3 +61,5 @@ We'll send an email to you soon to schedule a pairing process. If you don't hear
 - You won't be yelled at, belittled, or scolded
 - You won't be put on the spot without support
 - There's nothing you can do to instantly fail or blow it.
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/sinatra-cms-app-assessment'>Sinatra Assessment</a> on Learn.co and start learning to code for free.</p>
