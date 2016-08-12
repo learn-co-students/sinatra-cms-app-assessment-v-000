@@ -2,7 +2,7 @@
 
 ## Overview
 
-For this assessment you'll be creating any sort of CRUD app. The app should be a custom app that is created to track something important to you. Whether that's your golf club collection, or your blog posts is up to you. These types of apps are generally referred to as CRUD (Create Read Update Delete apps) or simple Content Management Systems.
+For this assessment you'll be creating any sort of CRUD app. The app should be a custom app that is created to track something important to you. Whether that's your golf club collection, or a travel app. These types of apps are generally referred to as CRUD (Create Read Update Delete apps) or simple Content Management Systems.
 
 ## Requirements
 
@@ -17,11 +17,20 @@ For this assessment you'll be creating any sort of CRUD app. The app should be a
 ### Example Domains
 
  - [Golf Club Organizer](https://github.com/learn-co-curriculum/example-sinatra-assessment)
- - Blog App. Posts can have multiple tags or categories
  - [Todo List](http://todomvc.com). Each task is part of a list
  - Collection of useful Ruby resources
 
 If you are unsure about a domain or can't come up with an idea, feel free to reach out to fullstack@learn.co for some advice.
+
+### Domains To Avoid
+
+ As we spent a lot of time working with domains similiar to these during the Sinatra curriculum we do not accept these domain designs. 
+  - Twitter Clone 
+  - Blog Application
+  
+### Recomendations
+
+ You do not have to make your routes any more complicated than `http://yourapp.com/posts/1`. We want to see you build a great CRUD application but we are not requiring you to build the next AirBnB. 
 
 ## Instructions
 
