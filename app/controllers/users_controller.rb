@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 
     @user = User.find(params[:id])
     if !@user.nil? && @user == current_user
-      redirect to '/teams/show'
+      redirect to '/teams/index'
     else
       redirect '/login'
     end
@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     if !session[:user_id]
       erb :'users/new'
     else
-      redirect to '/teams/show'
+      redirect to '/teams/index'
     end
   end
 
@@ -27,7 +27,7 @@ class UsersController < ApplicationController
     else
       @user = User.create(:username => params[:username], :password => params[:password])
       session[:user_id] = @user.id
-      redirect '/teams/show'
+      redirect '/teams/index'
     end
   end
 
@@ -36,7 +36,7 @@ class UsersController < ApplicationController
     if !session[:user_id]
       erb :'users/login'
     else
-      redirect '/teams/show'
+      redirect '/teams/index'
     end
   end
 
@@ -47,7 +47,7 @@ class UsersController < ApplicationController
     user = User.find_by(:username => params[:username])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect "/teams/show"
+      redirect "/teams/index"
     else
       redirect to '/login'
     end

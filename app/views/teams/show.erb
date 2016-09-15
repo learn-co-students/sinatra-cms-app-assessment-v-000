@@ -1,0 +1,12 @@
+<h3>Team</h3>
+
+<p>Name: <%= @team.name =></p>
+<p>League: <%= @team.league =></p>
+<p>Players:</p>
+<br>
+<ul>
+<% @players.each do |player| %>
+  <li><%= player.name %><%= player.position %><%= player.price %></li>
+<% end%>
+</ul>
+<a href="/teams/<%=@team.id%>/edit">Edit</a>

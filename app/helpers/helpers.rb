@@ -1,7 +1,7 @@
 class Helpers
 
-  def self.redirect_if_not_logged_in
-    if !logged_in?
+  def self.redirect_if_not_logged_in(session_info)
+    if !self.logged_in?(session_info)
       redirect "/login?error=You have to be logged in to do that"
     end
   end

@@ -8,9 +8,9 @@
     <nav>
       <% if Helpers.logged_in?(session) %>
 
-        <a href="/teams/new"> Create A Team </a>
+        <a href="/teams/new"> Create Team </a>
         <a href="/logout"> Log Out </a>
-        <p>Welcome, <%=current_user.username %></p>
+        <p><b>Welcome, <%=Helpers.current_user(session).username %></p>
 
       <% else %>
         <a href="/signup">Sign Up</a>
