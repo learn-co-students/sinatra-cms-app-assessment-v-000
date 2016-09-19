@@ -1,46 +1,19 @@
 <h3>Edit Team</h3>
-<form action="/teams/<%=@team.id" method="POST">
-  <p>Name: <input type="text" name="team[name]" value="<%=@team.name %>"></p>
-  <p>League: <input type="text" name="team[league]" value="<%=@team.league %>"></p>
+<form action="/teams/<%= @team.id %>" method="POST">
+  <input id="hidden" type="hidden" name="_method" value="PATCH">
+  <p>Name: <input type="text" name="team[name]" value="<%= @team.name %>"></p>
+  <p>League: <input type="text" name="team[league]" value="<%= @team.league %>"></p>
   <p>Players:</p>
   <br>
   <table>
     <tr>
       <th>Name</th> <th>Position</th> <th>Price</th>
     </tr>
+    <% @team.players.each do |player| %>
     <tr>
-      <td><input type="text" name="team[players][][name]" value="<%=@player[0].name %>"></td> <td><input type="text" name="team[players][][position]" value="<%=@player[0].position %>"></td> <td><input type="text" name="team[players][][price]" value="<%=@player[0].price %>"></td>
+      <td><input type="text" name="players[][name]" value="<%= player.name %>"></td> <td><input type="text" name="players[][position]" value="<%= player.position %>"></td> <td><input type="text" name="players[][price]" value="<%= player.price %>"></td> <td><input type="hidden" name="players[][id]" value="<%= player.id %>"></td>
     </tr>
-    <tr>
-      <td><input type="text" name="team[players][][name]" value="<%=@player[0].name %>"></td> <td><input type="text" name="team[players][][position]" value="<%=@player[0].position %>"></td> <td><input type="text" name="team[players][][price]" value="<%=@player[0].price %>"></td>
-    </tr>
-    <tr>
-      <td><input type="text" name="team[players][][name]" value="<%=@player[0].name %>"></td> <td><input type="text" name="team[players][][position]" value="<%=@player[0].position %>"></td> <td><input type="text" name="team[players][][price]" value="<%=@player[0].price %>"></td>
-    </tr>
-    <tr>
-      <td><input type="text" name="team[players][][name]" value="<%=@player[0].name %>"></td> <td><input type="text" name="team[players][][position]" value="<%=@player[0].position %>"></td> <td><input type="text" name="team[players][][price]" value="<%=@player[0].price %>"></td>
-    </tr>
-    <tr>
-      <td><input type="text" name="team[players][][name]" value="<%=@player[0].name %>"></td> <td><input type="text" name="team[players][][position]" value="<%=@player[0].position %>"></td> <td><input type="text" name="team[players][][price]" value="<%=@player[0].price %>"></td>
-    </tr>
-    <tr>
-      <td><input type="text" name="team[players][][name]" value="<%=@player[0].name %>"></td> <td><input type="text" name="team[players][][position]" value="<%=@player[0].position %>"></td> <td><input type="text" name="team[players][][price]" value="<%=@player[0].price %>"></td>
-    </tr>
-    <tr>
-      <td><input type="text" name="team[players][][name]" value="<%=@player[0].name %>"></td> <td><input type="text" name="team[players][][position]" value="<%=@player[0].position %>"></td> <td><input type="text" name="team[players][][price]" value="<%=@player[0].price %>"></td>
-    </tr>
-    <tr>
-      <td><input type="text" name="team[players][][name]" value="<%=@player[0].name %>"></td> <td><input type="text" name="team[players][][position]" value="<%=@player[0].position %>"></td> <td><input type="text" name="team[players][][price]" value="<%=@player[0].price %>"></td>
-    </tr>
-    <tr>
-      <td><input type="text" name="team[players][][name]" value="<%=@player[0].name %>"></td> <td><input type="text" name="team[players][][position]" value="<%=@player[0].position %>"></td> <td><input type="text" name="team[players][][price]" value="<%=@player[0].price %>"></td>
-    </tr>
-    <tr>
-      <td><input type="text" name="team[players][][name]" value="<%=@player[0].name %>"></td> <td><input type="text" name="team[players][][position]" value="<%=@player[0].position %>"></td> <td><input type="text" name="team[players][][price]" value="<%=@player[0].price %>"></td>
-    </tr>
-    <tr>
-      <td><input type="text" name="team[players][][name]" value="<%=@player[0].name %>"></td> <td><input type="text" name="team[players][][position]" value="<%=@player[0].position %>"></td> <td><input type="text" name="team[players][][price]" value="<%=@player[0].price %>"></td>
-    </tr>
+    <% end %>
   </table>
 <input class="btn btn-primary" type="submit" value="submit">
 </form>

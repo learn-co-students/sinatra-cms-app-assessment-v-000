@@ -8,39 +8,11 @@
     <tr>
       <th>Name</th> <th>Position</th> <th>Price</th>
     </tr>
+    <% 11.times do %>
     <tr>
-      <td><input type="text" name="team[players][][name]" placeholder="Player:"></td> <td><input type="text" name="team[players][][position]" placeholder="Position:"></td> <td><input type="text" name="team[players][][price]" placeholder="Price:"></td>
+      <td><input type="text" name="players[][name]" placeholder="Player:"></td> <td><input type="text" name="players[][position]" placeholder="Position:"></td> <td><input type="text" name="players[][price]" placeholder="Price:"></td>
     </tr>
-    <tr>
-      <td><input type="text" name="team[players][][name]" placeholder="Player:"></td> <td><input type="text" name="team[players][][position]" placeholder="Position:"></td> <td><input type="text" name="team[players][][price]" placeholder="Price:"></td>
-    </tr>
-    <tr>
-      <td><input type="text" name="team[players][][name]" placeholder="Player:"></td> <td><input type="text" name="team[players][][position]" placeholder="Position:"></td> <td><input type="text" name="team[players][][price]" placeholder="Price:"></td>
-    </tr>
-    <tr>
-      <td><input type="text" name="team[players][][name]" placeholder="Player:"></td> <td><input type="text" name="team[players][][position]" placeholder="Position:"></td> <td><input type="text" name="team[players][][price]" placeholder="Price:"></td>
-    </tr>
-    <tr>
-      <td><input type="text" name="team[players][][name]" placeholder="Player:"></td> <td><input type="text" name="team[players][][position]" placeholder="Position:"></td> <td><input type="text" name="team[players][][price]" placeholder="Price:"></td>
-    </tr>
-    <tr>
-      <td><input type="text" name="team[players][][name]" placeholder="Player:"></td> <td><input type="text" name="team[players][][position]" placeholder="Position:"></td> <td><input type="text" name="team[players][][price]" placeholder="Price:"></td>
-    </tr>
-    <tr>
-      <td><input type="text" name="team[players][][name]" placeholder="Player:"></td> <td><input type="text" name="team[players][][position]" placeholder="Position:"></td> <td><input type="text" name="team[players][][price]" placeholder="Price:"></td>
-    </tr>
-    <tr>
-      <td><input type="text" name="team[players][][name]" placeholder="Player:"></td> <td><input type="text" name="team[players][][position]" placeholder="Position:"></td> <td><input type="text" name="team[players][][price]" placeholder="Price:"></td>
-    </tr>
-    <tr>
-      <td><input type="text" name="team[players][][name]" placeholder="Player:"></td> <td><input type="text" name="team[players][][position]" placeholder="Position:"></td> <td><input type="text" name="team[players][][price]" placeholder="Price:"></td>
-    </tr>
-    <tr>
-      <td><input type="text" name="team[players][][name]" placeholder="Player:"></td> <td><input type="text" name="team[players][][position]" placeholder="Position:"></td> <td><input type="text" name="team[players][][price]" placeholder="Price:"></td>
-    </tr>
-    <tr>
-      <td><input type="text" name="team[players][][name]" placeholder="Player:"></td> <td><input type="text" name="team[players][][position]" placeholder="Position:"></td> <td><input type="text" name="team[players][][price]" placeholder="Price:"></td>
-    </tr>
+    <% end %>
   </table>
 <input class="btn btn-primary" type="submit" value="submit">
 </form>
