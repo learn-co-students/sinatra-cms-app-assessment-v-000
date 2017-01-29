@@ -2,7 +2,7 @@
 
 ## Overview
 
-For this assessment you'll be creating any sort of CRUD app. The app should be a custom app that is created to track something important to you. Whether that's your golf club collection, or your blog posts is up to you. These types of apps are generally referred to as CRUD (Create Read Update Delete apps) or simple Content Management Systems.
+For this assessment you'll be creating any sort of CRUD app. The app should be a custom app that is created to track something important to you. Whether that's your golf club collection, or a travel app. These types of apps are generally referred to as CRUD (Create Read Update Delete apps) or simple Content Management Systems.
 
 ## Requirements
 
@@ -12,16 +12,25 @@ For this assessment you'll be creating any sort of CRUD app. The app should be a
 4. Use at least one `has_many` relationship
 5. Must have user accounts. The user that created a given piece of content should be the only person who can modify that content
 6. You should validate user input to ensure that bad data isn't created
-7. Any validation failures must be shown to the user with an error message
+
 
 ### Example Domains
 
  - [Golf Club Organizer](https://github.com/learn-co-curriculum/example-sinatra-assessment)
- - Blog App. Posts can have multiple tags or categories
  - [Todo List](http://todomvc.com). Each task is part of a list
  - Collection of useful Ruby resources
 
 If you are unsure about a domain or can't come up with an idea, feel free to reach out to fullstack@learn.co for some advice.
+
+### Domains To Avoid
+
+ As we spent a lot of time working with domains similiar to these during the Sinatra curriculum we do not accept these domain designs. 
+  - Twitter Clone 
+  - Blog Application
+  
+### Recomendations
+
+ You do not have to make your routes any more complicated than `http://yourapp.com/posts/1`. We want to see you build a great CRUD application but we are not requiring you to build the next AirBnB. 
 
 ## Instructions
 
@@ -34,6 +43,8 @@ If you are unsure about a domain or can't come up with an idea, feel free to rea
 7. Prepare a short video demo (narration helps!) describing how a user would interact with your working application.
 8. Write a blog post about the project and process.
 9. When done, submit your GitHub repo's url, a link to your video demo, and a link to your blog post in the corresponding text boxes in the right rail. Hit "I'm done" to wrap it up.
+
+Unlike the rest of the curriculum, if you have any questions about your assessment or need help with it, please *don’t* use the Ask New Question feature. Rather than working with Learn Experts, please reach out to the Learn Instructor responsible for this section instead - Cernan / cernan@flatironschool.com / learn-co slack: cernanb.
 
 ## If you're a Learn-Verified Premium student:
 
@@ -63,3 +74,5 @@ We'll send an email to you soon to schedule a pairing process. If you don't hear
 - There's nothing you can do to instantly fail or blow it.
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/sinatra-cms-app-assessment'>Sinatra Assessment</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/sinatra-cms-app-assessment'>Sinatra Portfolio Project</a> on Learn.co and start learning to code for free.</p>
