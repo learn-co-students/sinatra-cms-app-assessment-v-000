@@ -1,0 +1,30 @@
+body {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+h1 {
+  color: blue;
+}
+
+#one, #three {
+  display: inline-block;
+  border: solid black 1px;
+  padding: 20px;
+  margin: 20px;
+}
+
+#two {
+  display: inline-block;
+  padding: 20px;
+  margin: 20px;
+}
+
+#ball {
+  height: 100px;
+  width: 100px;
+  background: url("./images/ball.jpg");
+  background-size: cover;
+  display: inline-block;
+}
