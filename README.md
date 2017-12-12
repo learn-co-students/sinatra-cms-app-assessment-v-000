@@ -58,13 +58,32 @@ We'll send an email to you soon to schedule a pairing process. If you don't hear
 
 ### What to expect from the pairing session
 
-- Use the best vocabulary you can. Technical terms allow for you to be more precise which makes conversations about code much easier.
-- If you make a mistake, correct yourself! We all make mistakes, I promise.
-- Trust yourself
-- Trust us
-- Think on your feet. Feel free to look things up while you're pairing with us. You'll be asked to expand on concepts you implemented and you will be pushed to the edge of your knowledge.
-- Explain the details. We're curious!
-- You're going to learn a ton. We will give pointers and show you ways to improve your code. This isn't telling you that your code is wrong, it's simply us teaching. Whatever you don't quite understand will be explained
+Project reviews are focused on preparing you for technical interviews. Treat project reviews as if they were technical interviews, in both attitude and technical presentation. 
+
+#### Be scrappy.
+- If you make a mistake, correct yourself. 
+- Think on your feet. We will expect you to be able to explain development concepts to us, as well as expanding on concepts that you have already implemented, but you’ll also have the opportunity to look things up while you're live coding.
+
+#### Make no little plans.
+- You're going to learn a ton. We will give pointers and show you ways to improve your code. This isn't telling you that your code is wrong, it's simply us teaching. 
+- Approach live coding with a constructive attitude. You might feel nervous or uncertain, but as long as you are familiar with the section material you should be able to reason your way to a solution.
+- Be proud of your project and your code, and show confidence in it. 
+
+#### Radiate positivity.
+- Present yourself and your project in the best way possible. 
+- Be open to feedback, both positive and constructive. 
+- If the instructor asks you to complete additional features, or you missed a project requirement, treat this as a learning experience. Becoming  a developer is complex and challenging, and it’s our job to find the holes in your knowledge and help you fill them. This is to help you become a better developer, not to delay your progress in the program.
+
+#### Work Together.
+- Trust yourself.
+- Trust us  - our goal is to help you be successful in achieving your goals.
+- We understand that this process can be stressful. We’re here to help you through.
+
+#### Pursue mastery.
+- Use the best technical vocabulary you can.
+- Explain the details - this is your application, you'll be expected to have a solid understand of how it works"
+- Ask questions! Curiosity and willingness to learn are hugely valued in our industry.  If you haven’t heard of something, that’s okay - use this opportunity to learn about it!
+
 
 ### What won't happen:
 
