@@ -12,7 +12,7 @@ class ShoesController < ApplicationController
   post "/shoes" do
         # binding.pry
     if params[:name] && params[:name] != ""
-      newshoe = Shoe.create(name: params[:name])
+      newshoe = Shoe.create(name: params[:name], color: params[:color], brand: params[:brand])
       current_user.shoes << newshoe
       redirect :"/users/#{current_user.slug}"
     else
@@ -21,7 +21,7 @@ class ShoesController < ApplicationController
   end
 
   get "/shoes/:slug" do
-    binding.pry
+
     if logged_in?
       @shoe = Shoe.find_by_slug(params[:slug])
       if current_user.shoes.include?(@shoe)
