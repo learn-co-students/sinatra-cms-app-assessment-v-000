@@ -7,6 +7,12 @@ This App is about to record user's shoes information. The user has many pairs of
 User: username, password
 Shoes: name, color, brand, user_id
 
+After login to to user's show page, including list of shoes and has a create new shoe button
+Shoes/new
+Shoes/:slug  Shoes'show page of a single pair of shoes, has a delet button
+Shoes/:slug/edit
+Shoes/:slug/delete
+
 
 ## Overview
 
