@@ -58,4 +58,18 @@ class ShoesController < ApplicationController
   end
 
 
+  delete "/shoes/:slug/delete" do
+      # binding.pry
+      if logged_in?
+        @shoe = Shoe.find_by_slug(params[:slug])
+        if current_user.shoes.include?(@shoe)
+          @shoe.delete
+          redirect :"/users/#{current_user.slug}"
+        else
+          redirect :"/users/#{current_user.slug}"
+        end
+      else
+        redirect :"/login"
+      end
+    end
 end
