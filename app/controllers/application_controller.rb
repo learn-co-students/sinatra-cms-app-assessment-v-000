@@ -14,9 +14,37 @@ class ApplicationController < Sinatra::Base
       erb :index
     end
 
+    get "/signup" do
+      if logged_in?
+        redirect :"/shoes"
+      else
+        erb :signup
+      end
+    end
+
+    post "/signup" do
+      # binding.pry
+      @user = User.new(username: params["username"], password: params["password"])
+      if params[:username] == nil || params[:username] == ""|| params[:password] == nil || params[:password] == ""
+        redirect :"/signup"
+      else
+        @user.save
+        session[:user_id] = @user.id
+        redirect :"/shoes/#{@user.slug}"
+      end
+    end
 
 
-    helper do
+    get "/login" do
+      if logged_in?
+        redirect :"/shoes/#{current_user.slug}"
+      else
+        erb :login
+      end
+    end
+
+
+    helpers do
       def logged_in?
   			!!session[:user_id]
   		end
