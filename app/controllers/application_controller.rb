@@ -30,14 +30,14 @@ class ApplicationController < Sinatra::Base
       else
         @user.save
         session[:user_id] = @user.id
-        redirect :"/shoes/#{@user.slug}"
+        redirect :"/users/#{@user.slug}"
       end
     end
 
 
     get "/login" do
       if logged_in?
-        redirect :"/shoes/#{current_user.slug}"
+        redirect :"/users/#{current_user.slug}"
       else
         erb :login
       end
@@ -47,7 +47,7 @@ class ApplicationController < Sinatra::Base
       user = User.find_by(username: params["username"])
       if user && user.authenticate(params["password"])
         session[:user_id] = user.id
-        redirect :"/shoes/#{current_user.slug}"
+        redirect :"/users/#{current_user.slug}"
       else
         redirect :"/login"
       end
