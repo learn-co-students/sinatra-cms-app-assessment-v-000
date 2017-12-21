@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Dream Teams</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  </head>
+  <body>
+    <nav>
+      <% if Helpers.logged_in?(session) %>
+
+        <a href="/teams/new"> Create Team </a>
+        <a href="/logout"> Log Out </a>
+        <p><b>Welcome, <%=Helpers.current_user(session).username %></p>
+
+      <% else %>
+        <a href="/signup">Sign Up</a>
+        <a href="/login"> Log In </a>
+      <%end %>
+
+    </nav>
+    <div class="container">
+      <h1><center>Dream Teams</h1>
+      <% if !@error_message.nil? %>
+      <div class="alert alert-warning">
+        <%= @error_message %>
+      </div>
+      <% end %>
+      <%= yield %>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

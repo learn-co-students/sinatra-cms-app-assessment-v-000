@@ -1,0 +1,18 @@
+<h3>New Team</h3>
+<form action="/teams" method="POST">
+  <p>Name: <input type="text" name="team[name]" placeholder="Name:"></p>
+  <p>League: <input type="text" name="team[league]" placeholder="League"></p>
+  <p>Players:</p>
+  <br>
+  <table>
+    <tr>
+      <th>Name</th> <th>Position</th> <th>Price</th>
+    </tr>
+    <% 11.times do %>
+    <tr>
+      <td><input type="text" name="players[][name]" placeholder="Player:"></td> <td><input type="text" name="players[][position]" placeholder="Position:"></td> <td><input type="text" name="players[][price]" placeholder="Price:"></td>
+    </tr>
+    <% end %>
+  </table>
+<input class="btn btn-primary" type="submit" value="submit">
+</form>
