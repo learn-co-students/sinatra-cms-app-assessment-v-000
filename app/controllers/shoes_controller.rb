@@ -10,10 +10,8 @@ class ShoesController < ApplicationController
   end
 
   post "/shoes" do
-        # binding.pry
-    if params[:name] && params[:name] != ""
-      newshoe = Shoe.create(name: params[:name], color: params[:color], brand: params[:brand])
-      current_user.shoes << newshoe
+    newshoe = current_user.shoes.build(name: params[:name], color: params[:color], brand: params[:brand])
+    if newshoe.save
       redirect :"/users/#{current_user.slug}"
     else
       redirect :"/shoes/new"
@@ -36,8 +34,7 @@ class ShoesController < ApplicationController
 
   get "/shoes/:slug/edit" do
     if logged_in?
-      @shoe = Shoe.find_by_slug(params[:slug])
-      if current_user.shoes.include?(@shoe)
+      if @shoe = current_user.shoes.find_by_slug(params[:slug])
         erb :"shoes/edit"
       else
         redirect :"/users/#{current_user.slug}"
@@ -48,8 +45,9 @@ class ShoesController < ApplicationController
   end
 
   patch "/shoes/:slug" do
+    # logged_in?
     if params[:name] != "" && params[:name] != nil
-      @shoe = Shoe.find_by_slug(params[:slug])
+      @shoe = Shoe.find_by_slug(params[:slug]) # does show belong to current_user?
       @shoe.update(name: params[:name], color: params[:color], brand: params[:brand])
       redirect :"/users/#{current_user.slug}"
     else

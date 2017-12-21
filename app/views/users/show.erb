@@ -1,8 +1,9 @@
 <h2><%= @user.username %> Shoes Collection</h2>
 <% @user.shoes.each do |t|%>
-  <ul><%= t.name%>
+    <ul>name: <%= t.name%></ul>
     <ul>Color: <%= t.color%></ul>
     <ul>Brand: <%= t.brand%></ul>
+    <a href="/shoes/<%= t.slug%>/edit">Edit</a><br>
   </ul>
 <%end %>
 

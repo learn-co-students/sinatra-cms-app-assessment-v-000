@@ -24,14 +24,16 @@ class ApplicationController < Sinatra::Base
     end
 
     post "/signup" do
-      # binding.pry
-      @user = User.new(username: params["username"], password: params["password"])
-      if params[:username] == nil || params[:username] == ""|| params[:password] == nil || params[:password] == ""
-        redirect :"/signup"
+      @user = User.new(username: params[:username], password: params["password"])
+      if params[:username] == "" || params[:password] == ""
+        erb :signup
       else
-        @user.save
-        session[:user_id] = @user.id
-        redirect :"/users/#{@user.slug}"
+        if @user.save
+          session[:user_id] = @user.id
+          redirect :"/users/#{@user.slug}"
+        else
+          erb :signup
+        end
       end
     end
 
