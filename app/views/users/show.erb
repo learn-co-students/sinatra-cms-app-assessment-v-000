@@ -1,0 +1,11 @@
+<h2><%= @user.username %> Shoes Collection</h2>
+<% @user.shoes.each do |t|%>
+  <ul><%= t.name%>
+    <ul>Color: <%= t.color%></ul>
+    <ul>Brand: <%= t.brand%></ul>
+  </ul>
+<%end %>
+
+<a href="/shoes/new">Add a new pair of shoes</a><br>
+
+<p><a href="/logout">Log Out</a></p>

@@ -1,0 +1,8 @@
+<form action="/shoes/<%= @shoe.slug %>" method="POST">
+  <input type="hidden" name="_method" value="patch">
+  Name: <input type="text" name="name" value="<%= @shoe.name %>"></input><br>
+  Color: <input type="text" name="color" value="<%= @shoe.color %>"></input><br>
+  Brand: <input type="text" name="brand" value="<%= @shoe.brand %>"></input><br>
+  <input type="submit" value="submit">
+
+</form>

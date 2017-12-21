@@ -1,0 +1,10 @@
+<h2><%= @shoe.name%></h2>
+<ul>Color: <%= @shoe.color%></ul>
+<ul>Brand: <%= @shoe.brand%></ul>
+<br>
+<a href="/shoes/<%=@shoe.slug%>/edit" id="Edit">Edit</a>
+<br>
+<form method="POST" action="/shoes/<%= @shoe.slug %>/delete">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete Shoe" id="Delete">
+</form>
