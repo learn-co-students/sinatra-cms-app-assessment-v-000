@@ -46,12 +46,16 @@ class ShoesController < ApplicationController
 
   patch "/shoes/:slug" do
     # logged_in?
-    if params[:name] != "" && params[:name] != nil
-      @shoe = Shoe.find_by_slug(params[:slug]) # does show belong to current_user?
-      @shoe.update(name: params[:name], color: params[:color], brand: params[:brand])
-      redirect :"/users/#{current_user.slug}"
+    if logged_in?
+      if @shoe = current_user.shoes.find_by_slug(params[:slug])
+        # @shoe = Shoe.find_by_slug(params[:slug]) # does show belong to current_user?
+        @shoe.update(name: params[:name], color: params[:color], brand: params[:brand])
+        redirect :"/users/#{current_user.slug}"
+      else
+        redirect :"/shoes/#{current_user.slug}"
+      end
     else
-      redirect :"/shoes/#{@shoe.slug}/edit"
+      redirect :"/login"
     end
   end
 
@@ -59,8 +63,7 @@ class ShoesController < ApplicationController
   delete "/shoes/:slug/delete" do
       # binding.pry
       if logged_in?
-        @shoe = Shoe.find_by_slug(params[:slug])
-        if current_user.shoes.include?(@shoe)
+        if @shoe = current_user.shoes.find_by_slug(params[:slug])
           @shoe.delete
           redirect :"/users/#{current_user.slug}"
         else
