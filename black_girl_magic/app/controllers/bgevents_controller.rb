@@ -1,9 +1,8 @@
 class BGEventsController < ApplicationController
-  #make sure to bundle install
-  #make sure to rake db:migrate SINATRA_ENV=test
+
   get "/bgevents" do
     redirect_if_not_logged_in
-    @events = Event.all
+    @bgevents = BGEvent.all
     erb :'bgevents/index'
   end
 
@@ -12,4 +11,16 @@ class BGEventsController < ApplicationController
     @error_message = params[:error]
     erb :'bgevents/new'
   end
+
+  get "/bgevents/:id/edit" do
+    redirect_if_not_logged_in
+    @error_message = params[:error]
+    @bgevent = BGEvent.find(params[:id])
+    erb :'/bgevents/edit'
+  end
+
+  post "/bgevents/:id" do
+    @bgevent = BGEvent.create(name: params["bgevent"]["name"])
+  end
+
 end
