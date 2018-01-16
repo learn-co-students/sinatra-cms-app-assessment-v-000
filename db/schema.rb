@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20180116060749) do
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.string "review"
+    t.string "content"
     t.boolean "experience"
     t.integer "musician_id"
     t.integer "venue_id"
