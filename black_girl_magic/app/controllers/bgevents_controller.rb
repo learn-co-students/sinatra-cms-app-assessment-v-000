@@ -1,0 +1,3 @@
+class BGEventsController < ApplicationController
+
+end
