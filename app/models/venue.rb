@@ -1,3 +1,4 @@
 class Venue < ActiveRecord::Base
-  belongs_to :musician
+  has_many :reviews
+  has_many :musicians, through: :reviews
 end

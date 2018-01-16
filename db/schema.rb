@@ -10,18 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180116053839) do
+ActiveRecord::Schema.define(version: 20180116060749) do
 
   create_table "musicians", force: :cascade do |t|
     t.string "username"
+    t.string "password_digest"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.string "review"
+    t.boolean "experience"
+    t.integer "musician_id"
+    t.integer "venue_id"
   end
 
   create_table "venues", force: :cascade do |t|
     t.string "name"
     t.string "location"
-    t.string "review"
-    t.boolean "positive"
-    t.integer "musician_id"
   end
 
 end
