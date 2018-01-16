@@ -72,7 +72,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord
   pry
   rack-flash3
   rake
