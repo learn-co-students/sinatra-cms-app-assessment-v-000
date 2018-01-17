@@ -2,6 +2,7 @@
 
 <% if !@musician.reviews.empty? %>
   <% @musician.reviews.each do |review| %>
-
+    <%= review.venue %>
+    <%= review.content %>
   <% end %>
 <% end %>

@@ -42,8 +42,14 @@ class MusiciansController < Sinatra::Base
   end
 
   get '/musicians/:slug' do
-    @musician = Musician.find_by_slug(params[:slug])
-    erb :'musicians/show'
+    if session[:id]
+      @musician = Musician.find_by_slug(params[:slug])
+      erb :'musicians/show'
+    end
   end
 
+  get '/logout' do
+    session.clear
+    redirect to "/"
+  end
 end

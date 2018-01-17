@@ -39,13 +39,20 @@
           color: hotpink;
           text-decoration: none;
       }
+
+      header li{
+        display: inline;
+        list-style: none;
+      }
     </style>
   </head>
   <body class="gradient">
+    <header>
     <h1>Musician's Venue Guide</h1>
+    <%='<a href="/logout">Logout</a>' if session[:id] %>
+    </header>
     <div class="content">
       <%= yield %>
     <div>
   </body>
-
 </html>
