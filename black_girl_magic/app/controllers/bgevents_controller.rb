@@ -48,4 +48,15 @@ class BGEventsController < ApplicationController
       redirect to "/bgevents/#{@bgevent.id}"
     end
   end
+
+  delete '/bgevents/:id/delete' do
+    redirect_if_not_logged_in
+    @bgevent = BGEvent.find_by_id(params[:id])
+    if @bgevent.user_id == current_user.id
+      @bgevent.delete
+      redirect to '/bgevents'
+    else
+      redirect to '/bgevents'
+    end
+  end
 end
