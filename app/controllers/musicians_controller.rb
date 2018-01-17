@@ -18,6 +18,7 @@ class MusiciansController < Sinatra::Base
       @musician = Musician.new(username: params[:username], password: params[:password])
 
       if @musician.save
+        session[:id] = @musician.id
         redirect "/musician/#{@musician.slug}"
       else
         flash[:message] = "Please Create a Password."
