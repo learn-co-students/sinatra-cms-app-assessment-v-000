@@ -1,9 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Musicians Venue Guide</title>
+    <style type="text/css">
+      body {
+        font-family: Arial, serif;
+        color: white;
+        background: linear-gradient(#888888, black);
+        height: 100vh;
+        margin-left: 20px;
+      }
+      h1 {
+        font-size: 3em;
+        font-weight: bolder;
+      }
+    </style>
   </head>
-  <body>
-    <%= yield %>
+  <body class="gradient">
+    <h1>Musician's Venue Guide</h1>
+    <div class="content">
+      <%= yield %>
+    <div>
   </body>
 
 </html>
