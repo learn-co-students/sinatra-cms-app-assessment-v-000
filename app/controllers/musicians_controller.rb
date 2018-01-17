@@ -7,4 +7,16 @@ class MusiciansController < Sinatra::Base
     set :session_secret, "secret"
   end
 
+  get '/signup' do
+    erb :'musicians/login'
+  end
+
+  post '/signup' do
+    if !session[:id]
+      @musician = Musician.create(username: params[:username], passwor_digest: params[:password])
+    else
+      redirect to "/reviews"
+    end
+  end
+
 end
