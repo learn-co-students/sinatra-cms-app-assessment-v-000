@@ -18,8 +18,7 @@ class MusiciansController < Sinatra::Base
       @musician = Musician.new(username: params[:username], password: params[:password])
 
       if @musician.save
-        flash[:message] = "Please Log In."
-        redirect "/login"
+        redirect "/musician/#{@musician.slug}"
       else
         flash[:message] = "Please Create a Password."
         redirect "/signup"
@@ -31,5 +30,16 @@ class MusiciansController < Sinatra::Base
     erb :'musicians/login'
   end
 
+  post '/login' do
+    @musician = Musician.find_by(:username => params[:username])
+
+    if @musician && user.authenticate(params[:password])
+        session[:id] = @musician.id
+        redirect "/musicians/#{@musician.slug}"
+    else
+        flash[:message] = "Put the bong down.  Please Try Again."
+        redirect "/login"
+    end
+  end
 
 end
