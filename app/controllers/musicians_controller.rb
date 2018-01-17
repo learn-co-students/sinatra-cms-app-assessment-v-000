@@ -1,4 +1,5 @@
 require 'rack-flash'
+require 'pry'
 
 class MusiciansController < Sinatra::Base
 
@@ -14,16 +15,13 @@ class MusiciansController < Sinatra::Base
   end
 
   post '/signup' do
-    if !session[:id]
-      @musician = Musician.new(username: params[:username], password: params[:password])
-
-      if @musician.save
-        session[:id] = @musician.id
-        redirect "/musician/#{@musician.slug}"
-      else
-        flash[:message] = "Please Create a Password."
-        redirect "/signup"
-      end
+    @musician = Musician.new(username: params[:username], password: params[:password])
+    if @musician.save
+      session[:id] = @musician.id
+      redirect to "/musicians/#{@musician.slug}"
+    else
+      flash[:message] = "Please Create a Password."
+      redirect to "/signup"
     end
   end
 
@@ -34,13 +32,18 @@ class MusiciansController < Sinatra::Base
   post '/login' do
     @musician = Musician.find_by(:username => params[:username])
 
-    if @musician && user.authenticate(params[:password])
+    if @musician && @musician.authenticate(params[:password])
         session[:id] = @musician.id
-        redirect "/musicians/#{@musician.slug}"
+        redirect to "/musicians/#{@musician.slug}"
     else
         flash[:message] = "Put the bong down.  Please Try Again."
-        redirect "/login"
+        redirect to "/login"
     end
+  end
+
+  get '/musicians/:slug' do
+    @musician = Musician.find_by_slug(params[:slug])
+    erb :'musicians/show'
   end
 
 end
