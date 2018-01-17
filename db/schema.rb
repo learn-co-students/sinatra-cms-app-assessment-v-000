@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20180116060749) do
   create_table "venues", force: :cascade do |t|
     t.string "name"
     t.string "location"
+    t.string "maps_url"
   end
 
 end

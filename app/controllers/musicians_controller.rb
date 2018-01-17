@@ -18,5 +18,4 @@ class MusiciansController < Sinatra::Base
       redirect to "/reviews"
     end
   end
-
 end
