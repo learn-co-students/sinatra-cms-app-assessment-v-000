@@ -8,12 +8,12 @@ class MusiciansController < Sinatra::Base
   end
 
   get '/signup' do
-    erb :'musicians/login'
+    erb :'musicians/create'
   end
 
   post '/signup' do
     if !session[:id]
-      @musician = Musician.create(username: params[:username], passwor_digest: params[:password])
+      @musician = Musician.create(username: params[:username], password_digest: params[:password])
     else
       redirect to "/reviews"
     end
