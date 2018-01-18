@@ -17,11 +17,14 @@ class ReviewsController < Sinatra::Base
     if session[:id]
       @venues = Venue.all
       erb :'reviews/new'
+    else
+      redirect to "/login"
     end
   end
 
   post '/reviews' do
     @musician = Musician.find_by(id: session[:id])
+
     @review = Review.create(content: params[:review][:content])
     @review.musician = @musician
 
@@ -33,7 +36,31 @@ class ReviewsController < Sinatra::Base
 
     @review.venue = @venue
     @review.save
-    binding.pry
+
     redirect to "/musicians/#{@musician.slug}"
+  end
+
+  get '/reviews/:id/edit' do
+    binding.pry
+    @musician = Musician.find_by(id: session[:id])
+    @review = Review.find_by(id: params[:id])
+    if @review.musician_id = @musican.id
+      if session[:id] &&
+        @review = Review.find_by(id: params[:id])
+        erb :'reviews/edit'
+      else
+        redirect to "/login"
+      end
+    else
+      redirect to "/musicans/#{@musician.slug}"
+    end
+  end
+
+  patch '/reviews/:id' do
+
+  end
+
+  get '/reviews/:id' do
+
   end
 end
