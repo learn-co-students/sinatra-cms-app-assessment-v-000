@@ -40,6 +40,7 @@ class ReviewsController < Sinatra::Base
     redirect to "/musicians/#{@musician.slug}"
   end
 
+  # check this method for proper permissions
   get '/reviews/:id/edit' do
     @musician = Musician.find_by(id: session[:id])
     @review = Review.find_by(id: params[:id])
