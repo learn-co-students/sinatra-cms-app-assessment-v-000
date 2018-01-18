@@ -33,7 +33,6 @@ class ReviewsController < Sinatra::Base
 
     @review.venue = @venue
     @review.save
-    binding.pry
     redirect to "/musicians/#{@musician.slug}"
   end
 end

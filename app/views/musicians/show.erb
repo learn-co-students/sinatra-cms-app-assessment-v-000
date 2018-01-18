@@ -1,10 +1,10 @@
-<h2><%= @musician.username %></h2>
+<h2>Greetings User <%= @musician.username %>.</h2>
+<h2>Create a <a href="/reviews/create">Review</a></h2>
 
-<% if !@musician.reviews.empty? %>
-  <% @musician.reviews.each do |review| %>
-    <ul>
-    <li>Venue: <%= review.venue.name %></li>
-    <li>Review: <%= review.content %></li>
-    </ul>
-  <% end %>
+<% @musician.reviews.each do |review| %>
+  <ul>
+  <li>Venue: <%= review.venue.name %></li>
+  <li>Location: <%= review.venue.location %></li>
+  <li>Review: <%= review.content %></li>
+  </ul>
 <% end %>
