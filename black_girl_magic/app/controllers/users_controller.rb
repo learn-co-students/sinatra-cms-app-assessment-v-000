@@ -24,7 +24,8 @@ class UsersController < ApplicationController
     if params[:username] == "" || params[:password] == "" || params[:email] == ""
       redirect to '/signup'
     else
-      @user = User.create(:username => params[:username], :email => params[:email], :password => params[:password])
+      @user = User.create(:username => params[:username],:password => params[:password], :email => params[:email])
+      binding.pry
       @user.save
       session[:user_id] = @user.id
       redirect '/bgevents'
