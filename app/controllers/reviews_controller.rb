@@ -41,11 +41,10 @@ class ReviewsController < Sinatra::Base
   end
 
   get '/reviews/:id/edit' do
-    binding.pry
     @musician = Musician.find_by(id: session[:id])
     @review = Review.find_by(id: params[:id])
-    if @review.musician_id = @musican.id
-      if session[:id] &&
+    if @review.musician_id = @musician.id
+      if session[:id]
         @review = Review.find_by(id: params[:id])
         erb :'reviews/edit'
       else
@@ -57,10 +56,13 @@ class ReviewsController < Sinatra::Base
   end
 
   patch '/reviews/:id' do
-
+    @review = Review.find_by(id: params[:id])
+    @review.update(content: params[:content])
+    redirect to "/reviews/#{@review.id}"
   end
 
   get '/reviews/:id' do
-
+    @review = Review.find_by(id: params[:id])
+    erb :'reviews/show'
   end
 end
