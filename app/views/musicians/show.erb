@@ -1,6 +1,6 @@
 <h2>Greetings User <%= @musician.username %>.</h2>
 <h2>Create a <a href="/reviews/create">Review</a></h2>
-
+<h2>REVIEWS:</h2>
 <% @musician.reviews.each do |review| %>
   <ul>
   <li>Venue: <%= review.venue.name %></li>

@@ -6,6 +6,7 @@ Create a Password:&nbsp;&nbsp;&nbsp;<input type="text" name="password">
 <input type="submit">
 </form>
 
+<%# error message for no password %>
 <% if flash.has?(:message) %>
   <br></br>
   <span style="font-weight: bolder"><%= flash[:message] %></span>
