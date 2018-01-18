@@ -35,14 +35,9 @@ class ReviewsController < Sinatra::Base
       @venue = Venue.find_by(name: params[:existing_venue][:name])
     end
 
-<<<<<<< HEAD
-    @review.venue = @venue
-    @review.save
-
-=======
     @venue.reviews << @review
     @venue.save
->>>>>>> 8567d47436f397f0468160f7d025302d5169f976
+
     redirect to "/musicians/#{@musician.slug}"
   end
 
