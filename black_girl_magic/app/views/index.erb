@@ -6,6 +6,15 @@
   </head>
   <body>
     <h1>Welcome to Black Girl Magic!!</h1>
-    
+
+    <h2>Black Girl Magic Events</h2>
+      <%if logged_in? %>
+        <a href="/bgevents/new">Create an Event</a>
+        <a href="/logout">Logout</a>
+      <% else %>
+        <a href="/signup">Sign Up</a>
+        <a href="/login">Login</a>
+      <% end %>
+
   </body>
 </html>

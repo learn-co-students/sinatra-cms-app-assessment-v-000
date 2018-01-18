@@ -15,15 +15,6 @@
 </head>
 <body>
 
-  <h1>Black Girl Magic Events</h1>
-    <%if logged_in? %>
-      <a href="/bgevents/new">Create an Event</a>
-      <a href="/logout">Logout</a>
-    <% else %>
-      <a href="/signup">Sign Up</a>
-      <a href="/login">Login</a>
-    <% end %>  
-
   <div class="wrapper">
 
       <%= yield %>
