@@ -23,7 +23,8 @@ class ReviewsController < Sinatra::Base
   post '/reviews' do
     @musician = Musician.find_by(id: session[:id])
     @review = Review.create(content: params[:review][:content])
-    @review.musician = @musician
+    @musician.reviews << @review
+    @musician.save
 
     if params[:venue][:name] != ""
       @venue = Venue.create(name: params[:venue][:name], location: params[:venue][:location])
@@ -31,8 +32,8 @@ class ReviewsController < Sinatra::Base
       @venue = Venue.find_by(name: params[:existing_venue][:name])
     end
 
-    @review.venue = @venue
-    @review.save
+    @venue.reviews << @review
+    @venue.save
     redirect to "/musicians/#{@musician.slug}"
   end
 end
