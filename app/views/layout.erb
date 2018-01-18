@@ -49,7 +49,7 @@
   <body class="gradient">
     <header>
     <h1>Musician's Venue Guide</h1>
-    <%='<a href="/logout">Logout</a>' if session[:id] %>
+    <%='<a href="/logout">Logout</a><br></br><br></br>' if session[:id] %>
     </header>
     <div class="content">
       <%= yield %>

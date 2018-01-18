@@ -1,0 +1,24 @@
+<form method="POST" action="/reviews">
+  <% if !@venues.empty? %>
+    Choose a Venue:
+    <% @venues.each do |venue| %>
+        <input type="checkbox" name="existing_venue[name]" value="<%= venue.name %>"><%= genre.name %></input>
+        <br></br>
+        <br></br>
+    <% end %>
+  <% end %>
+
+  Create a New Venue:
+  <br></br>
+  Name: <input type="text" name="venue[name]">
+  <br></br>
+  Location: <input type="text" name="venue[location]">
+  <br></br>
+  <br></br>
+
+  Write a Review:
+  <input type="text" name="review[content]" id="review_content">
+  <br></br>
+
+  <input type="submit">
+</form>
