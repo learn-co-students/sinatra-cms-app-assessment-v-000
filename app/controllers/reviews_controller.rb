@@ -24,7 +24,6 @@ class ReviewsController < Sinatra::Base
 
   post '/reviews' do
     @musician = Musician.find_by(id: session[:id])
-
     @review = Review.create(content: params[:review][:content])
     @musician.reviews << @review
     @musician.save
