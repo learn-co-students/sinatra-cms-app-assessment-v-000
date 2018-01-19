@@ -69,7 +69,7 @@ class ReviewsController < Sinatra::Base
     erb :'reviews/show'
   end
 
-  delete 'review/:id/delete' do
+  delete '/reviews/:id/delete' do
     @review = Review.find_by(id: params[:id])
     if session[:id]
       @musician = Musician.find_by(id: session[:id])
