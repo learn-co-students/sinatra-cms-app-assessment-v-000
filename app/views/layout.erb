@@ -52,8 +52,11 @@
   <body class="gradient">
     <header>
     <h1>Musician's Venue Guide</h1>
-    <%='<a href="/logout">Logout</a><br></br><br></br>' if session[:id] %>
+    <%= '<a href="/logout">Logout</a>&nbsp; &nbsp;' if session[:id] %>
+    <%= '<a href="/login">Login</a>&nbsp; &nbsp;' if !session[:id] %>
+    <a href="/reviews">Reviews</a>&nbsp; &nbsp; <a href="/venues">Venues</a>
     </header>
+    <br></br>
     <div class="content">
       <%= yield %>
     <div>

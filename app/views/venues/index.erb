@@ -1,0 +1,8 @@
+<% @venues.each do |venue| %>
+    <h3><%= venue.name %>&nbsp;&nbsp;&nbsp;&nbsp;LOCATION:&nbsp;<%= venue.location %></h3>
+  <ul>
+    <% venue.reviews.each do |review| %>
+      <li><%= review.content %></li>
+    <% end %>
+  </ul>
+<% end %>

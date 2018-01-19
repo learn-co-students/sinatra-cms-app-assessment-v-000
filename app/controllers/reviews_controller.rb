@@ -27,13 +27,13 @@ class ReviewsController < Sinatra::Base
     @review = Review.create(content: params[:review][:content])
     @musician.reviews << @review
     @musician.save
-
+    binding.pry
     if params[:venue][:name] != ""
       @venue = Venue.create(name: params[:venue][:name], location: params[:venue][:location])
     else
       @venue = Venue.find_by(name: params[:existing_venue][:name])
     end
-
+    binding.pry
     @venue.reviews << @review
     @venue.save
 

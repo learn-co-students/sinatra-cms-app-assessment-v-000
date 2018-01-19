@@ -2,7 +2,7 @@
   <% if !@venues.empty? %>
     Choose a Venue:
     <% @venues.each do |venue| %>
-        <input type="checkbox" name="existing_venue[name]"><%= venue.name %></input>
+        <input type="checkbox" name="existing_venue[name]" value="<%= venue.name %>"><%= venue.name %></input>
     <% end %>
   <% end %>
   <br></br>

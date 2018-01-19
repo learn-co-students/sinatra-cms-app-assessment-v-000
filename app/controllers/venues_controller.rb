@@ -6,4 +6,9 @@ class VenuesController < Sinatra::Base
   enable :sessions
   use Rack::Flash
 
+  get '/venues' do
+    @venues = Venue.all
+    erb :'venues/index'
+  end
+
 end
