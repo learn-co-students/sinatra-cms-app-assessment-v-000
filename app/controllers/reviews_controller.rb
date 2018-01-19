@@ -40,19 +40,18 @@ class ReviewsController < Sinatra::Base
     redirect to "/musicians/#{@musician.slug}"
   end
 
-  # check this method for proper permissions
   get '/reviews/:id/edit' do
-    @musician = Musician.find_by(id: session[:id])
     @review = Review.find_by(id: params[:id])
-    if @review.musician_id = @musician.id
-      if session[:id]
+    if session[:id]
+      @musician = Musician.find_by(id: session[:id])
+      if @review.musician_id = @musician.id
         @review = Review.find_by(id: params[:id])
         erb :'reviews/edit'
       else
-        redirect to "/login"
+        redirect to "/musicans/#{@musician.slug}"
       end
     else
-      redirect to "/musicans/#{@musician.slug}"
+      redirect to "/login"
     end
   end
 
@@ -64,6 +63,24 @@ class ReviewsController < Sinatra::Base
 
   get '/reviews/:id' do
     @review = Review.find_by(id: params[:id])
+    if session[:id]
+      @musician = Musician.find_by(id: session[:id])
+    end
     erb :'reviews/show'
+  end
+
+  delete 'review/:id/delete' do
+    @review = Review.find_by(id: params[:id])
+    if session[:id]
+      @musician = Musician.find_by(id: session[:id])
+      if @musician.reviews.include?(@review)
+        @review.delete
+        redirect to "/musicians/#{@musician.slug}"
+      else
+        redirect to "/reviews/#{@review.id}"
+      end
+    else
+      redirect to "/login"
+    end
   end
 end
