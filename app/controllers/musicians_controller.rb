@@ -12,7 +12,6 @@ class MusiciansController < Sinatra::Base
     erb :'musicians/create'
   end
 
-  # flash notice problem
   post '/signup' do
     @musician = Musician.new(username: params[:username], password: params[:password])
     if @musician.save
