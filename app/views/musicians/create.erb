@@ -1,4 +1,4 @@
-<p>Please create a username that is anonymous.  This site is meant to keep musician name's private.  Do not sign up with your band name or your real name.</p>
+<p>Please create a username that is anonymous.  This site is meant to keep musician name's private.  Do not sign up with your band name or your real name. Password must be at least 7 characters.</p>
 <form method="POST" action="/signup">
 Create a Username:&nbsp;&nbsp;<input type="text" name="username">
 <br></br>
@@ -7,7 +7,6 @@ Create a Password:&nbsp;&nbsp;&nbsp;<input type="text" name="password">
 <input type="submit">
 </form>
 
-<%# error message for no password %>
 <% if flash.has?(:message) %>
   <br></br>
   <span style="font-weight: bolder"><%= flash[:message] %></span>

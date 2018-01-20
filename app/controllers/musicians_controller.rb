@@ -2,18 +2,19 @@ require 'rack-flash'
 require 'pry'
 
 class MusiciansController < Sinatra::Base
-
-  set :public_folder, 'public'
-  set :views, 'app/views'
-  set :session_secret, "secret"
+  configure do
+    set :public_folder, 'public'
+    set :views, 'app/views'
+    set :session_secret, "secret"
+  end
   enable :sessions
   use Rack::Flash
-
 
   get '/signup' do
     erb :'musicians/create'
   end
 
+  # flash message problem
   post '/signup' do
     @musician = Musician.new(username: params[:username], password: params[:password])
     if @musician.save
