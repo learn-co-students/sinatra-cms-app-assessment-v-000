@@ -19,7 +19,7 @@ class MusiciansController < Sinatra::Base
       session[:id] = @musician.id
       redirect to "/musicians/#{@musician.slug}"
     else
-      # should be a flash message
+      flash[:notice] = "Please input a password"
       redirect to "/signup"
     end
   end
@@ -35,7 +35,7 @@ class MusiciansController < Sinatra::Base
       session[:id] = @musician.id
       redirect to "/musicians/#{@musician.slug}"
     else
-      # should be a flash message
+      flash[:notice] = "Please input a password"
       redirect to "/login"
     end
   end
