@@ -4,7 +4,6 @@ class VenuesController < Sinatra::Base
   set :views, 'app/views'
   set :session_secret, "secret"
   enable :sessions
-  use Rack::Flash
 
   get '/venues' do
     @venues = Venue.all

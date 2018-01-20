@@ -1,5 +1,5 @@
-<% if flash.has?(:message) %>
-  <span style="font-weight: bolder"><%= flash[:message] %></span>
+<% if flash.now.include?(:notice) %>
+  <%= flash.now[:notice] %>
   <br></br>
 <% end %>
 

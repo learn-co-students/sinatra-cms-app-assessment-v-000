@@ -1,27 +1,25 @@
-require 'rack-flash'
-require 'pry'
+require 'sinatra/base'
+require 'sinatra/flash'
 
 class MusiciansController < Sinatra::Base
-  configure do
-    set :public_folder, 'public'
-    set :views, 'app/views'
-    set :session_secret, "secret"
-  end
+  set :public_folder, 'public'
+  set :views, 'app/views'
+  set :session_secret, "secret"
   enable :sessions
-  use Rack::Flash
+  register Sinatra::Flash
 
   get '/signup' do
     erb :'musicians/create'
   end
 
-  # flash message problem
+  # flash notice problem
   post '/signup' do
     @musician = Musician.new(username: params[:username], password: params[:password])
     if @musician.save
       session[:id] = @musician.id
       redirect to "/musicians/#{@musician.slug}"
     else
-      flash[:message] = "Please Create a Password."
+      # should be a flash message
       redirect to "/signup"
     end
   end
@@ -34,11 +32,11 @@ class MusiciansController < Sinatra::Base
     @musician = Musician.find_by(:username => params[:username])
 
     if @musician && @musician.authenticate(params[:password])
-        session[:id] = @musician.id
-        redirect to "/musicians/#{@musician.slug}"
+      session[:id] = @musician.id
+      redirect to "/musicians/#{@musician.slug}"
     else
-        flash[:message] = "Put the bong down.  Please Try Again."
-        redirect to "/login"
+      # should be a flash message
+      redirect to "/login"
     end
   end
 
