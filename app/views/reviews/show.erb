@@ -1,8 +1,8 @@
 <h3><a href="/reviews/<%= @review.id %>/edit">Edit Review</a></h3>
 
-<h3><%= @review.venue.name %></h3>
-<h3><%= @review.venue.location %></h3>
-<p><%= @review.content %></p>
+<h3>Venue: <%= @review.venue.name %></h3>
+<h3>Location: <%= @review.venue.location %></h3>
+<p>Review: <%= @review.content %></p>
 
 <% if @musician.reviews.include?(@review) %>
   <form method="POST" action="/reviews/<%= @review.id %>/delete">
