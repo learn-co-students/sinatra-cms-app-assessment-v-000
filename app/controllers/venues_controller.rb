@@ -7,6 +7,7 @@ class VenuesController < Sinatra::Base
 
   get '/venues' do
     @venues = Venue.all
+    @musician = Musician.find_by(id: session[:id])
     erb :'venues/index'
   end
 

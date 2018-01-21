@@ -5,6 +5,7 @@
 <h2>REVIEWS:</h2>
 <% @musician.reviews.each do |review| %>
   <ul>
+  <li><a href="/reviews/<%= review.id %>">Review</a></li>
   <li>Venue: <%= review.venue.name %></li>
   <li>Location: <%= review.venue.location %></li>
   <li>Review: <%= review.content %></li>

@@ -55,6 +55,7 @@
     <%= '<a href="/logout">Logout</a>&nbsp; &nbsp;' if session[:id] %>
     <%= '<a href="/login">Login</a>&nbsp; &nbsp;' if !session[:id] %>
     <a href="/reviews">Reviews</a>&nbsp; &nbsp; <a href="/venues">Venues</a>
+    <%= "&nbsp; &nbsp;<a href='/musicians/#{@musician.slug}'>Home</a>" if session[:id] %>
     </header>
     <br></br>
     <div class="content">

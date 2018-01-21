@@ -6,12 +6,14 @@ class ReviewsController < Sinatra::Base
   enable :sessions
 
   get '/reviews' do
+    @musician = Musician.find_by(id: session[:id])
     @reviews = Review.all
     erb :'reviews/index'
   end
 
   get '/reviews/create' do
     if session[:id]
+      @musician = Musician.find_by(id: session[:id])
       @venues = Venue.all
       erb :'reviews/new'
     else
