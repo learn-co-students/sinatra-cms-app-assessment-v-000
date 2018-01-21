@@ -39,7 +39,7 @@ class BGEventsController < ApplicationController
   end
 
   patch '/bgevents/:id' do
-    if params[:content] == ""
+    if params[:description] == ""
       redirect to "/bgevents/#{parmas[:id]}/edit"
     else
       @bgevent = BGEvent.find_by_id(params[:id])

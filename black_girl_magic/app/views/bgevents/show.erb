@@ -1,5 +1,5 @@
 <h1>View Events</h1>
-  <p><%= @bgevent.content%></p>
+  <p><%= @bgevent.description%></p>
   <form action="/bgevents/<%=@bgevent.id%>/delete">
     <input id="hidden" type="hidden" name="_method" value="Delete">
     <input type="submit" value="Delete Event">
