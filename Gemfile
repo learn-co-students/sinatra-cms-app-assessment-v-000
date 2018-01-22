@@ -3,11 +3,15 @@ source 'http://rubygems.org'
 gem 'sinatra'
 gem 'sinatra-activerecord'
 gem 'sinatra-flash'
-gem 'rake'
 gem 'require_all'
 gem 'sqlite3'
 gem 'thin'
-gem 'shotgun'
-gem 'pry'
 gem 'bcrypt'
-gem 'tux'
+
+
+group :development do
+  gem 'rake'
+  gem 'pry'
+  gem 'tux'
+  gem 'shotgun'
+end
