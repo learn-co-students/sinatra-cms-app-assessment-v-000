@@ -1,3 +1,3 @@
-class BGEvents < ActiveRecord::Base
+class BgEvent < ActiveRecord::Base
   belongs_to :user
 end

@@ -9,7 +9,7 @@ class BGEventsController < ApplicationController
   get "/bgevents/new" do
     redirect_if_not_logged_in
     @error_message = params[:error]
-    @bgevents = User.find(session[:user_id]).bgevents
+    @bgevents = User.find(session[:user_id]).bg_events
     erb :'bgevents/new'
   end
 
@@ -17,7 +17,7 @@ class BGEventsController < ApplicationController
     if params[:description] == ""
       redirect to "/bgevents/new"
     else
-      @bgevent = current_user.bgevent.create(description: params[:description])
+      @bgevent = current_user.bgevent.create(description: params[:description], name: params[:name])
       redirect to "/bgevents/#{@bgevent.id}"
     end
   end
