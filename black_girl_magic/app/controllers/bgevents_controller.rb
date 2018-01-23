@@ -17,14 +17,14 @@ class BgEventsController < ApplicationController
     if params[:description] == ""
       redirect to "/bgevents/new"
     else
-      @bgevent = current_user.bgevent.create(description: params[:description], name: params[:name])
+      @bgevent = current_user.bg_events.create(description: params[:description], name: params[:name])
       redirect to "/bgevents/#{@bgevent.id}"
     end
   end
 
-  get '/bgevents/:id/' do
+  get '/bgevents/:id' do
     redirect_if_not_logged_in
-    @bgevent = BGEvent.find_by_id(params[:id])
+    @bgevent = BgEvent.find_by_id(params[:id])
     erb :'bgevents/show'
   end
 
