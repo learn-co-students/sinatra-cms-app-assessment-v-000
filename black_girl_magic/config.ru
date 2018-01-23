@@ -5,5 +5,5 @@ if ActiveRecord::Migrator.needs_migration?
 end
 
 use UsersController
-use BGEventsController
+use BgEventsController
 run ApplicationController

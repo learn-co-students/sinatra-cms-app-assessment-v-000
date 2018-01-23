@@ -1,8 +1,8 @@
-class BGEventsController < ApplicationController
+class BgEventsController < ApplicationController
 
   get "/bgevents" do
     redirect_if_not_logged_in
-    @bgevents = BGEvent.all
+    @bgevents = BgEvent.all
     erb :'bgevents/index'
   end
 
@@ -30,7 +30,7 @@ class BGEventsController < ApplicationController
 
   get '/bgevents/:id/edit' do
     redirect_if_not_logged_in
-    @bgevent = BGEvent.find_by_id(params[:id])
+    @bgevent = BgEvent.find_by_id(params[:id])
     if @bgevent.user_id == current_user.id
       erb :'bgevents/edit'
     else
@@ -42,7 +42,7 @@ class BGEventsController < ApplicationController
     if params[:description] == ""
       redirect to "/bgevents/#{parmas[:id]}/edit"
     else
-      @bgevent = BGEvent.find_by_id(params[:id])
+      @bgevent = BgEvent.find_by_id(params[:id])
       @bgevent.description = params[:description]
       @bgevent.save
       redirect to "/bgevents/#{@bgevent.id}"
@@ -51,7 +51,7 @@ class BGEventsController < ApplicationController
 
   delete '/bgevents/:id/delete' do
     redirect_if_not_logged_in
-    @bgevent = BGEvent.find_by_id(params[:id])
+    @bgevent = BgEvent.find_by_id(params[:id])
     if @bgevent.user_id == current_user.id
       @bgevent.delete
       redirect to '/bgevents'
