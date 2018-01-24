@@ -1,0 +1,7 @@
+<h2>Edit the Event</h2>
+<form action="/bgevents/<%=@bgevent.id%>" method="POST">
+  <input id="hidden" type="hidden" name="_method" value="PATCH">
+  <input type="text" name="name" value="<%=@bgevent.name%>">
+  <input type="text" name="description" value="<%=@bgevent.description%>">
+  <input type="submit" value="submit">
+</form>

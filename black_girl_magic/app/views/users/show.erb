@@ -1,0 +1,6 @@
+<p><%= @user.username%>'s Events:</p>
+  <%@user.bgevents each do |bgevent| %>
+    <div>
+      <%bgevent.content%>
+    </div>
+  <%end%>
