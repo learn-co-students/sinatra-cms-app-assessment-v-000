@@ -16,6 +16,10 @@
 <body>
 
   <div class="wrapper">
+    <%if logged_in?%>
+      <a href="/bgevents">Events</a>
+      <a href="/logout">Logout</a>
+    <% end %>
 
       <%= yield %>
 

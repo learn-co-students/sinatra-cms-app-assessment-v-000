@@ -14,7 +14,7 @@ class BgEventsController < ApplicationController
   end
 
   post '/bgevents' do
-    if params[:description] == ""
+    if params[:description] == "" || params[:name] == ""
       redirect to "/bgevents/new"
     else
       @bgevent = current_user.bg_events.create(description: params[:description], name: params[:name])
@@ -39,10 +39,12 @@ class BgEventsController < ApplicationController
   end
 
   patch '/bgevents/:id' do
-    if params[:description] == ""
+    @bgevent =BgEvent.find_by_id(params[:id])
+    if @bgevent.user_id != current_user.id
+      redirect to '/bgevents'
+    elsif params[:description] == ""
       redirect to "/bgevents/#{parmas[:id]}/edit"
     else
-      @bgevent = BgEvent.find_by_id(params[:id])
       @bgevent.description = params[:description]
       @bgevent.save
       redirect to "/bgevents/#{@bgevent.id}"
