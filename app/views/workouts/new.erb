@@ -2,30 +2,47 @@
 
 <form method="POST" action="/workouts">
 
-  <label for="name">Name</label>
-  <input type="text" name="name" placeholder="Name">
+  <label for="name">Name:</label>
+    <input type="text" name="name" placeholder="Name"><br>
 
-  <label for="duration">Duration</label>
-  <input type="text" name="duration" placeholder="Duration">
+  <label for="duration">Duration:</label>
+    <input type="text" name="duration" placeholder="Duration"><br>
 
-  <label for="difficulty">Difficulty</label>
-  <input type="text" name="difficulty" placeholder="Difficulty">
+  <label for="difficulty">Difficulty:</label>
+    1<input type="radio" name="difficulty" value="1" checked>
+    2<input type="radio" name="difficulty" value="2">
+    3<input type="radio" name="difficulty" value="3">
+    4<input type="radio" name="difficulty" value="4">
+    5<input type="radio" name="difficulty" value="5"><br>
 
-  <label for="body_focus">Body Focus</label>
-  <input type="text" name="body_focus" placeholder="Body Focus">
+  <label for="body_focus">Body Focus:</label>
+    <select name="body_focus">
+      <option value="Upper">Upper</option>
+      <option value="Core">Core</option>
+      <option value="Lower">Lower</option>
+      <option value="Total">Total</option>
+    </select><br>
 
-  <label for="training_type">Training Type</label>
-  <input type="text" name="training_type" placeholder="Training Type">
+  <label for="training_type">Training Type:</label>
+    <select name="training_type">
+      <option value="HIIT">HIIT</option>
+      <option value="Strength Training">Strength Training</option>
+      <option value="Pilates">Pilates</option>
+      <option value="Cardio">Cardio</option>
+      <option value="Yoga">Yoga</option>
+      <option value="Low Impact">Low Impact</option>
+      <option value="Kickboxing">Kickboxing</option>
+    </select><br>
 
   <label for="equipment_needed">Equipment Needed</label>
-  <input type="text" name="equipment_needed" placeholder="Equipment Needed">
+    Yes<input type="radio" name="equipment_needed" value="Yes" checked>
+    No<input type="radio" name="equipment_needed" value="No"><br>
 
-  <label for="notes">Notes</label>
-  <input type="text" name="notes" placeholder="Notes">
+  <label for="website">Website</label>
+    <input type="text" name="website" placeholder="Website"><br><br>
 
-  <label for="notes">Website</label>
-  <input type="text" name="website" placeholder="Website">
+  <textarea name="notes" placeholder="Add Workout Notes Here..." rows="10" cols="40"> </textarea> <br>
 
-  <input type="submit" value="Create">
+  <input type="submit" value="Add Workout">
 
 </form>

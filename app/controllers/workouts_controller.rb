@@ -25,7 +25,6 @@ class WorkoutsController < ApplicationController
           params[:body_focus]=="" ||
           params[:training_type]=="" ||
           params[:equipment_needed]=="" ||
-          params[:notes]=="" ||
           params[:website]==""
           redirect to "/workouts/new"
         else
@@ -71,14 +70,27 @@ class WorkoutsController < ApplicationController
         end
       end
 
-    post '/workouts/:id' do
+    patch '/workouts/:id' do
         if logged_in?
-          if params[:content] == ""   ###need to add more params
-            redirect to "/workouts/#{params[:id]}/edit"
+          if params[:name]=="" ||
+           params[:duration]=="" ||
+           params[:difficulty]=="" ||
+           params[:body_focus]=="" ||
+           params[:training_type]=="" ||
+           params[:equipment_needed]=="" ||
+           params[:website]==""
+          redirect to "/workouts/#{params[:id]}/edit"
           else
             @workout=Workout.find_by_id(params[:id])
             if @workout.user_id=current_user.id
-              @workout.update(content: params[:content])  ##Need to add more params
+              @workout.update(name: params["name"],
+                duration: params["duration"],
+                difficulty: params["difficulty"],
+                body_focus: params["body_focus"],
+                training_type: params["training_type"],
+                equipment_needed: params["equipment_needed"],
+                notes: params["notes"],
+                website: params["website"])
               redirect to "/workouts/#{@workout.id}"
             else
               redirect to "/workouts"

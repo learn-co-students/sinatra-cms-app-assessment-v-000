@@ -1,33 +1,52 @@
-<h2> Edit Workout</h2>
+<h2>Edit Workout</h2>
 
 <form method="POST" action="/workouts/<%= @workout.id%>">
 <input id="hidden" type="hidden" name="_method" value="PATCH">
 
+  <label for="name">Name:</label>
+    <input type="text" name="name" value="<%= @workout.name%>"><br>
 
-  <label for="name">Name</label>
-  <input type="text" name="name" value="<%=@workout.name %>">
+  <label for="duration">Duration:</label>
+    <input type="text" name="duration" value="<%= @workout.duration%>"><br>
 
-  <label for="duration">Duration</label>
-  <input type="text" name="duration" value="<%=@workout.duration %>">
+  <label for="difficulty">Difficulty:</label>
+    1<input type="radio" name="difficulty" value="1" <%='checked' if @workout.difficulty == "1"%>>
+    2<input type="radio" name="difficulty" value="2" <%='checked' if @workout.difficulty == "2"%>>
+    3<input type="radio" name="difficulty" value="3" <%='checked' if @workout.difficulty == "3"%>>
+    4<input type="radio" name="difficulty" value="4" <%='checked' if @workout.difficulty == "4"%>>
+    5<input type="radio" name="difficulty" value="5" <%='checked' if @workout.difficulty == "5"%>><br>
 
-  <label for="difficulty">Difficulty</label>
-  <input type="text" name="difficulty" value="<%=@workout.difficulty %>">
+  <label for="body_focus">Body Focus:</label>
+    <select name="body_focus">
+      <option value="Upper">Upper</option>
+      <option value="Core">Core</option>
+      <option value="Lower">Lower</option>
+      <option value="Total">Total</option>
+    </select><br>
 
-  <label for="body_focus">Body Focus</label>
-  <input type="text" name="body_focus" value="<%=@workout.body_focus %>">
 
-  <label for="training_type">Training Type</label>
-  <input type="text" name="training_type" value="<%=@workout.training_type %">
+  <label for="training_type">Training Type:</label>
+    <select name="training_type">
+      <option value="HIIT" <%='selected' if @workout.training_type == "HIIT"%>> HIIT </option>
+      <option value="Strength Training" <%='selected' if @workout.training_type == "Strength Training"%>> Strength Training </option>
+      <option value="Pilates" <%='selected' if @workout.training_type == "Pilates"%>> Pilates </option>
+      <option value="Cardio" <%='selected' if @workout.training_type == "Cardio"%>> Cardio </option>
+      <option value="Yoga" <%='selected' if @workout.training_type == "Yoga"%>> Yoga </option>
+      <option value="Low Impact" <%='selected' if @workout.training_type == "Low Impact"%>> Low Impact </option>
+      <option value="Kickboxing" <%='selected' if @workout.training_type == "Kickboxing"%>> Kickboxing </option>
+    </select><br>
 
-  <label for="equipment_needed">equipment_needed</label>
-  <input type="text" name="equipment_needed" value="<%=@workout.equipment_needed%>">
+  <label for="equipment_needed">Equipment Needed</label>
+    Yes<input type="radio" name="equipment_needed" value="Yes" <%='checked' if @workout.equipment_needed == "Yes"%>>
+    No<input type="radio" name="equipment_needed" value="No" <%='checked' if @workout.equipment_needed == "No"%>><br>
 
-  <label for="notes">Notes</label>
-  <input type="text" name="notes" value="<%=@workout.notes %>">
+  <label for="website">Website</label>
+    <input type="text" name="website" value="<%= @workout.website%>"><br>
 
-  <label for="notes">Website</label>
-  <input type="text" name="website" value="<%=@workout.website %>">
+  <br>
 
-  <input type="submit" value="Edit Workout!">
+  <textarea name="notes" value="<%= @workout.notes%>" rows="10" cols="40"> </textarea> <br>
+
+  <input type="submit" value="Update Workout">
 
 </form>

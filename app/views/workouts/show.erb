@@ -1,10 +1,11 @@
 <h2> Name: <%=@workout.name %> </h2>
-<p> Website: <a href="<%=@workout.website %>" target="_blank" ><%=@workout.website %></a> </p>
+<iframe width="840" height="472.5" src="<%=@workout.website %>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 <p> Duration: <%=@workout.duration %> </p>
 <p> Difficulty: <%=@workout.difficulty %> </p>
 <p> Body Focus: <%=@workout.body_focus %> </p>
 <p> Training Type: <%=@workout.training_type %> </p>
 <p> Equipment Needed: <%=@workout.equipment_needed %> </p>
+<p> Website: <a href="<%=@workout.website %>" target="_blank" ><%=@workout.website %></a> </p>
 <p> Notes: <%=@workout.notes %> </p>
 
 <% if @workout.user_id==current_user.id %>
