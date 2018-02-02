@@ -1,5 +1,5 @@
 
-<p>Welcome, <%=current_user.username.capitalize %>! Here are you're added workouts! <p>
+<p>Welcome, <%=current_user.username.capitalize %>! Here are your added workouts! <p>
 
 <% current_user.workouts.each do |workout| %>
   <p> <a href="/workouts/<%=workout.id%>"> <%=workout.name%> </a> </p>
