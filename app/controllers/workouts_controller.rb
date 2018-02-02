@@ -1,8 +1,8 @@
 class WorkoutsController < ApplicationController
 
-  get '/workouts' do
+    get '/workouts' do
       if logged_in?
-        erb :'/workouts/all'
+        erb :'/workouts/index'
       else
         redirect to '/login'
       end

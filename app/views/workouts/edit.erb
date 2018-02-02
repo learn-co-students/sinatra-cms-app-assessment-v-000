@@ -1,0 +1,33 @@
+<h2> Edit Workout</h2>
+
+<form method="POST" action="/workouts/<%= @workout.id%>">
+<input id="hidden" type="hidden" name="_method" value="PATCH">
+
+
+  <label for="name">Name</label>
+  <input type="text" name="name" value="<%=@workout.name %>">
+
+  <label for="duration">Duration</label>
+  <input type="text" name="duration" value="<%=@workout.duration %>">
+
+  <label for="difficulty">Difficulty</label>
+  <input type="text" name="difficulty" value="<%=@workout.difficulty %>">
+
+  <label for="body_focus">Body Focus</label>
+  <input type="text" name="body_focus" value="<%=@workout.body_focus %>">
+
+  <label for="training_type">Training Type</label>
+  <input type="text" name="training_type" value="<%=@workout.training_type %">
+
+  <label for="equipment_needed">equipment_needed</label>
+  <input type="text" name="equipment_needed" value="<%=@workout.equipment_needed%>">
+
+  <label for="notes">Notes</label>
+  <input type="text" name="notes" value="<%=@workout.notes %>">
+
+  <label for="notes">Website</label>
+  <input type="text" name="website" value="<%=@workout.website %>">
+
+  <input type="submit" value="Edit Workout!">
+
+</form>
