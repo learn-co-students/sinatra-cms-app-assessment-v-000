@@ -17,10 +17,29 @@ class WorkoutsController < ApplicationController
 
     post '/workouts' do
       if logged_in?
-        if params[:content]=="" ###need to add more params
+        if params[:name]=="" ||
+          params[:duration]=="" ||
+          params[:difficulty]=="" ||
+          params[:body_focus]=="" ||
+          params[:training_type]=="" ||
+          params[:equipment_needed]=="" ||
+          params[:notes]=="" ||
+          params[:website]=="" ||
+          params[:content]==""
           redirect to "/workouts/new"
         else
-          @workout=Workout.new(content: params["content"])
+          @workout=Workout.new(name: params["name"],
+            duration: params["duration"],
+            difficulty: params["difficulty"],
+            body_focus: params["body_focus"],
+            training_type: params["training_type"],
+            equipment_needed: params["equipment_needed"],
+            notes: params["notes"],
+            website: params["website"],
+            content: params["content"])
+
+
+
           @workout.user_id=current_user.id
           if @workout.save
             redirect to "/workouts/#{@workout.id}"
