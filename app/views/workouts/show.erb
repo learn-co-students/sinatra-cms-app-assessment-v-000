@@ -1,8 +1,17 @@
-<h2> <%=@workout.name %> </h2>
-<p> <a href="<%=@workout.website %>" target="_blank" ><%=@workout.website %></a> </p>
-<p> <%=@workout.duration %> </p>
-<p> <%=@workout.difficulty %> </p>
-<p> <%=@workout.body_focus %> </p>
-<p> <%=@workout.training_type %> </p>
-<p> <%=@workout.equipment_needed %> </p>
-<p> <%=@workout.notes %> </p>
+<h2> Name: <%=@workout.name %> </h2>
+<p> Website: <a href="<%=@workout.website %>" target="_blank" ><%=@workout.website %></a> </p>
+<p> Duration: <%=@workout.duration %> </p>
+<p> Difficulty: <%=@workout.difficulty %> </p>
+<p> Body Focus: <%=@workout.body_focus %> </p>
+<p> Training Type: <%=@workout.training_type %> </p>
+<p> Equipment Needed: <%=@workout.equipment_needed %> </p>
+<p> Notes: <%=@workout.notes %> </p>
+
+<% if @workout.user_id==current_user.id %>
+<form action="/workouts/<%= @workout.id %>/delete" method="post">
+   <input id="hidden" type="hidden" name="_method" value="delete">
+   <input type="submit" value="Delete Workout">
+ </form>
+
+<a href="/workouts/<%= @workout.id %>/edit">Edit Workout</a>
+<% end %>

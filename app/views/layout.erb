@@ -7,6 +7,9 @@
     <header> <h1>Workout Organizer</h1></header>
     <nav>
       <% if logged_in? %>
+      <p> Signed in as: <%=current_user.username.capitalize%></p>
+        <p><a href="/users/<%=current_user.username%>"> Profile Page </a></p>
+        <p><a href="/workouts"> All Workouts </a></p>
         <p><a href="/workouts/new"> Add Workout </a></p>
         <p><a href="/logout"> Log Out </a></p>
       <%end %>

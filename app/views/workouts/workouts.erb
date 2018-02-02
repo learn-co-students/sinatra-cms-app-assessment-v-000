@@ -1,0 +1,6 @@
+
+<h2>All Workouts!</h2>
+
+<% @workouts.each do |workout| %>
+  <p> <a href="/workouts/<%=workout.id%>"> <%=workout.name%> </a> </p>
+  <% end %>
