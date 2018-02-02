@@ -4,14 +4,13 @@
     <title>Workout Organizer</title>
   </head>
   <body>
+    <header> <h1>Workout Organizer</h1></header>
     <nav>
       <% if logged_in? %>
-      <p>Welcome, <%=current_user.username.capitalize %>!</p>
         <p><a href="/workouts/new"> Add Workout </a></p>
         <p><a href="/logout"> Log Out </a></p>
       <%end %>
     </nav>
-    <header> <h1>Workout Organizer</h1></header>
 
       <%= yield %>
 

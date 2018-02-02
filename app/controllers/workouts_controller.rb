@@ -1,7 +1,8 @@
 class WorkoutsController < ApplicationController
+
   get '/workouts' do
       if logged_in?
-        erb :'workouts/workouts'
+        erb :'/workouts/all'
       else
         redirect to '/login'
       end
@@ -24,8 +25,7 @@ class WorkoutsController < ApplicationController
           params[:training_type]=="" ||
           params[:equipment_needed]=="" ||
           params[:notes]=="" ||
-          params[:website]=="" ||
-          params[:content]==""
+          params[:website]==""
           redirect to "/workouts/new"
         else
           @workout=Workout.new(name: params["name"],
@@ -35,11 +35,7 @@ class WorkoutsController < ApplicationController
             training_type: params["training_type"],
             equipment_needed: params["equipment_needed"],
             notes: params["notes"],
-            website: params["website"],
-            content: params["content"])
-
-
-
+            website: params["website"])
           @workout.user_id=current_user.id
           if @workout.save
             redirect to "/workouts/#{@workout.id}"
