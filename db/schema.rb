@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20180201234858) do
 
   create_table "users", force: :cascade do |t|
@@ -29,6 +30,25 @@ ActiveRecord::Schema.define(version: 20180201234858) do
     t.string  "notes"
     t.integer "user_id"
     t.string  "website"
+=======
+ActiveRecord::Schema.define(version: 5) do
+
+  create_table "golf_bags", force: :cascade do |t|
+    t.string  "name"
+    t.integer "capacity"
+    t.integer "user_id"
+  end
+
+  create_table "golf_clubs", force: :cascade do |t|
+    t.string  "name"
+    t.string  "manufacturer"
+    t.integer "golf_bag_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "password_digest"
+>>>>>>> 3fa39cf7bcb96c9b5487dd8830c5f6ecae00750c
   end
 
 end

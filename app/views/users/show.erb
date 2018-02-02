@@ -1,1 +1,10 @@
+<<<<<<< HEAD
 User show
+=======
+<p> Here are your Golf Bags, <%= @user.username %>
+<% @user.golf_bags.each do |bag| %>
+  <ul>
+    <li><a href="/bags/<%=bag.id%>"><%= bag.name %></a></li>
+  </ul>
+<% end %>
+>>>>>>> 3fa39cf7bcb96c9b5487dd8830c5f6ecae00750c

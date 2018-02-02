@@ -11,7 +11,10 @@ gem 'shotgun'
 gem 'pry'
 gem 'bcrypt'
 gem "tux"
+<<<<<<< HEAD
 gem 'rack-flash3'
+=======
+>>>>>>> 3fa39cf7bcb96c9b5487dd8830c5f6ecae00750c
 
 group :test do
   gem 'rspec'
