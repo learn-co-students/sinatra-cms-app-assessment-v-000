@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <h2>Add New Workout</h2>
 
 <form method="POST" action="/workouts">
@@ -25,23 +24,7 @@
   <input type="text" name="website" placeholder="Website">
 
   <input type="submit" placeholder="Add Workouts!">
-=======
-<h1>Add a New Golf Club</h1>
-
-<form action="/clubs" method="POST">
-  <label> Club Name </label>
-  <input type="text" name="name"> </br>
-
-  <label> Club Manufacturer </label>
-  <input type="text" name="manufacturer"> </br>
-
-  <label> Which Golf Bag does this belong in? </label>
-  <select name="golf_bag_id">
-    <% current_user.golf_bags.each do |bag| %>
-      <option value=<%=bag.id %>><%= bag.name %></option>
-    <% end %>
-  </select>
 
   <input type="submit" value="Create">
->>>>>>> 3fa39cf7bcb96c9b5487dd8830c5f6ecae00750c
+
 </form>

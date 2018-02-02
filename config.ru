@@ -5,14 +5,7 @@ if ActiveRecord::Migrator.needs_migration?
 end
 
 use Rack::MethodOverride
-<<<<<<< HEAD
-
 
 use UsersController
 use WorkoutsController
-=======
-use GolfClubsController 
-use GolfBagsController  
-use UsersController   
->>>>>>> 3fa39cf7bcb96c9b5487dd8830c5f6ecae00750c
 run ApplicationController
