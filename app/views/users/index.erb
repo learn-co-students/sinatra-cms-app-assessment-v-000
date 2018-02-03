@@ -1,6 +1,14 @@
 
-<p>Welcome, <%=current_user.username.capitalize %>! Here are your added workouts! <p>
+<p class="container-fluid text-center">Welcome, <%=current_user.username.capitalize %>! Here are your added workouts! <p>
 
-<% current_user.workouts.each do |workout| %>
-  <p> <a href="/workouts/<%=workout.id%>"> <%=workout.name%> </a> </p>
-  <% end %>
+  <div class="container">
+    <div class="row">
+      <% current_user.workouts.each do |workout| %>
+          <div class="col-sm-4">
+          <div class="panel-heading"><a href="/workouts/<%=workout.id%>"> <%=workout.name%> </a></div>
+          <div class="panel-body"><img src="#{}" class="img-responsive" style="width:100%" alt="Image"></div>
+          <div class="panel-footer"><%=workout.training_type%> || <%=workout.duration%></div>
+        </div>
+      <% end %>
+    </div>
+  </div>
