@@ -1,0 +1,9 @@
+</h2>RECENT REVIEWS</h2>
+
+<% @reviews.each do |review| %>
+  <ul>
+  <li><%= review.venue.name %></li>
+  <li><%= review.venue.location %></li>
+  <li><%= review.content %></li>
+  </ul>
+<% end %>

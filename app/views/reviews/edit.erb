@@ -1,0 +1,13 @@
+You Are Editing:
+
+<h3>Venue: <%= @review.venue.name %></h3>
+<h3>Location: <%= @review.venue.location %></h3>
+<p>Review: <%= @review.content %></p>
+
+
+<form method="POST" action="/reviews/<%= @review.id %>">
+  <input id="hidden" type="hidden" name="_method" value="patch">
+  Edit Content: <input type="text" name="content" value="<%= @review.content %>">
+  <br></br>
+  <input type="submit">
+</form>
