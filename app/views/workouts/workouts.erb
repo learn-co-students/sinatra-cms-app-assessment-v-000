@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 <h2 class="container-fluid text-center">All Workouts!</h2>
 <div class="container">
   <div class="row">
@@ -11,3 +12,24 @@
     <% end %>
   </div>
 </div>
+=======
+<h2>All Workouts!</h2>
+
+<div class="container">
+  <div class="row">
+
+  <% @workouts.each do |workout| %>
+  <div class="col-sm-4">
+      <div class="panel panel-success">
+        <div class="panel-heading"><a href="/workouts/<%=workout.id%>"> <%=workout.name%> </a></div>
+        <div class="panel-body"><img src="#{}" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+      </div>
+    </div>
+    <% end %>
+
+
+
+        </div>
+      </div>
+>>>>>>> a6580afb6d8c23ff1b1412a4a9b02a2475ce0abb
