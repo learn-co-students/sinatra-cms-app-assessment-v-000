@@ -1,13 +1,17 @@
 
-<p class="container-fluid text-center">Welcome, <%=current_user.username.capitalize %>! Here are your added workouts! <p>
+<h3 class="container-fluid text-center">Welcome, <%=current_user.username.capitalize %>! Here are your added workouts! </h3>
+
+<br>
 
   <div class="container">
     <div class="row">
       <% current_user.workouts.each do |workout| %>
           <div class="col-sm-4">
-          <div class="panel-heading"><a href="/workouts/<%=workout.id%>"> <%=workout.name%> </a></div>
-          <div class="panel-body"><img src="#{workout.photo}" class="img-responsive" style="width:100%" alt="Image"></div>
-          <div class="panel-footer"><%=workout.training_type%> || <%=workout.duration%></div>
+          <div class="container-fluid text-center"><a href="/workouts/<%=workout.id%>"> <%=workout.name%> </a><br>
+          <img src="<%=workout.photo%>" class="img-responsive" width="170" height="120" alt="Image"><br>
+          <%=workout.training_type%> || <%=workout.duration%></div>
+          <br>
+          <br>
         </div>
       <% end %>
     </div>

@@ -18,10 +18,10 @@
 
   <label for="body_focus">Body Focus:</label>
     <select name="body_focus">
-      <option value="Upper">Upper</option>
-      <option value="Core">Core</option>
-      <option value="Lower">Lower</option>
-      <option value="Total">Total</option>
+      <option value="Upper" <%='selected' if @workout.body_focus == "Upper"%>>Upper</option>
+      <option value="Core" <%='selected' if @workout.body_focus == "Core"%> >Core</option>
+      <option value="Lower" <%='selected' if @workout.body_focus == "Lower"%>>Lower</option>
+      <option value="Total" <%='selected' if @workout.body_focus == "Total"%> >Total</option>
     </select><br>
 
 

@@ -1,4 +1,4 @@
-<h2>Add New Workout</h2>
+<h2 class="container-fluid text-center">Add New Workout</h2>
 
 <form method="POST" action="/workouts">
 
@@ -38,10 +38,11 @@
     Yes<input type="radio" name="equipment_needed" value="Yes" checked>
     No<input type="radio" name="equipment_needed" value="No"><br>
 
-  <label for="website">Website</label>
+  <label for="website">Website:</label>
     <input type="text" name="website" placeholder="Website"><br><br>
 
-  <textarea name="notes" placeholder="Add Workout Notes Here..." rows="10" cols="40"> </textarea> <br>
+  <label for="notes">Add Workout Notes:</label><br>
+  <textarea name="notes" rows="5" cols="40"> </textarea> <br>
 
   <input type="submit" value="Add Workout">
 
