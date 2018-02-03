@@ -36,9 +36,9 @@ class WorkoutsController < ApplicationController
             equipment_needed: params["equipment_needed"],
             notes: params["notes"],
             website: params["website"])
-          @workout.user_id=current_user.id
-          @workout.photo=assign_photo
-          if @workout.save
+            @workout.user_id=current_user.id
+            @workout.photo=Workout.assign_photo(params["training_type"])
+            if @workout.save
             redirect to "/workouts/#{@workout.id}"
           else
             redirect to "/workouts/new"
