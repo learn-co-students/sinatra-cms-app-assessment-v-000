@@ -34,6 +34,7 @@ class MusiciansController < ApplicationController
     end
   end
 
+  # only let musician see their own page
   get '/musicians/:slug' do
     if logged_in?
       @musician = Musician.find_by_slug(params[:slug])

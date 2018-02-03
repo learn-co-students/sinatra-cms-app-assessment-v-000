@@ -9,7 +9,11 @@ class ApplicationController < Sinatra::Base
   register Sinatra::Flash
 
   get '/' do
-    @musician = nil
+    if !logged_in?
+      @musician = nil
+    else
+      @musician = current_user
+    end
     erb :'application/root'
   end
 
