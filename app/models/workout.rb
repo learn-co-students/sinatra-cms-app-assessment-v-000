@@ -1,21 +1,20 @@
 class Workout < ActiveRecord::Base
     belongs_to :user
-  def self.assign_photo(training_type)
-    case training_type
-      when "HIIT"
+  def assign_photo(training_type)
+    if training_type== "HIIT"
         "/images/HIIT-Logo.gif"
-      when "Strength Training"
+      elsif training_type== "Strength Training"
         "/images/weight-lifting-1297690_960_720.png"
-      when "Pilates"
+      elsif training_type== "Pilates"
         "/images/6609676_orig.png"
-      when "Cardio"
+      elsif training_type== "Cardio"
         "/images/logo-cardio.jpg"
-      when "Yoga"
+      elsif training_type== "Yoga"
         "/images/yoga-transparent.png"
-      when "Low Impact"
+      elsif training_type== "Low Impact"
         "/images/lowimpact-logo.png"
-      when "Kickboxing"
+      else
         "/images/boxing-kickboxing-logo.png"
-      end
     end
+  end
 end

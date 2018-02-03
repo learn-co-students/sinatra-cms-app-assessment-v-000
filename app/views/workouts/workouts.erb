@@ -5,7 +5,7 @@
     <% @workouts.each do |workout| %>
       <div class="col-sm-4">
         <div class="panel-heading"><a href="/workouts/<%=workout.id%>"> <%=workout.name%> </a></div>
-        <div class="panel-body"><img src="#{@workout.photo}" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-body"><img src="<%=@workout.photo%>" class="img-responsive" style="width:80%" alt="Image"></div>
         <div class="panel-footer"><%=workout.training_type%> || <%=workout.duration%></div>
       </div>
     <% end %>
