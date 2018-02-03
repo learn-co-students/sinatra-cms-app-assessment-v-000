@@ -1,12 +1,7 @@
 require 'sinatra/base'
 require 'sinatra/flash'
 
-class MusiciansController < Sinatra::Base
-  set :public_folder, 'public'
-  set :views, 'app/views'
-  set :session_secret, "secret"
-  enable :sessions
-  register Sinatra::Flash
+class MusiciansController < ApplicationController
 
   get '/signup' do
     erb :'musicians/create'

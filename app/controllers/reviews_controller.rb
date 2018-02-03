@@ -1,9 +1,4 @@
-class ReviewsController < Sinatra::Base
-
-  set :public_folder, 'public'
-  set :views, 'app/views'
-  set :session_secret, "secret"
-  enable :sessions
+class ReviewsController < ApplicationController
 
   get '/reviews' do
     @musician = Musician.find_by(id: session[:id])
@@ -42,12 +37,11 @@ class ReviewsController < Sinatra::Base
   get '/reviews/:id/edit' do
     @review = Review.find_by(id: params[:id])
     if session[:id]
-      @musician = Musician.find_by(id: session[:id])
-      if @review.musician_id = @musician.id
+      if @review.musician_id = current_user.id
         @review = Review.find_by(id: params[:id])
         erb :'reviews/edit'
       else
-        redirect to "/musicans/#{@musician.slug}"
+        redirect to "/musicans/#{current_user.slug}"
       end
     else
       redirect to "/login"
@@ -56,8 +50,10 @@ class ReviewsController < Sinatra::Base
 
   patch '/reviews/:id' do
     @review = Review.find_by(id: params[:id])
-    @review.update(content: params[:content])
-    redirect to "/reviews/#{@review.id}"
+    if params[:content] != "" && current_user == @review.musician_id
+      @review.update(content: params[:content])
+      redirect to "/reviews/#{@review.id}"
+    end
   end
 
   get '/reviews/:id' do

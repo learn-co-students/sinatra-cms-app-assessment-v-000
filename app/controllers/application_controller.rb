@@ -6,6 +6,14 @@ class ApplicationController < Sinatra::Base
   enable :sessions
 
   get '/' do
+    current_user
+    current_user
     erb :'application/root'
+  end
+
+  helpers do
+    def current_user
+      @current_user ||= Musician.find(session[:id])
+    end
   end
 end
