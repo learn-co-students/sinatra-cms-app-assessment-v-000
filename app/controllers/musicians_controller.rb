@@ -35,7 +35,7 @@ class MusiciansController < ApplicationController
   end
 
   get '/musicians/:slug' do
-    if session[:id]
+    if logged_in?
       @musician = Musician.find_by_slug(params[:slug])
       erb :'musicians/show'
     end

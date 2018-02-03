@@ -7,7 +7,7 @@ class ReviewsController < ApplicationController
   end
 
   get '/reviews/create' do
-    if session[:id]
+    if logged_in?
       @musician = Musician.find_by(id: session[:id])
       @venues = Venue.all
       erb :'reviews/new'
@@ -36,7 +36,7 @@ class ReviewsController < ApplicationController
 
   get '/reviews/:id/edit' do
     @review = Review.find_by(id: params[:id])
-    if session[:id]
+    if logged_in?
       if @review.musician_id = current_user.id
         @review = Review.find_by(id: params[:id])
         erb :'reviews/edit'
@@ -58,7 +58,7 @@ class ReviewsController < ApplicationController
 
   get '/reviews/:id' do
     @review = Review.find_by(id: params[:id])
-    if session[:id]
+    if logged_in?
       @musician = Musician.find_by(id: session[:id])
     end
     erb :'reviews/show'
@@ -66,7 +66,7 @@ class ReviewsController < ApplicationController
 
   delete '/reviews/:id/delete' do
     @review = Review.find_by(id: params[:id])
-    if session[:id]
+    if logged_in?
       @musician = Musician.find_by(id: session[:id])
       if @musician.reviews.include?(@review)
         @review.delete

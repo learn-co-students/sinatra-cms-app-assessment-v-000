@@ -1,3 +1,5 @@
+require 'pry'
+
 class ApplicationController < Sinatra::Base
 
   set :public_folder, 'public'
@@ -14,6 +16,14 @@ class ApplicationController < Sinatra::Base
   helpers do
     def current_user
       @current_user ||= Musician.find(session[:id])
+    end
+
+    def logged_in?
+      if session[:id]
+        true
+      else
+        false
+      end
     end
   end
 end
