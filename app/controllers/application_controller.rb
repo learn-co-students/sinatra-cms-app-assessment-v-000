@@ -4,8 +4,10 @@ class ApplicationController < Sinatra::Base
   set :views, 'app/views'
   set :session_secret, "secret"
   enable :sessions
+  register Sinatra::Flash
 
   get '/' do
+    @musician = nil
     erb :'application/root'
   end
 
