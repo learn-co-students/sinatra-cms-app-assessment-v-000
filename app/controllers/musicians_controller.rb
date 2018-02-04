@@ -11,7 +11,7 @@ class MusiciansController < ApplicationController
     if params[:username] != ""
       @musician = Musician.new(username: params[:username], password: params[:password])
     else
-      flash[:notice] = "Please enter a Username"
+      flash[:notice] = "Please enter a username."
       redirect to "/signup"
     end
 
@@ -19,7 +19,7 @@ class MusiciansController < ApplicationController
       session[:id] = @musician.id
       redirect to "/musicians/#{@musician.slug}"
     else
-      flash[:notice] = "Please Enter a Password"
+      flash[:notice] = "Please Enter a password."
       redirect to "/signup"
     end
   end
@@ -29,18 +29,22 @@ class MusiciansController < ApplicationController
   end
 
   post '/login' do
-    @musician = Musician.find_by(:username => params[:username])
+    if params[:username] != ""
+      @musician = Musician.find_by(:username => params[:username])
+    else
+      flash[:notice] = "Please input a username."
+      redirect to "/login"
+    end
 
     if @musician && @musician.authenticate(params[:password])
       session[:id] = @musician.id
       redirect to "/musicians/#{@musician.slug}"
     else
-      flash[:notice] = "Please input a password"
+      flash[:notice] = "Password failure."
       redirect to "/login"
     end
   end
 
-  # only let musician see their own page
   get '/musicians/:slug' do
     if logged_in?
       @musician = Musician.find_by_slug(params[:slug])
