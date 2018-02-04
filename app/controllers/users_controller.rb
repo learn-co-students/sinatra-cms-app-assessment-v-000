@@ -46,21 +46,21 @@ class UsersController < ApplicationController
 
   get '/users/:username' do
       @user=User.find_by(username: params[:username])
-    if @user && logged_in?
-       if @user.id == current_user.id
-         erb :'users/index'
+    if logged_in?
+        erb :'users/index'
        else
-         erb :'users/show'
-       end
-    else
-       redirect to '/login'
+        redirect to '/login'
     end
   end
 
   post '/search' do
     @user=User.find_by(username: params[:search])
-    if @user && logged_in?
-      redirect to '/users/@user'
+    if logged_in?
+      if @user
+        redirect to "/users/#{@user.username}"
+      else
+        redirect to '/users/show'
+      end
     else
       redirect to '/login'
     end

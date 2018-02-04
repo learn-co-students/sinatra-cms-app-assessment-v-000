@@ -6,8 +6,8 @@
   <div class="row">
     <% @workouts.each do |workout| %>
       <div class="col-sm-4">
-        <div class="container-fluid text-center"><a href="/workouts/<%=workout.id%>"> <%=workout.name%></a><br>
-        <img src="<%=workout.photo%>" class="img-responsive" width="170" height="120" alt="Image"><br>
+        <div class="container-fluid text-center"><a href="/workouts/<%=workout.id%>"> <%=workout.name%><br>
+        <img src="<%=workout.photo%>" class="img-responsive" width="170" height="120" alt="Image"><br></a>
         <%=workout.training_type%> || <%=workout.duration%></div>
         <br>
         <br>

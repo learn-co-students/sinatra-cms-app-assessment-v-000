@@ -1,11 +1,11 @@
 
-<h3 class="container-fluid text-center">Welcome, <%=current_user.username.capitalize %>! Here are your added workouts! </h3>
+<h3 class="container-fluid text-center"> Workouts added by: <%=@user.username.capitalize %> </h3>
 
 <br>
 
   <div class="container">
     <div class="row">
-      <% current_user.workouts.each do |workout| %>
+      <% @user.workouts.each do |workout| %>
           <div class="col-sm-4">
           <div class="container-fluid text-center"><a href="/workouts/<%=workout.id%>"> <%=workout.name%> </a><br>
           <img src="<%=workout.photo%>" class="img-responsive" width="170" height="120" alt="Image"><br>
