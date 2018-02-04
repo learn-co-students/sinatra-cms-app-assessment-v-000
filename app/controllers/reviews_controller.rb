@@ -33,8 +33,8 @@ class ReviewsController < ApplicationController
   end
 
   get '/reviews/:id/edit' do
-    @review = Review.find_by(id: params[:id])
     if logged_in?
+      @review = Review.find_by(id: params[:id])
       if @review.musician_id == current_user.id
         @review = Review.find_by(id: params[:id])
         erb :'reviews/edit'
@@ -60,8 +60,8 @@ class ReviewsController < ApplicationController
   end
 
   delete '/reviews/:id/delete' do
-    @review = Review.find_by(id: params[:id])
     if logged_in?
+      @review = Review.find_by(id: params[:id])
       if current_user.reviews.include?(@review)
         @review.delete
         redirect to "/musicians/#{current_user.slug}"
