@@ -39,6 +39,8 @@ class MusiciansController < ApplicationController
     if logged_in?
       @musician = Musician.find_by_slug(params[:slug])
       erb :'musicians/show'
+    else
+      redirect to "/login"
     end
   end
 
