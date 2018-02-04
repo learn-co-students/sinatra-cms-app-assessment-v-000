@@ -1,6 +1,0 @@
-friends page
-<% current_user.friends.all.each do |friend|%>
-  <p><%=@id=friend.friend_id  %><p>
-  <%@user=User.find_by(id: @id)%>
-
-<% end %>

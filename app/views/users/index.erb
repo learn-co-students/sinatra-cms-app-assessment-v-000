@@ -1,13 +1,5 @@
 
 <h3 class="container-fluid text-center"> Workouts added by: <%=@user.username.capitalize %> </h3>
-<div class="container">
-  <div class="row">
-  <form class="col-sm-6 text-right" method="POST" action="/friend">
-    <input id="hidden" type="hidden" name="friend_id" value="<%=@user.id%>">
-  <input type="submit" value="Follow">
-</form>
-</div>
-</div>
 
 <br>
 
