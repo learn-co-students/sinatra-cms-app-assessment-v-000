@@ -1,0 +1,44 @@
+body {
+  font-family: Arial, serif;
+  color: white;
+  background: linear-gradient(#888888, black);
+  background-attachment: fixed;
+  height: 100vh;
+  margin-left: 20px;
+}
+h1 {
+  font-size: 3em;
+  font-weight: bolder;
+}
+/* unvisited link */
+a:link {
+    color: hotpink;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: hotpink;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+    text-decoration: none;
+    font-style: italic;
+}
+
+/* selected link */
+a:active {
+    color: hotpink;
+    text-decoration: none;
+}
+
+header li{
+  display: inline;
+  list-style: none;
+}
+li {
+  list-style: none;
+}
