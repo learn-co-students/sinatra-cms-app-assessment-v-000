@@ -57,5 +57,12 @@ class UsersController < ApplicationController
     end
   end
 
-
+  post '/search' do
+    @user=User.find_by(username: params[:search])
+    if @user && logged_in?
+      redirect to '/users/@user'
+    else
+      redirect to '/login'
+    end
+  end
 end
