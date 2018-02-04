@@ -6,7 +6,7 @@
 <h3>Location: <%= @review.venue.location %></h3>
 <p>Review: <%= @review.content %></p>
 
-<% if @musician.reviews.include?(@review) %>
+<% if current_user.reviews.include?(@review) %>
   <form method="POST" action="/reviews/<%= @review.id %>/delete">
       <input id="hidden" type="hidden" name="_method" value="delete">
       <input type="submit" value="delete">

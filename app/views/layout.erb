@@ -55,7 +55,7 @@
     <%= '<a href="/logout">Logout</a>&nbsp; &nbsp;' if logged_in? %>
     <%= '<a href="/login">Login</a>&nbsp; &nbsp;' if !logged_in? %>
     <a href="/reviews">Reviews</a>&nbsp; &nbsp; <a href="/venues">Venues</a>
-    <%= "&nbsp; &nbsp;<a href='/musicians/#{@musician.slug}'>Home</a>" if logged_in? %>
+    <%= "&nbsp; &nbsp;<a href='/musicians/#{current_user.slug}'>Home</a>" if logged_in? %>
     </header>
     <br></br>
     <div class="content">

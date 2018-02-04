@@ -1,15 +1,12 @@
 class ReviewsController < ApplicationController
 
   get '/reviews' do
-    @musician = current_user
     @reviews = Review.all
     erb :'reviews/index'
   end
 
-  # only allow musician to create their own reviews if they are logged in and session ids match current_user id
   get '/reviews/create' do
     if logged_in?
-      @musician = current_user
       @venues = Venue.all
       erb :'reviews/new'
     else
@@ -18,10 +15,9 @@ class ReviewsController < ApplicationController
   end
 
   post '/reviews' do
-    @musician = current_user
     @review = Review.create(content: params[:review][:content])
-    @musician.reviews << @review
-    @musician.save
+    current_user.reviews << @review
+    current_user.save
 
     # check for empty location
     if params[:venue][:name] != "" && params[:venue][:location] != ""
@@ -33,7 +29,7 @@ class ReviewsController < ApplicationController
     @venue.reviews << @review
     @venue.save
 
-    redirect to "/musicians/#{@musician.slug}"
+    redirect to "/musicians/#{current_user.slug}"
   end
 
   get '/reviews/:id/edit' do
@@ -60,17 +56,13 @@ class ReviewsController < ApplicationController
 
   get '/reviews/:id' do
     @review = Review.find_by(id: params[:id])
-    if logged_in?
-      @musician = current_user
-    end
     erb :'reviews/show'
   end
 
   delete '/reviews/:id/delete' do
     @review = Review.find_by(id: params[:id])
     if logged_in?
-      @musician = current_user
-      if @musician.reviews.include?(@review)
+      if current_user.reviews.include?(@review)
         @review.delete
         redirect to "/musicians/#{current_user.slug}"
       else
