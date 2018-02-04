@@ -8,4 +8,5 @@ use Rack::MethodOverride
 
 use UsersController
 use WorkoutsController
+use FriendsController
 run ApplicationController
