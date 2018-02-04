@@ -1,0 +1,5 @@
+friends page
+<% current_user.friends.all.each do |friend|%>
+  <%user=User.find_by(id: friend.friend_id)  %>
+  <%=user.username%>
+<% end %>

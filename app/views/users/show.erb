@@ -1,6 +1,0 @@
-
-<p><%=@user.username.capitalize%>'s added workouts: <p>
-
-<% @user.workouts.each do |workout| %>
-  <p> <a href="/workouts/<%=workout.id%>"> <%=workout.name%> </a> </p>
-  <% end %>

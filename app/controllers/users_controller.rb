@@ -46,7 +46,7 @@ class UsersController < ApplicationController
 
   get '/users/:username' do
       @user=User.find_by(username: params[:username])
-    if logged_in?
+      if logged_in?
         erb :'users/index'
        else
         redirect to '/login'
@@ -59,7 +59,7 @@ class UsersController < ApplicationController
       if @user
         redirect to "/users/#{@user.username}"
       else
-        redirect to '/users/show'
+        redirect to '/workouts'
       end
     else
       redirect to '/login'
