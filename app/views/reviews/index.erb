@@ -2,6 +2,7 @@
 
 <% @reviews.each do |review| %>
   <ul>
+  <%= "<li><a href='/reviews/#{review.id}'>Link to Review</a></li>" if logged_in? %>
   <li><%= review.venue.name %></li>
   <li><%= review.venue.location %></li>
   <li><%= review.content %></li>
