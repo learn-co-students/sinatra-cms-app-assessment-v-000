@@ -11,6 +11,7 @@ class ApplicationController < Sinatra::Base
   get '/' do
     if !logged_in?
       @musician = nil
+      #needs to be here for the layout erb to load
     else
       @musician = current_user
     end
