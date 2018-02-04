@@ -19,7 +19,6 @@ class ReviewsController < ApplicationController
     current_user.reviews << @review
     current_user.save
 
-    # check for empty location
     if params[:venue][:name] != "" && params[:venue][:location] != ""
       @venue = Venue.create(name: params[:venue][:name], location: params[:venue][:location])
     else
