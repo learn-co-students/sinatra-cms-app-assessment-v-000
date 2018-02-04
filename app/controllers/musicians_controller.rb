@@ -8,12 +8,18 @@ class MusiciansController < ApplicationController
   end
 
   post '/signup' do
-    @musician = Musician.new(username: params[:username], password: params[:password])
+    if params[:username] != ""
+      @musician = Musician.new(username: params[:username], password: params[:password])
+    else
+      flash[:notice] = "Please enter a Username"
+      redirect to "/signup"
+    end
+
     if @musician.save
       session[:id] = @musician.id
       redirect to "/musicians/#{@musician.slug}"
     else
-      flash[:notice] = "Please input a password"
+      flash[:notice] = "Please Enter a Password"
       redirect to "/signup"
     end
   end
