@@ -24,11 +24,7 @@ class ApplicationController < Sinatra::Base
     end
 
     def logged_in?
-      if session[:id]
-        true
-      else
-        false
-      end
+      !!session[:id]
     end
   end
 end
