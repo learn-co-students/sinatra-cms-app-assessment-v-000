@@ -1,5 +1,9 @@
 class MusiciansController < ApplicationController
 
+  get '/' do
+    erb :'application/root'
+  end
+
   get '/signup' do
     erb :'musicians/create'
   end
