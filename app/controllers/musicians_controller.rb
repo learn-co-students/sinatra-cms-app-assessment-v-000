@@ -1,6 +1,3 @@
-require 'sinatra/base'
-require 'sinatra/flash'
-
 class MusiciansController < ApplicationController
 
   get '/signup' do

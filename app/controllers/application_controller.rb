@@ -1,5 +1,3 @@
-require 'pry'
-
 class ApplicationController < Sinatra::Base
 
   set :public_folder, 'public'
