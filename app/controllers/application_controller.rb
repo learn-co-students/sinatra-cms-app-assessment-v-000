@@ -6,16 +6,6 @@ class ApplicationController < Sinatra::Base
   enable :sessions
   register Sinatra::Flash
 
-  get '/' do
-    if !logged_in?
-      @musician = nil
-      #needs to be here for the layout erb to load
-    else
-      @musician = current_user
-    end
-    erb :'application/root'
-  end
-
   helpers do
     def current_user
       @current_user ||= Musician.find(session[:id])

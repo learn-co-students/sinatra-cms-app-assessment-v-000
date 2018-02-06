@@ -47,7 +47,7 @@ class ReviewsController < ApplicationController
 
   patch '/reviews/:id' do
     @review = Review.find_by(id: params[:id])
-    if params[:content] != "" && current_user == @review.musician_id
+    if params[:content] != "" && current_user == @review.musician
       @review.update(content: params[:content])
       redirect to "/reviews/#{@review.id}"
     end
