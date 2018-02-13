@@ -4,10 +4,10 @@
 <input id="hidden" type="hidden" name="_method" value="PATCH">
 
   <label for="name">Name:</label>
-    <input type="text" name="name" value="<%= @workout.name%>"><br>
+    <input type="text" id="name" name="name" value="<%= @workout.name%>"><br>
 
   <label for="duration">Duration:</label>
-    <input type="text" name="duration" value="<%= @workout.duration%>"><br>
+    <input type="text" id="duration" name="duration" value="<%= @workout.duration%>"><br>
 
   <label for="difficulty">Difficulty:</label>
     1<input type="radio" name="difficulty" value="1" <%='checked' if @workout.difficulty == "1"%>>
@@ -41,11 +41,12 @@
     No<input type="radio" name="equipment_needed" value="No" <%='checked' if @workout.equipment_needed == "No"%>><br>
 
   <label for="website">Website</label>
-    <input type="text" name="website" value="<%= @workout.website%>"><br>
+    <input type="text" id="website" name="website" value="<%= @workout.website%>"><br>
 
   <br>
 
-  <textarea name="notes" rows="10" cols="40"> <%=@workout.notes%> </textarea> <br>
+  <label for="notes">Add Workout Notes:</label><br>
+  <textarea id="notes" name="notes" rows="10" cols="40"> <%=@workout.notes%> </textarea> <br>
 
   <input type="submit" value="Update Workout">
 

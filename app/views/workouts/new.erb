@@ -3,10 +3,10 @@
 <form method="POST" action="/workouts">
 
   <label for="name">Name:</label>
-    <input type="text" name="name" placeholder="Name"><br>
+    <input type="text" id="name" name="name" placeholder="Name"><br>
 
   <label for="duration">Duration:</label>
-    <input type="text" name="duration" placeholder="Duration"><br>
+    <input type="text" id="duration" name="duration" placeholder="Duration"><br>
 
   <label for="difficulty">Difficulty:</label>
     1<input type="radio" name="difficulty" value="1" checked>
@@ -39,10 +39,10 @@
     No<input type="radio" name="equipment_needed" value="No"><br>
 
   <label for="website">Website:</label>
-    <input type="text" name="website" placeholder="Website"><br><br>
+    <input type="text" id="website" name="website" placeholder="Website"><br><br>
 
   <label for="notes">Add Workout Notes:</label><br>
-  <textarea name="notes" rows="5" cols="40"> </textarea> <br>
+  <textarea id="notes" name="notes" rows="5" cols="40"> </textarea> <br>
 
   <input type="submit" value="Add Workout">
 
