@@ -12,7 +12,7 @@ For this assessment you'll be creating any sort of CRUD app. The app should be a
 4. Use at least one `has_many` relationship
 5. Must have user accounts. The user that created a given piece of content should be the only person who can modify that content
 6. Must have the abilty to create, read, update and destroy the resource that belongs to a user and only that user is able to edit it.
-7. You should also have validations for user input to ensure that bad data isn't added to the database. The fields in your signup for should be required and the user attribute that is used to login a user should be a unique value in the DB before creating the user. 
+7. You should also have validations for user input to ensure that bad data isn't added to the database. The fields in your signup form should be required and the user attribute that is used to login a user should be a unique value in the DB before creating the user. 
 
 ### Example Domains
 
