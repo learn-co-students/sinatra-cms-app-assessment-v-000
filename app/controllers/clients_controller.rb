@@ -38,17 +38,12 @@ class ClientsController < ApplicationController
     client_id = params[:id].to_i
     @client = Client.find(client_id)
     @user = current_user
-    if !!!@client
-      #raise error msg
+    if !@client || !@user.clients.include?(@client)
       erb :'/error'
-    end
-    if @user.clients.include?(@client)
-      erb :'/clients/edit'
     else
-      erb :'/error'
+      erb :'/clients/edit'
     end
   end
-
 
   patch '/clients/:id' do
     @client = Client.find(params[:id])
@@ -66,6 +61,7 @@ class ClientsController < ApplicationController
     @client = Client.find(params[:id])
     @user = current_user
     if @client
+      @lineitems = @client.products.all
       erb :'/clients/show'
     else
 #Raise error msg and reload users index page
@@ -73,9 +69,15 @@ class ClientsController < ApplicationController
     end
   end
 #DELETE CLIENT
+# Need to also find references in User.all and ClientProduct.all and remove them!!
   delete '/clients/:id/delete' do
     @client = Client.find_by_id(params[:id])
     @client.delete
     redirect to '/clients'
+  end
+#EDIT A CLIENT'S PRODUCTS
+  get '/clients/:id/products' do
+    # code to edit a client's products needs to be written here.
+    erb :'/clients/edit_products'
   end
 end

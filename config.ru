@@ -6,7 +6,6 @@ end
 
 use Rack::MethodOverride
 use ClientsController
-use ClientProductsController
 use ProductsController
 use UsersController
 run ApplicationController

@@ -5,8 +5,4 @@ class Client < ActiveRecord::Base
   has_many :client_products
   has_many :products, :through => :client_products
 
-
-  # def find_client
-  #   Client.find(params[:id])
-  # end
 end

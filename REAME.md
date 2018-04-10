@@ -22,35 +22,41 @@ The file directory tree view is as follows:
 │   │   └── users_controller.rb
 │   ├── models
 │   │   ├── client.rb
-│   │   ├── clientproducts.rb
+│   │   ├── clientproduct.rb
 │   │   ├── product.rb
 │   │   └── user.rb
 │   └── views
-│       ├── errors.erb
+│       ├── error.erb
 │       ├── index.erb
 │       ├── layout.erb
 │       ├── login.erb
 │       ├── clients
-│       │   ├── create_tweet.erb
-│       │   ├── edit_tweet.erb
-│       │   ├── show_tweet.erb
-│       │   └── tweets.erb
+│       │   ├── edit.erb
+│       │   ├── index.erb
+│       │   ├── new.erb
+│       │   └── show.erb
+│       ├── products
+│       │   ├── edit.erb
+│       │   ├── index.erb
+│       │   ├── new.erb
+│       │   └── show.erb
 │       └── users
-│           ├── create_user.erb
-│           └── login.erb
-│           └── show.erb
+│          ├── edit.erb
+│          ├── index.erb
+│          ├── new.erb
+│          └── show.erb
 ├── config
 │   └── environment.rb
 ├── config.ru
 ├── db
 │   ├── development.sqlite
 │   ├── migrate
-│   │   ├── 20151124191332_create_users.rb
-│   │   └── 20151124191334_create_tweets.rb
+│   │   ├── 01_create_users.rb
+│   │   └── 02_create_products.rb
+│   │   ├── 03_create_clients.rb
+│   │   └── 04_create_client_products.rb
 │   ├── schema.rb
-│   └── test.sqlite
-└── spec
-    ├── controllers
-    │   └── application_controller_spec.rb
-    └── spec_helper.rb
+│   └── seeds.rb
+└── dist
+└── public
 ```

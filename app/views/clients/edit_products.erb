@@ -22,31 +22,4 @@
     </ul>
   </div>
 </nav>
-<h1>Product Listing</h1>
-<strong>Product:</strong>
-<%= @product.name %>
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
-
-<p>
-  <strong>Gender:</strong>
-  <%= @product.gender %>
-</p>
-
-<p>
-  <strong>Size:</strong>
-  <%= @product.size %>
-</p>
-
-<p>
-  <strong>Quantity:</strong>
-  <%= @product.quantity %>
-</p>
-
-<a href='/products/<%= @product.id %>/edit' class="btn btn-default">Edit Product</a><br><br>
-<form action="/products/<%= @product.id %>/delete" method="post">
-  <input id="hidden" type="hidden" name="_method" value="delete">
-  <input type="submit" value="Delete">
-</form>
+<p>Code to edit Products assigned to a Client has not been written.</p>

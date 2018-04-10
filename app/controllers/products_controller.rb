@@ -68,7 +68,7 @@ class ProductsController < ApplicationController
     end
   end
 #DELETE PRODUCT
-
+# Need to also find references in Client.all and ClientProduct.all and remove them!!
   delete '/products/:id/delete' do
     @product = Product.find_by_id(params[:id])
     @product.delete

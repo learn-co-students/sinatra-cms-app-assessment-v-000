@@ -40,6 +40,7 @@ class UsersController < ApplicationController
     end
   end
 # DELETE USER
+# # Need to also find references in Client.all and ClientProduct.all and remove them!!
   delete '/users/:id/delete' do
     if logged_in?
       @user.destroy
