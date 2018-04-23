@@ -16,8 +16,6 @@ class TransactionsController < ApplicationController
 
         @transaction = Transaction.create(params)
         @transaction.user = current_user
-        
-        binding.pry
     end
 
 end

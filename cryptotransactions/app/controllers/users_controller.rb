@@ -11,13 +11,13 @@ class UsersController < ApplicationController
 
     get '/users/:user_slug' do
         @user = current_user
-        binding.pry
         erb :'/users/show'
     end
 
     post '/signup' do
         if logged_in?
-            redirect '/transactions'
+            @user = current_user
+            redirect "/users/#{@user.slug}"
         else
             @user = User.create(params)
             session[:username] = params[:username]
@@ -27,7 +27,8 @@ class UsersController < ApplicationController
 
     post '/login' do
         if logged_in?
-            redirect '/transactions'
+            @user = current_user
+            redirect "/users/#{@user.slug}"
         else
             @user = User.find_by(username: params[:username])
             session[:username] = params[:username]
@@ -35,12 +36,12 @@ class UsersController < ApplicationController
         end
     end
 
-    get 'logout' do
+    get '/logout' do
         if logged_in?
             session.clear
             redirect '/'
         else
-            redirect "/users/#{@user.slug}"
+            redirect "/login"
         end
     end
 
