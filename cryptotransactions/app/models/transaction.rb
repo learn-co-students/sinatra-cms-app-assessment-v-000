@@ -1,3 +1,5 @@
-class Transcation < ActiveRecord::Base
+class Transaction < ActiveRecord::Base
     belongs_to :user
+
+
 end
