@@ -1,0 +1,11 @@
+<h1> Welcome <%= @user.username %>
+
+
+<p> Here is a recap of your previous transactions: <p><br>
+
+<ul>
+    <% @user.transactions.each do |transaction| %>
+        <li> transaction.currency%>: $<%=transaction.price %>
+        </li>
+    <% end %>
+</ul>

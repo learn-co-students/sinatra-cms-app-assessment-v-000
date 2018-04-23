@@ -15,6 +15,8 @@ class TransactionsController < ApplicationController
     post '/transactions' do
 
         @transaction = Transaction.create(params)
+        @transaction.user = current_user
+        
         binding.pry
     end
 
