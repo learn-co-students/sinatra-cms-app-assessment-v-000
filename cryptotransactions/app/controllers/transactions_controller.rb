@@ -14,7 +14,6 @@ class TransactionsController < ApplicationController
 
     get '/transactions/:id' do
         if logged_in?
-            binding.pry
             @transaction = Transaction.find(params[:id])
             erb :"/transactions/show" 
         else
