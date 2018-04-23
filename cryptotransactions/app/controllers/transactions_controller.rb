@@ -12,10 +12,10 @@ class TransactionsController < ApplicationController
         end
     end
 
-    get 'transaction/:id' do
+    get '/transactions/:id' do
         if logged_in?
             binding.pry
-            @transaction = Transaction.find(:id)
+            @transaction = Transaction.find(params[:id])
             erb :"/transactions/show" 
         else
             redirect "/login"
@@ -26,7 +26,7 @@ class TransactionsController < ApplicationController
         @transaction = Transaction.create(params)
         @transaction.user = current_user
         @transaction.save
-        redirect "/transaction/#{@transaction.id}"
+        redirect "/transactions/#{@transaction.id}"
     end
 
 end
