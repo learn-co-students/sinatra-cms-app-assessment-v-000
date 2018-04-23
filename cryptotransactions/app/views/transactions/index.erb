@@ -1,0 +1,7 @@
+<h1>Past transactions</h1>
+
+<ul>
+<% Transaction.all.each do |transaction| %>
+    <li><%= transaction.currency%>: $<%=transaction.price %>
+    </li>
+<% end %>
