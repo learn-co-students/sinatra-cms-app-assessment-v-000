@@ -1,8 +1,10 @@
 <h1> Edit form</h1>
 
-<form method="POST" action="/transactions/<%= @transaction.id %>">
-    <input type='hidden' id='hidden' name='_method' value='PATCH'>
+  
+<form method="post" action="/transactions/<%=@transaction.id%>">
+    <input id="hidden" type="hidden" name="_method" value="PATCH">
     <input type='text' id='currency' name='currency' value="<%= @transaction.currency %>"><br>
     <input type='text' id='price' name="price" value="<%= @transaction.price %>"><br>
     <input type='text' id='comments' name="comments" value="<%= @transaction.comments %>"><br>
+    <input type="submit" value="submit">
 </form>
