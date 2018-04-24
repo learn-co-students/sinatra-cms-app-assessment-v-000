@@ -1,6 +1,5 @@
 <h1> Edit form</h1>
 
-  
 <form method="post" action="/transactions/<%=@transaction.id%>">
     <input id="hidden" type="hidden" name="_method" value="PATCH">
     <input type='text' id='currency' name='currency' value="<%= @transaction.currency %>"><br>
