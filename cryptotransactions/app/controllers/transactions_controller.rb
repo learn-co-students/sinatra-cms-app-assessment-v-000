@@ -21,6 +21,15 @@ class TransactionsController < ApplicationController
         end
     end
 
+    get '/transactions/:id/edit' do
+        if logged_in?
+            @transaction = Transaction.find(params[:id])
+            erb :"/transactions/edit"
+        else
+            redirect "/login"
+        end
+    end
+
     post '/transactions' do
         @transaction = Transaction.create(params)
         @transaction.user = current_user
