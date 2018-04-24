@@ -12,6 +12,19 @@
     <% end %>
 </ul><br>
 
+
+<form action='/transactions/new'>
+  <input type="submit" value="New Transaction">
+</form><br>
+
+<form action="/users/<%=current_user.slug%>">
+  <input type="submit" value="My Transactions">
+</form><br>
+
+<form action="/transactions">
+  <input type="submit" value="Recent Transactions">
+</form><br>
+
 <form action="/logout">
   <input type="submit" value="Logout">
 </form>

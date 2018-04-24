@@ -1,4 +1,14 @@
+
 class UsersController < ApplicationController
+ 
+
+    get "/" do
+        if logged_in?
+        erb :index
+        else
+        redirect "/users/#{current_user.slug}"
+        end
+    end
 
     get '/signup' do
         if logged_in?

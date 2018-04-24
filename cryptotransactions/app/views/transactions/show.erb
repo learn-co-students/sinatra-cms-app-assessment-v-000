@@ -13,6 +13,14 @@ You wrote the followind memo to justify this purchase: <b><%= @transaction.comme
   <input type="submit" value="Delete Transaction">
 </form><br>
 
+<form action='/transactions/new'>
+  <input type="submit" value="New Transaction">
+</form><br>
+
+<form action="/users/<%=current_user.slug%>">
+  <input type="submit" value="Recent Transactions">
+</form><br>
+
 <form action="/logout">
   <input type="submit" value="Logout">
 </form>
