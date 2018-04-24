@@ -1,5 +1,18 @@
 <h1> Transaction Recap</h1><br><br>
 
 
-<p> You bought one <%= @transaction.currency %> at a price of <%= @transaction.price %>$.<br>
-You wrote the followind memo to justify this purchase: <%= @transaction.comments %></p>
+<p> You bought one <b><%= @transaction.currency %></b> at a price of <b><%= @transaction.price %>$</b>.<br>
+You wrote the followind memo to justify this purchase: <b><%= @transaction.comments %></b></p><br><br>
+
+<form action="/transactions/<%=@transaction.id%>/edit">
+  <input type="submit" value="Edit Transaction">
+</form><br>
+
+<form method="post" action="/transactions/<%=@transaction.id%>/delete">
+  <input id="hidden" type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Delete Transaction">
+</form><br>
+
+<form action="/logout">
+  <input type="submit" value="Logout">
+</form>

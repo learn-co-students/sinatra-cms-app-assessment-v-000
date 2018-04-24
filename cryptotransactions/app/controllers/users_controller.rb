@@ -39,8 +39,12 @@ class UsersController < ApplicationController
             redirect '/login'
         else
             @user = User.find_by(username: params[:username])
-            session[:username] = params[:username]
-            redirect "/users/#{@user.slug}"
+            if @user && @user.password_digest == params[:password] 
+                session[:username] = params[:username]
+                redirect "/users/#{@user.slug}"
+            else
+                redirect 'login'
+            end
         end
     end
 

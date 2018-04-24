@@ -66,17 +66,18 @@ class TransactionsController < ApplicationController
         end
     end
 
-
     delete '/transactions/:id/delete' do
         if logged_in?
           @transaction = Transaction.find(params[:id])
+          
           if @transaction && @transaction.user == current_user
             @transaction.delete
           end
+          
           redirect to "/users/#{current_user.slug}"
         else
           redirect to '/login'
         end
-      end
+    end
 
 end
