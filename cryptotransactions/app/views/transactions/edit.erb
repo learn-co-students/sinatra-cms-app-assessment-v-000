@@ -4,6 +4,6 @@
     <input id="hidden" type="hidden" name="_method" value="PATCH">
     <input type='text' id='currency' name='currency' value="<%= @transaction.currency %>"><br>
     <input type='text' id='price' name="price" value="<%= @transaction.price %>"><br>
-    <input type='text' id='comments' name="comments" value="<%= @transaction.comments %>"><br>
+    <textarea type='text' id='comments' name="comments"><%= @transaction.comments %></textarea><br>
     <input type="submit" value="submit">
 </form>

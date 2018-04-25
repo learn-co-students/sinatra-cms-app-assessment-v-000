@@ -4,9 +4,9 @@ class UsersController < ApplicationController
 
     get "/" do
         if logged_in?
-        erb :index
+            redirect "/users/#{current_user.slug}"
         else
-        redirect "/users/#{current_user.slug}"
+            erb :index
         end
     end
 

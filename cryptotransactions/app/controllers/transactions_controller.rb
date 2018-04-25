@@ -26,7 +26,11 @@ class TransactionsController < ApplicationController
     get '/transactions/:id' do
         if logged_in?
             @transaction = Transaction.find(params[:id])
-            erb :"/transactions/show" 
+            if @transaction && @transaction.user ==current_user
+                erb :"/transactions/show"
+            else
+                redirect "/users/#{current_user.slug}"
+            end 
         else
             redirect "/login"
         end
