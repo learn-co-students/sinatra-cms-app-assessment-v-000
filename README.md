@@ -2,6 +2,8 @@
 
 My Sinatra Portfolio Project will be a simple app that will allow the All God's People organization to identify their clients and establish a unique user record in their SQL database.
 
+It can be found on the web here. 
+
 ### AGP Project Directory
 
 The file directory tree view is as follows:
