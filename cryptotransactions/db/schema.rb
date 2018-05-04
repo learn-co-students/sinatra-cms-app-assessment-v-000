@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180423012811) do
+ActiveRecord::Schema.define(version: 20180504133935) do
 
   create_table "transactions", force: :cascade do |t|
     t.string   "currency"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20180423012811) do
     t.string "username"
     t.string "email"
     t.string "password_digest"
+    t.string "first_name"
   end
 
 end
