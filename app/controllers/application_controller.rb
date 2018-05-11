@@ -26,7 +26,7 @@ class ApplicationController < Sinatra::Base
     if params[:email] != "" && params[:name] != "" && params[:password] != "" && User.find_by_email(params[:email]) == nil
       @user = User.create(params)
       session[:user_id] = @user.id
-      redirect to '/users/:id'
+      redirect to "/users/#{@user.id}"
     elsif params[:email] == "" || params[:name] == "" || params[:password] == ""
       flash[:message] = "You must fill in all required fields."
       redirect to '/sign-up'
