@@ -35,4 +35,13 @@ class ApplicationController < Sinatra::Base
       redirect to '/login'
     end
   end
+
+  post '/login' do
+    @user = User.find_by_email(params[:email])
+    if @user && @user.authenticate(params[:password])
+      session[:user_id] = @user.id
+      flash[:message] = "Welcome back."
+      redirect to "/users/#{@user.id}"
+    end
+  end
 end
