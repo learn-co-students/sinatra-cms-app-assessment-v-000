@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_11_150212) do
+ActiveRecord::Schema.define(version: 2018_05_11_150445) do
+
+  create_table "sleeplogs", force: :cascade do |t|
+    t.string "date"
+    t.string "type"
+    t.string "hours"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
