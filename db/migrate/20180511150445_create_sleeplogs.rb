@@ -3,7 +3,7 @@ class CreateSleeplogs < ActiveRecord::Migration[5.2]
     create_table :sleeplogs do |t|
       t.string :date
       t.string :type
-      t.string :hours
+      t.integer :hours
     end
   end
 end
