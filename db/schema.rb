@@ -10,7 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_11_150445) do
+ActiveRecord::Schema.define(version: 2018_05_11_150739) do
+
+  create_table "energylogs", force: :cascade do |t|
+    t.string "date"
+    t.string "rating"
+  end
 
   create_table "sleeplogs", force: :cascade do |t|
     t.string "date"
