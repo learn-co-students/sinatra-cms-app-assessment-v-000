@@ -42,6 +42,9 @@ class ApplicationController < Sinatra::Base
       session[:user_id] = @user.id
       flash[:message] = "Welcome back."
       redirect to "/users/#{@user.id}"
+    else
+      flash[:message] = "The email and password your entered do not match our records."
+      redirect to '/login'
     end
   end
 end
