@@ -7,8 +7,16 @@ class ApplicationController < Sinatra::Base
     enable :sessions
     set :session_secret, "secret"
   end
-  
+
   get '/' do
     erb :'index'
+  end
+
+  get '/login' do
+    erb :'login'
+  end
+
+  get '/sign-up' do
+    erb :'sign-up'
   end
 end
