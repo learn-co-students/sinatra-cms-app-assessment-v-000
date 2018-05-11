@@ -1,1 +1,4 @@
 login.erb
+<% if flash.has?(:message) %>
+  <%= flash[:message] %>
+<% end %>
