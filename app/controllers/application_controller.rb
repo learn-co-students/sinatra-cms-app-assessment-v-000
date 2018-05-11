@@ -19,4 +19,11 @@ class ApplicationController < Sinatra::Base
   get '/sign-up' do
     erb :'sign-up'
   end
+
+  post '/sign-up' do
+    if params[:name] != "" && params[:email] != "" && params[:password] != ""
+      @user = User.create(params)
+      session[:user_id] = @user.id
+    end
+  end
 end
