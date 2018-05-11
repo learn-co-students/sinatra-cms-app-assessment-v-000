@@ -1,0 +1,3 @@
+class Sleeplog < ActiveRecord::Base
+  belongs_to :user
+end
