@@ -6,4 +6,4 @@ To run:
 
 1. Clone this repo.
 2. Run rake db:migrate.
-3. Run shotgun
+3. Run shotgun.

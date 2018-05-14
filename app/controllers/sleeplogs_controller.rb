@@ -22,7 +22,12 @@ class SleeplogsController < ApplicationController
 
   get '/sleeplogs/:id/edit' do
     @log = Sleeplog.find_by_id(params[:id])
-    erb :'sleeplogs/edit'
+    if Helper.is_logged_in?(session) && @log.user_id == session[:user_id]
+      erb :'sleeplogs/edit'
+    else
+      flash[:message] = "You must be logged in to edit a log."
+      redirect to '/'
+    end
   end
 
   get '/sleeplogs/:id/delete' do
