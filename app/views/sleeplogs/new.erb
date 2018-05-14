@@ -1,4 +1,7 @@
 <h1>Record a sleep log</h1>
+<% if flash.has?(:message) %>
+  <%= flash[:message] %>
+<% end %>
 <form action="/sleeplogs/index" method='POST'>
   <label>Date and time you woke up:</label><input type='datetime-local' name='date' id='date'>
   <br></br>

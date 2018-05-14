@@ -24,6 +24,9 @@ class UsersController < ApplicationController
       @user = User.find_by_id(session[:user_id])
       @user.sleeplogs << @log
       redirect to "/users/#{session[:user_id]}"
+    else
+      flash[:message] = "You must fill in all fields."
+      redirect to '/sleeplogs/new'
     end
   end
 
