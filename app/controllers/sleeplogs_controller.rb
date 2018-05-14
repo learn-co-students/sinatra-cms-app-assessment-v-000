@@ -24,6 +24,8 @@ class SleeplogsController < ApplicationController
     @log = Sleeplog.find_by_id(params[:id])
     if Helper.is_logged_in?(session) && @log.user_id == session[:user_id]
       erb :'sleeplogs/edit'
+    elsif @log.user_id != session[:user_id]
+      redirect to '/sleeplogs'
     else
       flash[:message] = "You must be logged in to edit a log."
       redirect to '/'

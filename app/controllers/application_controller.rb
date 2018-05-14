@@ -11,15 +11,27 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/' do
-    erb :'index'
+    if Helper.is_logged_in?(session)
+      redirect to "/users/#{session[:user_id]}"
+    else
+      erb :'index'
+    end
   end
 
   get '/login' do
-    erb :'login'
+    if Helper.is_logged_in?(session)
+      redirect to "/users/#{session[:user_id]}"
+    else
+      erb :'login'
+    end
   end
 
   get '/sign-up' do
-    erb :'sign-up'
+    if Helper.is_logged_in?(session)
+      redirect to "/users/#{session[:user_id]}"
+    else
+      erb :'sign-up'
+    end
   end
 
   post '/sign-up' do
