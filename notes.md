@@ -1,22 +1,22 @@
 # Models
 ## User
-  name
-  email
-  password
-  has many sleep logs
+  name [x]
+  email [x]
+  password [x]
+  has many sleep logs [x]
   has many energy logs
   has many caffeine logs
 ## Sleep log
-  Date(time wakeup)
-  sleep/nap
-  hours
-  notes
-  belong to user
-## Energy log
+  Date(time wakeup) [x]
+  sleep/nap [x]
+  hours [x]
+  notes- did not include
+  belong to user [x]
+## Energy log- did not include
   date time
   rating
   belongs to user
-## Caffeine log
+## Caffeine log- did note include
   date time
   mgs
   belongs to user
