@@ -1,8 +1,12 @@
 class SleeplogsController < ApplicationController
   get '/sleeplogs' do
-    @user = User.find_by_id(session[:user_id])
-    @logs = @user.sleeplogs
-    erb :'sleeplogs/index'
+    if Helper.is_logged_in?(session)
+      @user = User.find_by_id(session[:user_id])
+      @logs = @user.sleeplogs
+      erb :'sleeplogs/index'
+    else
+      flash[:message] = 'You must be logged in to view this page'
+      redirect to '/'
   end
 
   get '/sleeplogs/new' do
