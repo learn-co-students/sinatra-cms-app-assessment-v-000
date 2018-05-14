@@ -19,11 +19,12 @@ class UsersController < ApplicationController
   end
 
   post '/sleeplogs/index' do
-    @log = Sleeplog.create(params)
-    @user = User.find_by_id(session[:user_id])
-    @user.sleeplogs << @log
-    binding.pry
-    redirect to '/'
+    if params[:hours] != "" && params[:kind] != nil && params[:date] != ""
+      @log = Sleeplog.create(params)
+      @user = User.find_by_id(session[:user_id])
+      @user.sleeplogs << @log
+      redirect to "/users/#{session[:user_id]}"
+    end
   end
 
 end
