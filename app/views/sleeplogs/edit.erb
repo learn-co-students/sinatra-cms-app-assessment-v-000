@@ -1,1 +1,15 @@
-edit
+<h1>Edit a sleep log</h1>
+<% if flash.has?(:message) %>
+  <%= flash[:message] %>
+<% end %>
+<form action="/sleeplogs/<%=@log.id%>/edit" method='POST'>
+  <label>Date and time you woke up:</label><input type='datetime-local' name='date' id='date' value='<%=@log.date%>'>
+  <br></br>
+  <label>Number of hours slept:</label><input type='number' name='hours' id='hours' value='<%=@log.hours%>'>
+  <br></br>
+  <label>Sleep:</label><input type='radio' name='kind' value='sleep'>
+  <br></br>
+  <label>Nap:</label><input type='radio' name='kind' value='nap'>
+  <br></br>
+  <input type='submit'>
+</form>
