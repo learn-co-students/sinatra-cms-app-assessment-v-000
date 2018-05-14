@@ -15,12 +15,14 @@ ActiveRecord::Schema.define(version: 2018_05_11_150739) do
   create_table "energylogs", force: :cascade do |t|
     t.string "date"
     t.integer "rating"
+    t.integer "user_id"
   end
 
   create_table "sleeplogs", force: :cascade do |t|
     t.string "date"
     t.string "kind"
     t.integer "hours"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|

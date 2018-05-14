@@ -4,6 +4,7 @@ class CreateSleeplogs < ActiveRecord::Migration[5.2]
       t.string :date
       t.string :kind
       t.integer :hours
+      t.integer :user_id
     end
   end
 end
