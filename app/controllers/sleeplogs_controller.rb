@@ -1,0 +1,3 @@
+class SleeplogsController < ApplicationController
+
+end

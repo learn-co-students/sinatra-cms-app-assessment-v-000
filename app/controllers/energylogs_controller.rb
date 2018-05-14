@@ -1,0 +1,3 @@
+class EnergylogsController < ApplicationController
+
+end

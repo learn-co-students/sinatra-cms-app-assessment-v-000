@@ -28,6 +28,11 @@ class UsersController < ApplicationController
     erb :'sleeplogs/edit'
   end
 
+  get '/sleeplogs/:id/delete' do
+    Sleeplog.find_by_id(params[:id]).delete
+    redirect to '/sleeplogs'
+  end
+
   post '/sleeplogs/new' do
     if params[:hours] != "" && params[:kind] != nil && params[:date] != ""
       @log = Sleeplog.create(params)
@@ -38,11 +43,6 @@ class UsersController < ApplicationController
       flash[:message] = "You must fill in all fields."
       redirect to '/sleeplogs/new'
     end
-  end
-
-  get '/sleeplogs/:id/delete' do
-    Sleeplog.find_by_id(params[:id]).delete
-    redirect to '/sleeplogs'
   end
 
 end
