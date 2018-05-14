@@ -1,0 +1,16 @@
+<table>
+<tr>
+  <th>Date</th>
+  <th>Hours</th>
+  <th>Type</th>
+</tr>
+<% @logs.each do |log| %>
+  <tr>
+    <td><%=log.date%></td>
+    <td><%=log.hours%></td>
+    <td><%=log.kind%></td>
+    <td><form action='/sleeplogs/<%=log.id%>/edit' action='GET'><input type='submit' value='edit'></form></td>
+    <td><form><input type='submit' value='delete'></form></td>
+  </tr>
+<%end%>
+</table>

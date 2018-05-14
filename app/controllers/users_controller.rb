@@ -18,12 +18,18 @@ class UsersController < ApplicationController
     end
   end
 
-  post '/sleeplogs/index' do
+  get '/sleeplogs' do
+    @user = User.find_by_id(session[:user_id])
+    @logs = @user.sleeplogs
+    erb :'sleeplogs/index'
+  end
+
+  post '/sleeplogs' do
     if params[:hours] != "" && params[:kind] != nil && params[:date] != ""
       @log = Sleeplog.create(params)
       @user = User.find_by_id(session[:user_id])
       @user.sleeplogs << @log
-      redirect to "/users/#{session[:user_id]}"
+      #redirect to "/users/#{session[:user_id]}"
     else
       flash[:message] = "You must fill in all fields."
       redirect to '/sleeplogs/new'
