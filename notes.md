@@ -20,3 +20,7 @@
   date time
   mgs
   belongs to user
+
+##Fix queue
+-update average message logic to deal with no logs
+-update edit form to pre select
