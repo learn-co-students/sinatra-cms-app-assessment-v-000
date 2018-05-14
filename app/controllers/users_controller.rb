@@ -13,4 +13,8 @@ class UsersController < ApplicationController
     erb :'/sleeplogs/new'
   end
 
+  post '/sleeplogs/index' do
+    binding.pry
+  end
+
 end

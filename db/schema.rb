@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2018_05_11_150739) do
 
   create_table "sleeplogs", force: :cascade do |t|
     t.string "date"
-    t.string "type"
+    t.string "kind"
     t.integer "hours"
   end
 
