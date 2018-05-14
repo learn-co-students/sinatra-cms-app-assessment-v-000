@@ -10,11 +10,15 @@ class UsersController < ApplicationController
   end
 
   get '/sleeplogs/new' do
+    
     erb :'/sleeplogs/new'
   end
 
   post '/sleeplogs/index' do
-    binding.pry
+    @log = Sleeplog.create(params)
+    @user = User.find_by_id(session[:user_id])
+    @user.sleeplogs << @log
+    redirect to '/'
   end
 
 end
