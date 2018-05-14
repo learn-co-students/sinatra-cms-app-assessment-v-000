@@ -2,7 +2,7 @@
 <% if flash.has?(:message) %>
   <%= flash[:message] %>
 <% end %>
-<form action="/sleeplogs/index" method='POST'>
+<form action="/sleeplogs/new" method='POST'>
   <label>Date and time you woke up:</label><input type='datetime-local' name='date' id='date'>
   <br></br>
   <label>Number of hours slept:</label><input type='number' name='hours' id='hours'>

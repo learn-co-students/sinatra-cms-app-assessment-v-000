@@ -3,6 +3,8 @@
   <th>Date</th>
   <th>Hours</th>
   <th>Type</th>
+  <th>Edit</th>
+  <th>Delete</th>
 </tr>
 <% @logs.each do |log| %>
   <tr>
@@ -10,7 +12,7 @@
     <td><%=log.hours%></td>
     <td><%=log.kind%></td>
     <td><form action='/sleeplogs/<%=log.id%>/edit' action='GET'><input type='submit' value='edit'></form></td>
-    <td><form><input type='submit' value='delete'></form></td>
+    <td><form action='/sleeplogs/<%=log.id%>/delete' action='GET'><input type='submit' name='log[<%=log.id%>]'value='delete'></form></td>
   </tr>
 <%end%>
 </table>
