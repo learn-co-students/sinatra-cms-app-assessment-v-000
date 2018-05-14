@@ -3,6 +3,7 @@ class SleeplogsController < ApplicationController
     if Helper.is_logged_in?(session)
       @user = User.find_by_id(session[:user_id])
       @logs = @user.sleeplogs
+      @logs = @logs.order(date: :desc)
       erb :'sleeplogs/index'
     else
       flash[:message] = 'You must be logged in to view this page'
