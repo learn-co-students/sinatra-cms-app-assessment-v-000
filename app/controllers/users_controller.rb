@@ -9,4 +9,8 @@ class UsersController < ApplicationController
     end
   end
 
+  get '/sleeplogs/new' do
+    erb :'/sleeplogs/new'
+  end
+
 end
