@@ -4,6 +4,7 @@
 <table>
 <tr>
   <th>Date</th>
+  <th>Time</th>
   <th>Hours</th>
   <th>Type</th>
   <th>Edit</th>
@@ -11,7 +12,8 @@
 </tr>
 <% @logs.each do |log| %>
   <tr>
-    <td><%=log.date%></td>
+    <td><%=log.date[0,10]%></td>
+    <td><%=log.date[11,5]%></td>
     <td><%=log.hours%></td>
     <td><%=log.kind%></td>
     <td><form action='/sleeplogs/<%=log.id%>/edit' action='GET'><input type='submit' value='edit'></form></td>
