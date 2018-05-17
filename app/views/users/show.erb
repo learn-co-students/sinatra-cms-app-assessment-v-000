@@ -3,7 +3,7 @@
 <% if flash.has?(:message) %>
   <%= flash[:message] %>
 <% end %>
-<%if @user.sleeplogs != []%>
+<%if @sleep_only_logs != []%>
   <h2>On average you sleep <%=@sleep_only_logs.average(:hours)%> hours per night.</h2>
 <%end%>
 <a href='/sleeplogs/new'>Add a new sleep log</a>
