@@ -33,8 +33,13 @@ class SleeplogsController < ApplicationController
   end
 
   get '/sleeplogs/:id/delete' do
-    Sleeplog.find_by_id(params[:id]).delete
-    redirect to '/sleeplogs'
+    if Helper.current_user(session) == User.find_by_id(params[:id])
+      Sleeplog.find_by_id(params[:id]).delete
+      redirect to '/sleeplogs'
+    else
+      flash[:message] = "You must be logged in to delete a log."
+      redirect to '/'
+    end
   end
 
   post '/sleeplogs/new' do
@@ -50,11 +55,14 @@ class SleeplogsController < ApplicationController
   end
 
   post '/sleeplogs/:id/edit' do
-    if params[:hours] != "" && params[:kind] != nil && params[:date] != ""
-      @log = Sleeplog.find_by_id(params[:id])
+    @log = Sleeplog.find_by_id(params[:id])
+    if params[:hours] != "" && params[:kind] != nil && params[:date] != "" && Helper.current_user(session).id == @log.user_id
       @log.update(hours: params[:hours], kind: params[:kind], date: params[:date])
       flash[:message] = "Your changes have been made"
       redirect to "/sleeplogs"
+    elsif Helper.current_user(session).id != @log.user_id
+      flash[:message] = "You must be the owner of this log."
+      redirect to "/users/#{@log.user_id}"
     else
       flash[:message] = "You must fill in all fields."
       redirect to '/sleeplogs/new'
