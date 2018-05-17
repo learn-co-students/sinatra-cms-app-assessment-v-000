@@ -5,6 +5,7 @@ class UsersController < ApplicationController
       @user = User.find_by_id(params[:id])
       @logs = @user.sleeplogs
       @sleep_only_logs = @logs.where(kind: "sleep")
+      @nap_only_logs = @logs.where(kind: "nap")
       erb :'users/show'
     elsif Helper.is_logged_in?(session)
       redirect to "/users/#{session[:user_id]}"
