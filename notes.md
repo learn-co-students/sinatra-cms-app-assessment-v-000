@@ -22,3 +22,5 @@
   belongs to user
 
 ##Fix queue
+  define a block in app controller with helpers
+  fix restful conventions
