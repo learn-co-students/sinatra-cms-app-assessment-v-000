@@ -1,0 +1,21 @@
+<h1>Record a sleep log</h1>
+<% if flash.has?(:message) %>
+  <%= flash[:message] %>
+<% end %>
+<form action="/sleeplogs/new" method='POST'>
+  <label>Date and time you woke up:</label><input type='datetime-local' name='date' id='date'>
+  <br></br>
+  <label>Number of hours slept:</label><input type='number' name='hours' id='hours'>
+  <br></br>
+  <label>Sleep:</label><input type='radio' name='kind' value='sleep'>
+  <br></br>
+  <label>Nap:</label><input type='radio' name='kind' value='nap'>
+  <br></br>
+  <input type='submit'>
+</form>
+  <br></br>
+<a href='/users/<%=session[:user_id]%>'>Home</a> <a href='/sleeplogs'>See your logs</a>
+<br></br>
+<form action='/logout' method='POST'>
+  <input type='submit' value='Log out'>
+</form>

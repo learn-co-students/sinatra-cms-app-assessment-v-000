@@ -1,0 +1,18 @@
+<h1>How'd you sleep, <%=@user.name%>?</h1>
+
+<% if flash.has?(:message) %>
+  <%= flash[:message] %>
+<% end %>
+<%if @sleep_only_logs != []%>
+  <h2>On average you sleep <%=@sleep_only_logs.average(:hours)%> hours per night.</h2>
+<%end%>
+<%if @nap_only_logs != []%>
+  <h2>On average you nap for <%=@nap_only_logs.average(:hours)%> hours at a time.</h2>
+<%end%>
+<a href='/sleeplogs/new'>Add a new sleep log</a>
+<br></br>
+<a href='/sleeplogs'>See your logs</a>
+<br></br>
+<form action='/logout' method='POST'>
+  <input type='submit' value='Log out'>
+</form>

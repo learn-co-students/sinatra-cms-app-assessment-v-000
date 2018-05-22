@@ -1,0 +1,29 @@
+<% if flash.has?(:message) %>
+  <%= flash[:message] %>
+<% end %>
+<table>
+<tr>
+  <th>Date</th>
+  <th>Time</th>
+  <th>Hours</th>
+  <th>Type</th>
+  <th>Edit</th>
+  <th>Delete</th>
+</tr>
+<% @logs.each do |log| %>
+  <tr>
+    <td><%=log.date[0,10]%></td>
+    <td><%=log.date[11,5]%></td>
+    <td><%=log.hours%></td>
+    <td><%=log.kind%></td>
+    <td><form action='/sleeplogs/<%=log.id%>/edit' action='GET'><input type='submit' value='edit'></form></td>
+    <td><form action='/sleeplogs/<%=log.id%>/delete' action='GET'><input type='submit' name='log[<%=log.id%>]'value='delete'></form></td>
+  </tr>
+<%end%>
+</table>
+<br></br>
+<a href='/users/<%=session[:user_id]%>'>Home</a> <a href='/sleeplogs/new'>Add a new sleep log</a>
+<br></br>
+<form action='/logout' method='POST'>
+  <input type='submit' value='Log out'>
+</form>
