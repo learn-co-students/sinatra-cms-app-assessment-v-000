@@ -1,0 +1,43 @@
+<h1>Edit the Client shown below:</h1>
+<form method="post" action='/clients/<%= @client.id %>' id="form">
+  <input id="hidden" type="hidden" name="_method" value="patch">
+  First Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="text" value="<%= @client.first_name %>" name="first_name"><br><br>
+  Last Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="text" value="<%= @client.last_name %>"  name="last_name"><br><br>
+  Nickname:&nbsp;&nbsp;
+  <input type="text" value="<%= @client.aka_name %>" name="aka_name"><br><br>
+  Existing Age:&nbsp; <%= @client.age %><br>
+  <p>Select a new Age below, if need be.</p>
+  <select name="age">
+    <option value="<%= @client.age %>"><%= @client.age %></option>
+    <option value="Newborn">Newborn</option>
+    <option value="Infant">Infant</option>
+    <option value="Child">Child</option>
+    <option value="Youth">Youth</option>
+    <option value="Adult">Adult</option>
+    <option value="Senior">Senior</option>
+  </select><br><br>
+  Existing Gender:&nbsp;&nbsp;&nbsp;&nbsp;<%= @client.gender %><br>
+  <p>Select a new Gender below, if need be.</p>
+  <div>
+    <input type="radio" id="genderChoice1"
+           name="gender" value="Male">
+    <label for="genderChoice1">Male</label>
+
+    <input type="radio" id="genderChoice2"
+           name="gender" value="Female">
+    <label for="genderChoice2">Female</label>
+
+    <input type="radio" id="genderChoice3"
+           name="gender" value="Unisex">
+    <label for="genderChoice3">Unisex</label>
+  </div><br>
+  Needs:<br>
+  <textarea name="need" rows="5" cols="50"><%= @client.need %></textarea><br>
+
+  <input type="reset" value="Reset"><br><br>
+  <input type="submit" value="Edit Client"><br>
+</form><br><br>
+<h3>Cancel Editing and Go to Clients Index </h3>
+<a href='/clients' class="btn btn-default">Cancel</a>

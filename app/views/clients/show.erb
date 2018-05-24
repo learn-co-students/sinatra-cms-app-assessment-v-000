@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/clients">Clients</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/products">Products</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          New
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/clients/new">New Client</a>
+          <a class="dropdown-item" href="/products/new">New Product</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/logout">Log Out</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<h1>Here is the Client:</h1>
+<ul>
+  <li>First Name:&nbsp;<%= @client.first_name %></li>
+  <li>Last Name:&nbsp;<%= @client.last_name %></li>
+  <li>Nickname:&nbsp;<%= @client.aka_name %></li>
+  <li>Age:&nbsp;<%= @client.age %></li>
+  <li>Gender:&nbsp;<%= @client.gender %></li>
+  <li>Needs:&nbsp;<%= @client.need %></li>
+  <% if @client.user != nil %>
+    <li>Belongs To:&nbsp;<%= @client.user.username %></li>
+  <% end %>
+</ul>
+<p>Client has the following products.</p>
+<% @lineitems.each do |lineitem| %>
+  <p>Product #&nbsp;<%= lineitem.id %>&nbsp;<%= lineitem.name %>&nbsp;<%= lineitem.description %></p>
+<% end %>
+<% if @client.user == current_user || @client.user == nil %>
+  <a href='/clients/<%= @client.id %>/edit' class="btn btn-default">Edit Client</a>
+  <a href='/clients/<%= @client.id %>/products' class="btn btn-default">Edit Products assigned to Client</a>
+  <form action="/clients/<%= @client.id %>/delete" method="post">
+    <input id="hidden" type="hidden" name="_method" value="delete">
+    <input type="submit" value="Delete">
+  </form>
+<% end %>

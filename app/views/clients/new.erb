@@ -1,0 +1,48 @@
+<h1>Create a New Client</h1>
+<form method="post" action='/clients' id="form">
+
+  First Name:&nbsp;&nbsp;&nbsp;
+  <input type="text" value="" name="first_name"><br><br>
+  Last Name:&nbsp;&nbsp;&nbsp;
+  <input type="text" value=""  name="last_name"><br><br>
+  Nickname:&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="text" value="" name="aka_name"><br><br>
+  Age:
+  <br>
+  <select name="age">
+    <option value="" selected disabled hidden>Choose here</option>
+    <option value="Newborn">Newborn</option>
+    <option value="Infant">Infant</option>
+    <option value="Child">Child</option>
+    <option value="Youth">Youth</option>
+    <option value="Adult">Adult</option>
+    <option value="Senior">Senior</option>
+  </select><br>
+  Gender:&nbsp;&nbsp;&nbsp;&nbsp;
+  <div>
+    <input type="radio" id="genderChoice1"
+           name="gender" value="Male">
+    <label for="genderChoice1">Male</label>
+
+    <input type="radio" id="genderChoice2"
+           name="gender" value="Female">
+    <label for="genderChoice2">Female</label>
+
+    <input type="radio" id="genderChoice3"
+           name="gender" value="Unisex" checked>
+    <label for="genderChoice3">Unisex</label>
+  </div>
+  Needs:
+  <br>
+  <textarea name="need" rows="5" cols="50"></textarea><br><br>
+  <p>Give the your Client a Item from the list below.</p>
+  <% Product.all.each do |product| %>
+    <div class="form-check">
+      <input class="form-check-input" id="<%= product.name %>" type="checkbox" name="products[]" value="<%= product.id %>">
+      <label class="form-check-label" for="<%= product.id %>"><%= product.name %>&nbsp;<%= product.description %></label>
+    </div>
+  <% end %>
+  <input type="submit" value="Create Client">
+</form><br><br>
+<h4>Cancel Create New Client and Go to Clients Index </h4>
+<a href='/clients' class="btn btn-default">Cancel</a>

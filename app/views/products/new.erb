@@ -1,0 +1,39 @@
+<h1>Create a Product</h1>
+<form method="post" action='/products' id="form">
+
+  Name:&nbsp;&nbsp;&nbsp;
+  <input type="text" value="" name="name"><br><br>
+  Descritpion:&nbsp;&nbsp;&nbsp;
+  <input type="text" value=""  name="description"><br><br>
+
+  Gender:
+  <div>
+    <input type="radio" id="genderChoice1"
+           name="gender" value="Male">
+    <label for="genderChoice1">Male</label>
+
+    <input type="radio" id="genderChoice2"
+           name="gender" value="Female">
+    <label for="genderChoice2">Female</label>
+
+    <input type="radio" id="genderChoice3"
+           name="gender" value="Unisex" checked>
+    <label for="genderChoice3">Unisex</label>
+  </div><br>
+
+  Size:<br>
+  <select name="size">
+    <option value="" selected disabled hidden>Choose here</option>
+    <option value="X-Small">X-Small</option>
+    <option value="Small">Small</option>
+    <option value="Medium">Medium</option>
+    <option value="Large">Large</option>
+    <option value="X-Large">X-Large</option>
+    <option value="XX-Large">XX-Large</option>
+  </select><br><br>
+  Quantity:&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="text" value="" name="quantity"><br><br>
+  <input type="submit" value="Create Product">
+</form><br><br>
+<h4>Cancel Create New Product and Go to Products Index </h4>
+<a href='/products' class="btn btn-default">Cancel</a>

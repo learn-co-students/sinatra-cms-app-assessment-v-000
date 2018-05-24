@@ -1,0 +1,43 @@
+<h1>Edit the Product Shown Below:</h1>
+<form method="post" action='/products/<%= @product.id %>' id="form">
+  <input id="hidden" type="hidden" name="_method" value="patch">
+  Product:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="text" value="<%= @product.name %>" name="name"><br><br>
+
+  Description:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="text" value="<%= @product.description %>"  name="description"><br><br>
+
+  Existing Gender:&nbsp;&nbsp;&nbsp;&nbsp;<%= @product.gender %><br>
+  <div>
+    <input type="radio" id="genderChoice1"
+           name="gender" value="Male">
+    <label for="genderChoice1">Male</label>
+
+    <input type="radio" id="genderChoice2"
+           name="gender" value="Female">
+    <label for="genderChoice2">Female</label>
+
+    <input type="radio" id="genderChoice3"
+           name="gender" value="Unisex">
+    <label for="genderChoice3">Unisex</label>
+  </div><br>
+
+  Size:&nbsp; <%= @product.size %><br><br>
+  <select name="size">
+    <option value="<%= @product.size %>"><%= @product.size %></option>
+    <option value="X-Small">X-Small</option>
+    <option value="Small">Small</option>
+    <option value="Medium">Medium</option>
+    <option value="Large">Large</option>
+    <option value="X-Large">X-Large</option>
+    <option value="XX-Large">XX-Large</option>
+  </select><br><br>
+
+  Quantity:&nbsp;
+  <input type="text" value="<%= @product.quantity %>"  name="quantity"><br><br>
+
+  <input type="reset" value="Reset"><br><br>
+  <input type="submit" value="Edit Product"><br>
+</form><br><br>
+<h4>Cancel Editing and Go To Products Index </h4>
+<a href='/products' class="btn btn-default">Cancel</a>
