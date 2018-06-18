@@ -1,0 +1,8 @@
+<p>Welcome, <%=current_user.username %></p>
+<h2>  Games </h2>
+
+<% @games.each do |game| %>
+  <div>
+    <% game.title %>
+  </div>
+<% end %>

@@ -1,0 +1,8 @@
+<%= @game.title %>
+
+<form action="/games/<%=@game.id%>/delete" method="post">
+  <input id="hidden" type="hidden" name="_method" value="DELETE">
+  <input type="submit"  value="Delete Game">
+</form>
+
+<a href="/games/<%= @=game.id %>/edit"> Edit Game</a>
