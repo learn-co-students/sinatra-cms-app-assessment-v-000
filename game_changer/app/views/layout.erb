@@ -18,8 +18,10 @@
     <nav>
     <% if logged_in? %>
 
-      <a href="/games/new"> Create Game </a>
-      <a href="/logout"> Log Out </a>
+      <a href="/games/new"> Create Game </a><br>
+      <a href="/logout"> Log Out </a><br>
+      <a href="/home"> Home</a><br>
+      <br>
       <p>Welcome, <%=current_user.username %></p>
 
     <% else %>
