@@ -1,5 +1,6 @@
 require "pry"
 class UserController < ApplicationController
+
   get '/users/:slug' do
       @user = User.find_by_slug(params[:slug])
       erb :'users/show'
@@ -34,7 +35,7 @@ class UserController < ApplicationController
 
     post '/login' do
       user = User.find_by(:username => params[:username])
-      if user && user.authenticate(params[:password])
+      if user && user.authenticate(params[:username]) && user.authenticate(params[:password])
         session[:user_id] = user.id
         redirect "/games"
       else
@@ -44,7 +45,7 @@ class UserController < ApplicationController
 
     get '/logout' do
       if logged_in?
-        session.destroy
+        session.clear
         redirect to '/login'
       else
         redirect to '/'
@@ -54,7 +55,6 @@ class UserController < ApplicationController
     get '/home' do
       if logged_in?
         redirect to '/games'
-
       end
     end
   end
