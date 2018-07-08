@@ -1,5 +1,7 @@
 require "pry"
+require "rack-flash"
 class UserController < ApplicationController
+  use Rack::Flash
 
   get '/users/:slug' do
       @user = User.find_by_slug(params[:slug])
@@ -8,7 +10,8 @@ class UserController < ApplicationController
 
     get '/signup' do
       if !logged_in?
-        erb :'users/create_user', locals: {message: "Please sign up before you sign in"}
+          flash[:message] = "Please sign up before you sign in"
+        erb :'users/create_user'
       else
         redirect to '/games'
       end

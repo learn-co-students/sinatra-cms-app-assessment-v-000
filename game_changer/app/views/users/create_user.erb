@@ -1,5 +1,5 @@
-<% unless locals.empty? %>
-  <%= message %>
+<% if flash.has?(:message) %>
+  <%= flash[:message] %>
 <% end %>
 <h1>Signup</h1>
 

@@ -49,7 +49,7 @@ class GamesController < ApplicationController
   end
 
   patch '/games/:id' do
-    if parmas[:title] == ""
+    if params[:title] == ""
       redirect "/games/#{params[:id]}/edit"
     else
       @game = Game.find_by_id(params[:id])
@@ -61,10 +61,9 @@ class GamesController < ApplicationController
 
   delete '/games/:id/delete' do
     if logged_in?
-      @game = Game.find_by_id(params[:id])
-      if @game.user_id == current_user.id
+      if  @game = Game.find_by_id(params[:id])
         @game.delete
-        redirect '/games'
+        redirect '/home'
       else
         redirect '/games'
       end
