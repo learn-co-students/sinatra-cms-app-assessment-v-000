@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   has_many :games
   has_secure_password
+  validates :username, presence: true
 
   def slug
     username.downcase.gsub(" ","-")
@@ -12,4 +13,3 @@ class User < ActiveRecord::Base
 
 
 end
-    
