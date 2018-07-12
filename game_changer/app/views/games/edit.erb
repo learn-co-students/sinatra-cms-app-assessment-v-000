@@ -1,0 +1,9 @@
+<form action="/games/<%= @game.id %>" method="post">
+
+  <input type="hidden" name="_method" id="hidden" value="PATCH">
+
+  <label>Game Title</label>
+  <input type="text" name="title" value="<% @game.title %>" id="title">
+
+  <input type="submit" value="submit" id="submit">
+</form>
