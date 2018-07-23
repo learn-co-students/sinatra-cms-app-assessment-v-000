@@ -1,0 +1,14 @@
+<h1>Recommendation:</h1>
+<ul>
+  <li><b><%= @recommendation.user.username %></b>: <%= @recommendation.content %></li>
+</ul>
+
+<a href="/tweets/<%= @tweet.id %>/edit">Edit Tweet</a>
+
+<br></br>
+
+<form action="/recommendation/<%= @tweet.id %>/delete" method="POST">
+  <input type="hidden" id="hidden" name="_method" value="delete">
+
+  <input type="submit" value="Delete Tweet" id="Delete Tweet">
+</form>

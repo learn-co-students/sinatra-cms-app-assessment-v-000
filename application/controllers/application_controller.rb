@@ -4,7 +4,7 @@ class ApplicationController < Sinatra::Base
 
   configure do
     set :public_folder, 'public'
-    set :views, 'app/views'
+    set :views, 'application/views'
     enable :sessions unless test?
     set :session_secret, "secret"
   end
@@ -22,12 +22,8 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/signup' do
-    if params["username"].empty?
-      redirect to('/signup')
-    elsif params["email"].empty?
-      redirect to('/signup')
-    elsif params["password"].empty?
-      redirect to('/signup')
+    if params["username"].empty? || params["email"].empty? || params["password"].empty?
+      redirect to("/signup")
     else
       @user = User.create(username: params["username"], email: params["email"], password: params["password"])
       session[:user_id] = @user.id
