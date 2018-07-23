@@ -1,10 +1,9 @@
 <h1>Profile Information</h1>
 
+<p>Welcome, <%= @user.username %></p>
 
-<%= @user.username %>
+<p>List of Requests</p>
 
-
-<ul>
 <% @user.tweets.each do |tweet| %>
   <li><%= tweet.content %></li>
 <% end %>
