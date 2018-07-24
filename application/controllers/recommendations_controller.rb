@@ -5,61 +5,61 @@ class RecommendationsController < ApplicationController
   end
 
   post '/recommendations' do
-    @recommendation = Recommendation.create(recommendation: params[:recommendation], user_id: params[:user_id])
+    @recommendation = Recommendation.create(content: params[:content], user_id: @user.id)
 
     redirect to("/recommendations/#{@recommendation.slug}")
   end
 
-  get '/tweets/:id' do
-    @tweet = Tweet.find(params["id"])
+  get '/recommendations/:id' do
+    @recommendation = Recommendation.find(params["id"])
 
     if logged_in?
       @user = User.find_by(id: session[:user_id])
-      erb :'/tweets/show_tweet'
+      erb :'/recommendations/show_recommendation'
     else
       redirect to("/login")
     end
   end
 
-  get '/tweets/:id/edit' do
+  get '/recommendations/:id/edit' do
 
     if logged_in?
-      @tweet = Tweet.find(params[:id])
+      @recommendation = Recommendation.find(params[:id])
       @user = User.find_by(id: session[:user_id])
-      if @tweet && @tweet.user_id == @user.id
-        erb :'/tweets/edit_tweet'
+      if @recommendation && @recommendation.user_id == @user.id
+        erb :'/recommendations/edit_recommendation'
       else
-        redirect to("/tweets")
+        redirect to("/account")
       end
     else
     redirect to("/login")
     end
   end
 
-  patch '/tweets/:id' do
-    @tweet = Tweet.find(params[:id])
+  patch '/recommendation/:id' do
+    @recommendation = Recommendation.find(params[:id])
     @user = User.find_by(id: session[:user_id])
 
-    if !params[:content].empty? && @tweet.user_id == @user.id
-      @tweet.content = params[:content]
-      @tweet.save
-    elsif params[:content].empty? && @tweet.user_id == @user.id
-      redirect to("/tweets/#{@tweet.id}/edit")
-    elsif !params[:content].empty? && @tweet.user_id != @user.id
-      redirect to("/tweets")
+    if !params[:content].empty? && @recommendation.user_id == @user.id
+      @recommendation.content = params[:content]
+      @recommendation.save
+    elsif params[:content].empty? && @recommendation.user_id == @user.id
+      redirect to("/recommendations/#{@recommendation.id}/edit")
+    elsif !params[:content].empty? && @recommendation.user_id != @user.id
+      redirect to("/account")
     else
       redirect to("/login")
     end
   end
 
-  delete '/tweets/:id/delete' do
-    @tweet = Tweet.find(params[:id])
+  delete '/recommendations/:id/delete' do
+    @recommendation = Recommendation.find(params[:id])
     @user = User.find_by(id: session[:user_id])
 
-    if logged_in? && @tweet.user_id == @user.id
-      @tweet.destroy
+    if logged_in? && @recommendation.user_id == @user.id
+      @recommendation.destroy
 
-      redirect to("/tweets")
+      redirect to("/delete_confirmation")
     else
       redirect to("/login")
     end

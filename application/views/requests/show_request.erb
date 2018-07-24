@@ -1,0 +1,14 @@
+<h1>Request:</h1>
+<ul>
+  <li><b><%= @request.user.username %></b>: <%= @request.content %></li>
+</ul>
+
+<a href="/requests/<%= @request.id %>/edit">Edit Request</a>
+
+<br></br>
+
+<form action="/requests/<%= @request.id %>/delete" method="POST">
+  <input type="hidden" id="hidden" name="_method" value="delete">
+
+  <input type="submit" value="Delete Request" id="Delete Request">
+</form>

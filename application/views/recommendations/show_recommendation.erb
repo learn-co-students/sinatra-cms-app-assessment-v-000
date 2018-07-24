@@ -3,12 +3,12 @@
   <li><b><%= @recommendation.user.username %></b>: <%= @recommendation.content %></li>
 </ul>
 
-<a href="/tweets/<%= @tweet.id %>/edit">Edit Tweet</a>
+<a href="/recommendations/<%= @recommendation.id %>/edit">Edit Recommendation</a>
 
 <br></br>
 
-<form action="/recommendation/<%= @tweet.id %>/delete" method="POST">
+<form action="/recommendation/<%= @recommendation.id %>/delete" method="POST">
   <input type="hidden" id="hidden" name="_method" value="delete">
 
-  <input type="submit" value="Delete Tweet" id="Delete Tweet">
+  <input type="submit" value="Delete Recommendation" id="Delete Recommendation">
 </form>

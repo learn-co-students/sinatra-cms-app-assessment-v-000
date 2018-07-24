@@ -4,22 +4,10 @@
 
 <p>List of Requests</p>
 
-<% @user.tweets.each do |tweet| %>
-  <li><%= tweet.content %></li>
+<ol>
+<% @user.requests.each do |request| %>
+  <li><a href="/requests/<%=#{@request.id}%>"><br/><%= request.content %></li>
 <% end %>
-</ul>
-
-
-  <label for="username">Username: </label>
-  <input type="text" name="username" id="username">
-
-  <br><br/>
-
-  <label for="password">Password: </label>
-  <input type="text" name="password" id="password">
-
-  <br><br/>
-
-  <input type="submit" value="Submit" id="submit">
+</ol>
 
 </form>
