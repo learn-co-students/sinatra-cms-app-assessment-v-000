@@ -2,10 +2,18 @@
 
 <p>Welcome, <%= @user.username %></p>
 
-<p>List of Requests</p>
+<p>View your Requests Here:</p>
 
 <ol>
 <% @user.requests.each do |request| %>
+  <li><a href="/requests/<%=#{@request.id}%>"><br/><%= request.content %></li>
+<% end %>
+</ol>
+
+<p>View All Requests:</p>
+
+<ol>
+<% @Request.all.each do |request| %>
   <li><a href="/requests/<%=#{@request.id}%>"><br/><%= request.content %></li>
 <% end %>
 </ol>

@@ -7,7 +7,7 @@ class RecommendationsController < ApplicationController
   post '/recommendations' do
     @recommendation = Recommendation.create(content: params[:content], user_id: @user.id)
 
-    redirect to("/recommendations/#{@recommendation.slug}")
+    redirect to("/recommendations/#{@recommendation.id}")
   end
 
   get '/recommendations/:id' do
