@@ -1,6 +1,6 @@
 <h1>Profile Information</h1>
 
-<p>Welcome, <%= @user.username %></p>
+<p>Welcome, <%= @user.username %>.</p>
 
 <p>View your Requests Here:</p>
 
@@ -13,7 +13,7 @@
 <p>View All Requests:</p>
 
 <ol>
-<% @Request.all.each do |request| %>
+<% Request.all.each do |request| %>
   <li><a href="/requests/<%= @request.id %>"><br/><%= request.content %></li>
 <% end %>
 </ol>
