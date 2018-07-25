@@ -1,6 +1,11 @@
 <h1>Request:</h1>
+
+<%= @request.user.username %>: <%= @request.content %>
+
 <ul>
-  <li><b><%= @request.user.username %></b>: <%= @request.content %></li>
+  <% @request.recommendations.each do |recommendation| %>
+    <li><%= @recommendation.user.username %>: <%= @recommendation.content %></li>
+  <% end %>
 </ul>
 
 <a href="/requests/<%= @request.id %>/edit">Edit Request</a>

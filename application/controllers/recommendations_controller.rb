@@ -29,7 +29,7 @@ class RecommendationsController < ApplicationController
       if @recommendation && @recommendation.user_id == @user.id
         erb :'/recommendations/edit_recommendation'
       else
-        redirect to("/account")
+        redirect to("/profile")
       end
     else
     redirect to("/login")
@@ -46,7 +46,7 @@ class RecommendationsController < ApplicationController
     elsif params[:content].empty? && @recommendation.user_id == @user.id
       redirect to("/recommendations/#{@recommendation.id}/edit")
     elsif !params[:content].empty? && @recommendation.user_id != @user.id
-      redirect to("/account")
+      redirect to("/profile")
     else
       redirect to("/login")
     end

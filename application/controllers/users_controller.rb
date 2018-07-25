@@ -12,8 +12,8 @@ class UsersController < ApplicationController
 
   get '/login' do
     if logged_in?
-      redirect to("/account")
-      erb :'/users/account'
+      redirect to("/profile")
+      erb :'/users/profile'
     else
       erb :'/users/login'
     end
@@ -24,16 +24,25 @@ class UsersController < ApplicationController
 
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
-      redirect to("/account")
+      redirect to("/profile")
     else
       redirect to("/")
     end
 
   end
 
+  get '/profile' do
+    if logged_in?
+      @user = User.find_by(id: session[:user_id])
+      erb :'/users/profile'
+    else
+      redirect to("/login")
+    end
+  end
+
   get '/users/:slug' do
     @user = User.find_by_slug(params[:slug])
-    erb :'/users/show'
+    erb :'/users/profile'
   end
 
   get '/logout' do

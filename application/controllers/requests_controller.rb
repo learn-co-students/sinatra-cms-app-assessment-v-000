@@ -29,7 +29,7 @@ class RequestsController < ApplicationController
       if @request && @request.user_id == @user.id
         erb :'/requests/edit_request'
       else
-        redirect to("/account")
+        redirect to("/profile")
       end
     else
     redirect to("/login")
@@ -46,7 +46,7 @@ class RequestsController < ApplicationController
     elsif params[:content].empty? && @request.user_id == @user.id
       redirect to("/requests/#{@request.id}/edit")
     elsif !params[:content].empty? && @request.user_id != @user.id
-      redirect to("/account")
+      redirect to("/profile")
     else
       redirect to("/login")
     end

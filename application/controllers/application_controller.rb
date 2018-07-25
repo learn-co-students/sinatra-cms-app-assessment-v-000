@@ -15,7 +15,7 @@ class ApplicationController < Sinatra::Base
 
   get '/signup' do
     if logged_in?
-      redirect to("/account")
+      redirect to("/profile")
     else
       erb :'/application/signup'
     end
@@ -30,7 +30,7 @@ class ApplicationController < Sinatra::Base
     end
 
     if session[:user_id] == @user.id
-      redirect to("/account")
+      redirect to("/profile")
     else
       redirect to("/signup")
     end
