@@ -26,7 +26,7 @@ class RequestsController < ApplicationController
   get '/requests/:id' do
     if logged_in?
       @request = Request.find(params["id"])
-      @user = User.find_by(id: rack.session[:user_id])
+      @user = User.find_by(id: env['rack.session'][:user_id])
       erb :'/requests/show_request'
     else
       redirect to("/login")
@@ -37,7 +37,7 @@ class RequestsController < ApplicationController
 
     if logged_in?
       @request = Request.find(params[:id])
-      @user = User.find_by(id: rack.session[:user_id])
+      @user = User.find_by(id: env['rack.session'][:user_id])
       if @request && @request.user_id == @user.id
         erb :'/requests/edit_request'
       else
@@ -50,7 +50,7 @@ class RequestsController < ApplicationController
 
   patch '/request/:id' do
     @request = Request.find(params[:id])
-    @user = User.find_by(id: rack.session[:user_id])
+    @user = User.find_by(id: env['rack.session'][:user_id])
 
     if !params[:content].empty? && @request.user_id == @user.id
       @request.content = params[:content]
@@ -66,7 +66,7 @@ class RequestsController < ApplicationController
 
   delete '/requests/:id/delete' do
     @request = Request.find(params[:id])
-    @user = User.find_by(id: rack.session[:user_id])
+    @user = User.find_by(id: env['rack.session'][:user_id])
 
     if logged_in? && @request.user_id == @user.id
       @request.destroy
