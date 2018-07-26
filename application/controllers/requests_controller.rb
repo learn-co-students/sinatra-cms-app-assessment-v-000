@@ -23,6 +23,20 @@ class RequestsController < ApplicationController
     end
   end
 
+  get '/requests/:slug' do
+    @user = User.find_by_slug(params[:slug])
+
+    if logged_in?
+      if @user
+        erb :'show_requests_by_user'
+      else
+        # put error message
+        redirect to("/requests")
+    else
+      redirect to("/login")
+    end
+  end
+
   get '/requests/:id' do
     if logged_in?
       @request = Request.find(params["id"])
