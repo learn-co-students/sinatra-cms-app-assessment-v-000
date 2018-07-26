@@ -1,5 +1,8 @@
+require 'rack-flash'
 require 'pry'
 class RequestsController < ApplicationController
+
+  use Rack::Flash
 
   get '/requests/new' do
     if logged_in?
@@ -30,8 +33,9 @@ class RequestsController < ApplicationController
       if @user
         erb :'show_requests_by_user'
       else
-        # put error message
+        flash[:message] = "Make sure to spell your username correctly. Please try again."
         redirect to("/requests")
+      end
     else
       redirect to("/login")
     end
