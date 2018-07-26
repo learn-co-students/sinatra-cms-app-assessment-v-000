@@ -1,20 +1,32 @@
+require 'pry'
 class RequestsController < ApplicationController
 
   get '/requests/new' do
-    erb :'/requests/create_request'
+    if logged_in?
+      erb :'/requests/create_request'
+    else
+      redirect to("/login")
+    end
   end
 
-  post '/request' do
-    @request = Request.create(content: params[:content], user_id: @user.id)
+  post '/requests' do
+    @request = Request.create(content: params[:content], user_id: current_user.id)
 
-    redirect to("/requests/#{@request.slug}")
+    redirect to("/requests/#{@request.id}")
+  end
+
+  get '/requests' do
+    if logged_in?
+      erb :'/requests/requests'
+    else
+      redirect to("/login")
+    end
   end
 
   get '/requests/:id' do
-    @request = Request.find(params["id"])
-
     if logged_in?
-      @user = User.find_by(id: session[:user_id])
+      @request = Request.find(params["id"])
+      @user = User.find_by(id: rack.session[:user_id])
       erb :'/requests/show_request'
     else
       redirect to("/login")
@@ -25,7 +37,7 @@ class RequestsController < ApplicationController
 
     if logged_in?
       @request = Request.find(params[:id])
-      @user = User.find_by(id: session[:user_id])
+      @user = User.find_by(id: rack.session[:user_id])
       if @request && @request.user_id == @user.id
         erb :'/requests/edit_request'
       else
@@ -38,7 +50,7 @@ class RequestsController < ApplicationController
 
   patch '/request/:id' do
     @request = Request.find(params[:id])
-    @user = User.find_by(id: session[:user_id])
+    @user = User.find_by(id: rack.session[:user_id])
 
     if !params[:content].empty? && @request.user_id == @user.id
       @request.content = params[:content]
@@ -54,7 +66,7 @@ class RequestsController < ApplicationController
 
   delete '/requests/:id/delete' do
     @request = Request.find(params[:id])
-    @user = User.find_by(id: session[:user_id])
+    @user = User.find_by(id: rack.session[:user_id])
 
     if logged_in? && @request.user_id == @user.id
       @request.destroy

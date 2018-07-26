@@ -4,7 +4,7 @@
 
 <ul>
   <% @request.recommendations.each do |recommendation| %>
-    <li><%= @recommendation.user.username %>: <%= @recommendation.content %></li>
+    <li><%= recommendation.user.username %>: <%= recommendation.content %></li>
   <% end %>
 </ul>
 

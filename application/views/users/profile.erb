@@ -6,7 +6,7 @@
 
 <ol>
 <% @user.requests.each do |request| %>
-  <li><a href="/requests/<%= @request.id %>"><br/><%= request.content %></li>
+  <li><a href="/requests/<%= request.id %>"><br/><%= request.content %></li>
 <% end %>
 </ol>
 
@@ -14,6 +14,6 @@
 
 <ol>
 <% Request.all.each do |request| %>
-  <li><a href="/requests/<%= @request.id %>"><br/><%= request.content %></li>
+  <li><a href="/requests/<%= request.id %>"><br/><%= request.content %></li>
 <% end %>
 </ol>

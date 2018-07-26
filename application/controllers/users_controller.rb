@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   post '/users' do
     @user = User.create(username: params[:username], email: params[:email], password: params[:password])
 
-    redirect to("/users/#{@user.slug}")
+    redirect to("/profile")
   end
 
   get '/login' do
@@ -38,11 +38,6 @@ class UsersController < ApplicationController
     else
       redirect to("/login")
     end
-  end
-
-  get '/users/:slug' do
-    @user = User.find_by_slug(params[:slug])
-    erb :'/users/profile'
   end
 
   get '/logout' do

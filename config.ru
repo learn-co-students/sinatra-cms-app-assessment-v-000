@@ -9,6 +9,7 @@ require_relative 'application/controllers/recommendations_controller'
 
 use Rack::MethodOverride
 
+use RequestsController
 use RecommendationsController
 use UsersController
 run ApplicationController
