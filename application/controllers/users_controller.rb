@@ -34,6 +34,7 @@ class UsersController < ApplicationController
   get '/profile' do
     if logged_in?
       @user = User.find_by(id: session[:user_id])
+      @recommendations = current_user.recommendations
       erb :'/users/profile'
     else
       redirect to("/login")

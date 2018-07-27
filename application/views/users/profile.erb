@@ -29,3 +29,11 @@
   <li><a href="/requests/<%= request.id %>"><br/><%= request.content %></li>
 <% end %>
 </ol>
+
+<a href="/recommendations">View your current travel recommendations for the Bon Voyage community:</a>
+
+<ol>
+<% @recommendations.each do |recommendation| %>
+  <li><a href="/recommendations/<%= recommendation.id %>"><br/><%= recommendation.content %></li>
+<% end %>
+</ol>
