@@ -1,18 +1,18 @@
 <h1>Request:</h1>
 
-<%= @request.user.username %>: <%= @request.content %>
+<%= @req.user.username %>: <%= @req.content %>
 
 <ul>
-  <% @request.recommendations.each do |recommendation| %>
+  <% @req.recommendations.each do |recommendation| %>
     <li><%= recommendation.user.username %>: <%= recommendation.content %></li>
   <% end %>
 </ul>
 
-<a href="/requests/<%= @request.id %>/edit">Edit Request</a>
+<a href="/requests/<%= @req.id %>/edit">Edit Request</a>
 
 <br></br>
 
-<form action="/requests/<%= @request.id %>/delete" method="POST">
+<form action="/requests/<%= @req.id %>/delete" method="POST">
   <input type="hidden" id="hidden" name="_method" value="delete">
 
   <input type="submit" value="Delete Request" id="Delete Request">

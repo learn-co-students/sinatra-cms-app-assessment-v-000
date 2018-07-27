@@ -1,7 +1,7 @@
 <h1>Your Travel Requests:</h1>
 
 <ol>
-  <% @user.requests.each do |request| %>
+  <% @requests.each do |request| %>
     <li><%= request.content %></li>
   <% end %>
 </ol>

@@ -13,12 +13,12 @@ class RequestsController < ApplicationController
   end
 
   post '/requests' do
-    @request = Request.create(content: params[:content], user_id: current_user.id)
+    @req = Request.create(content: params[:content], user_id: current_user.id)
 
-    redirect to("/requests/#{@request.id}")
+    redirect to("/requests/#{@req.id}")
   end
 
-  get '/requests' do
+  get '/requests/all' do
     if logged_in?
       erb :'/requests/requests'
     else
@@ -26,15 +26,15 @@ class RequestsController < ApplicationController
     end
   end
 
-  get '/requests/:slug' do
-    @user = User.find_by_slug(params[:slug])
+  get '/requests' do
+    @requests = current_user.requests
 
     if logged_in?
-      if @user
+      if @requests
         erb :'show_requests_by_user'
       else
         flash[:message] = "Make sure to spell your username correctly. Please try again."
-        redirect to("/requests")
+        redirect to("/requests/all")
       end
     else
       redirect to("/login")
@@ -43,7 +43,7 @@ class RequestsController < ApplicationController
 
   get '/requests/:id' do
     if logged_in?
-      @request = Request.find(params["id"])
+      @req = Request.find(params["id"])
       @user = User.find_by(id: env['rack.session'][:user_id])
       erb :'/requests/show_request'
     else
@@ -54,9 +54,9 @@ class RequestsController < ApplicationController
   get '/requests/:id/edit' do
 
     if logged_in?
-      @request = Request.find(params[:id])
+      @req = Request.find(params[:id])
       @user = User.find_by(id: env['rack.session'][:user_id])
-      if @request && @request.user_id == @user.id
+      if @req && @req.user_id == @user.id
         erb :'/requests/edit_request'
       else
         redirect to("/profile")
@@ -67,15 +67,15 @@ class RequestsController < ApplicationController
   end
 
   patch '/request/:id' do
-    @request = Request.find(params[:id])
+    @req = Request.find(params[:id])
     @user = User.find_by(id: env['rack.session'][:user_id])
 
-    if !params[:content].empty? && @request.user_id == @user.id
-      @request.content = params[:content]
-      @request.save
-    elsif params[:content].empty? && @request.user_id == @user.id
-      redirect to("/requests/#{@request.id}/edit")
-    elsif !params[:content].empty? && @request.user_id != @user.id
+    if !params[:content].empty? && @req.user_id == @user.id
+      @req.content = params[:content]
+      @req.save
+    elsif params[:content].empty? && @req.user_id == @user.id
+      redirect to("/requests/#{@req.id}/edit")
+    elsif !params[:content].empty? && @req.user_id != @user.id
       redirect to("/profile")
     else
       redirect to("/login")
@@ -83,11 +83,11 @@ class RequestsController < ApplicationController
   end
 
   delete '/requests/:id/delete' do
-    @request = Request.find(params[:id])
+    @req = Request.find(params[:id])
     @user = User.find_by(id: env['rack.session'][:user_id])
 
-    if logged_in? && @request.user_id == @user.id
-      @request.destroy
+    if logged_in? && @req.user_id == @user.id
+      @req.destroy
 
       redirect to("/delete_confirmation")
     else
