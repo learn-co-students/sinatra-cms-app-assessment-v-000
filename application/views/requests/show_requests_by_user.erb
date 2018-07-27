@@ -1,0 +1,11 @@
+<h1>Your Travel Requests:</h1>
+
+<% if @requests.empty? %>
+  <p>There are no travel requests that have been submitted. Please create a new travel request.</p>
+<% else %>
+<ol>
+  <% @requests.each do |request| %>
+    <li><%= request.content %></li>
+  <% end %>
+</ol>
+<% end %>

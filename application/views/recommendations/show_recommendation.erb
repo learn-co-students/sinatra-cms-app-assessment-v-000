@@ -1,0 +1,14 @@
+<h1>Recommendation:</h1>
+<ul>
+  <li><b><%= @recommendation.user.username %></b>: <%= @recommendation.content %></li>
+</ul>
+
+<a href="/recommendations/<%= @recommendation.id %>/edit">Edit Recommendation</a>
+
+<br></br>
+
+<form action="/recommendations/<%= @recommendation.id %>/delete" method="POST">
+  <input type="hidden" id="hidden" name="_method" value="delete">
+
+  <input type="submit" value="Delete Recommendation" id="Delete Recommendation">
+</form>

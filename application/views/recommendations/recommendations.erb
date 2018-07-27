@@ -1,0 +1,7 @@
+<h1>View All Recommendations:</h1>
+
+<ol>
+<% Recommendation.all.each do |recommendation| %>
+  <li><a href="/recommendations/<%= recommendation.id %>"><br/><%= recommendation.content %></li>
+<% end %>
+</ol>

@@ -1,0 +1,19 @@
+<h1>Request:</h1>
+
+<%= @req.user.username %>: <%= @req.content %>
+
+<ul>
+  <% @req.recommendations.each do |recommendation| %>
+    <li><%= recommendation.user.username %>: <%= recommendation.content %></li>
+  <% end %>
+</ul>
+
+<a href="/requests/<%= @req.id %>/edit">Edit Request</a>
+
+<br></br>
+
+<form action="/requests/<%= @req.id %>/delete" method="POST">
+  <input type="hidden" id="hidden" name="_method" value="delete">
+
+  <input type="submit" value="Delete Request" id="Delete Request">
+</form>

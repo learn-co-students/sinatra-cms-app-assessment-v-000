@@ -1,0 +1,11 @@
+<% if flash.has?(:message) %>
+  <%= flash[:message] %>
+<% end %>
+
+<h1>View All Requests:</h1>
+
+<ol>
+<% Request.all.each do |request| %>
+  <li><a href="/requests/<%= request.id %>"><br/><%= request.content %></li>
+<% end %>
+</ol>

@@ -1,0 +1,39 @@
+<h1>Profile Information</h1>
+
+<br><p>Welcome, <%= @user.username %>.</p></br>
+
+<a href="/requests/new">Create a new travel request.</a>
+
+<br></br>
+
+<a href="/recommendations/new">Create a new travel recommendation.</a>
+
+<br></br>
+
+<a href="/requests">View your individual travel requests here:</a>
+
+<% if @user.requests.empty? %>
+  <p style="margin-left: 40px">Please create a new travel request. Other members of the Bon Voyage community will share any travel recommendations that they have.</p>
+<% else %>
+  <ol>
+  <% @user.requests.each do |request| %>
+    <li><a href="/requests/<%= request.id %>"><br/><%= request.content %></li>
+  <% end %>
+  </ol>
+<% end %>
+
+<a href="/requests/all">View all travel requests for the Bon Voyage community:</a>
+
+<ol>
+<% Request.all.each do |request| %>
+  <li><a href="/requests/<%= request.id %>"><br/><%= request.content %></li>
+<% end %>
+</ol>
+
+<a href="/recommendations">View your current travel recommendations for the Bon Voyage community:</a>
+
+<ol>
+<% @recommendations.each do |recommendation| %>
+  <li><a href="/recommendations/<%= recommendation.id %>"><br/><%= recommendation.content %></li>
+<% end %>
+</ol>

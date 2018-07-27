@@ -1,0 +1,11 @@
+<h1>Your Travel Recommendations:</h1>
+
+<% if @recommendations.empty? %>
+  <p>There are no travel recommendations that have been submitted. Please create a new travel recommendation.</p>
+<% else %>
+<ol>
+  <% @recommendations.each do |recommendation| %>
+    <li><%= recommendation.content %></li>
+  <% end %>
+</ol>
+<% end %>
