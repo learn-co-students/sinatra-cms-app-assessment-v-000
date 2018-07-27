@@ -33,7 +33,6 @@ class RequestsController < ApplicationController
       if @requests
         erb :'/requests/show_requests_by_user'
       else
-        flash[:message] = "Make sure to spell your username correctly. Please try again."
         redirect to("/requests/all")
       end
     else
