@@ -36,7 +36,7 @@ class RecommendationsController < ApplicationController
     end
   end
 
-  patch '/recommendation/:id' do
+  patch '/recommendations/:id' do
     @recommendation = Recommendation.find(params[:id])
     @user = User.find_by(id: session[:user_id])
 
