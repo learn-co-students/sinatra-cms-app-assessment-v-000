@@ -4,18 +4,18 @@
 
 <a href="/requests/new">Create a New Request</a>
 
-<p>View Your Requests Here:</p>
+<br></br>
+
+<a href="/requests">View Your Requests Here:</a>
 
 <% if @user.requests.empty? %>
   <p>Please create a request.</p>
 <% else %>
-
   <ol>
   <% @user.requests.each do |request| %>
     <li><a href="/requests/<%= request.id %>"><br/><%= request.content %></li>
   <% end %>
   </ol>
-
 <% end %>
 
 <p>View All Requests:</p>
