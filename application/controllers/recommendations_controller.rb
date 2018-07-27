@@ -1,7 +1,7 @@
 class RecommendationsController < ApplicationController
 
   get '/recommendations/new' do
-    erb :'/users/create_recommendation'
+    erb :'/recommendations/create_recommendation'
   end
 
   post '/recommendations' do
