@@ -1,10 +1,15 @@
 class RecommendationsController < ApplicationController
 
   get '/recommendations/new' do
-    erb :'/recommendations/create_recommendation'
+    if logged_in?
+      erb :'/recommendations/create_recommendation'
+    else
+      redirect to("/login")
+    end
   end
 
   post '/recommendations' do
+    @user = current_user
     @recommendation = Recommendation.create(content: params[:content], user_id: @user.id)
 
     redirect to("/recommendations/#{@recommendation.id}")
