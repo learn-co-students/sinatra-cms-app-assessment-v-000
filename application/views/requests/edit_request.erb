@@ -1,6 +1,6 @@
 <h1>Edit Request</h1>
 
-<form action="/requests/<%=@request.id%>" method="POST">
+<form action="/requests/<%=@req.id%>" method="POST">
   <input type="hidden" id="hidden" name="_method" value="patch">
 
   <br></br>
@@ -10,7 +10,7 @@
   <br></br>
 
   <label for="content">Content:</label>
-  <input type="text" name="content" id="content" value="<%=@request.content%>">
+  <input type="text" name="content" id="content" value="<%=@req.content%>">
 
   <br></br>
 

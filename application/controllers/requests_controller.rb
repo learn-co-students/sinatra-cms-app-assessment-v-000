@@ -66,13 +66,14 @@ class RequestsController < ApplicationController
     end
   end
 
-  patch '/request/:id' do
+  patch '/requests/:id' do
     @req = Request.find(params[:id])
     @user = User.find_by(id: env['rack.session'][:user_id])
 
     if !params[:content].empty? && @req.user_id == @user.id
       @req.content = params[:content]
       @req.save
+      redirect to("/requests/#{@req.id}")
     elsif params[:content].empty? && @req.user_id == @user.id
       redirect to("/requests/#{@req.id}/edit")
     elsif !params[:content].empty? && @req.user_id != @user.id
@@ -89,7 +90,7 @@ class RequestsController < ApplicationController
     if logged_in? && @req.user_id == @user.id
       @req.destroy
 
-      redirect to("/delete_confirmation")
+      erb :'/requests/delete_confirmation'
     else
       redirect to("/login")
     end
