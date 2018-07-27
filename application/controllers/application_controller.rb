@@ -1,6 +1,9 @@
 require './config/environment'
+require 'rack-flash'
 
 class ApplicationController < Sinatra::Base
+
+  use Rack::Flash
 
   configure do
     set :public_folder, 'public'
@@ -27,6 +30,7 @@ class ApplicationController < Sinatra::Base
 
   post '/signup' do
     if params["username"].empty? || params["email"].empty? || params["password"].empty?
+      flash[:message] = "Please ensure all fields are completed. A username, email and password is required for registration."
       redirect to("/signup")
     else
       @user = User.create(username: params["username"], email: params["email"], password: params["password"])
