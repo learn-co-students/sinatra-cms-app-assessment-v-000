@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'pry'
 
-describe GlobalTesting do
+describe ApplicationController do
 
   describe "Homepage" do
     it 'loads the homepage' do
