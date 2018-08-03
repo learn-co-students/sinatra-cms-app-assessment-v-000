@@ -9,7 +9,7 @@ describe 'User' do
 
   end
   it 'can slug the nickname' do
-    expect(@user.slug).to eq("dbca-creator")
+    expect(@organization.slug).to eq("dbca")
   end
 
 end
