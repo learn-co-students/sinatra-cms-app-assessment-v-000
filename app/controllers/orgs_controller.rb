@@ -4,4 +4,8 @@ class OrgsController < ApplicationController
     erb :"orgs/index"
   end
 
+  get '/orgs/new' do
+    erb :"orgs/new"
+  end
+
 end

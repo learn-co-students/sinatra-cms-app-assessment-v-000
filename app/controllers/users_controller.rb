@@ -38,7 +38,7 @@ class UsersController < ApplicationController
 
   get '/account' do
     if logged_in?
-      @user = current_user
+      @organization = Organization.find_by(:user_id => current_user.id)
       erb :"users/index"
     else
       redirect '/login'

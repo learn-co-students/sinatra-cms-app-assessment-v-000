@@ -1,1 +1,13 @@
 <h1>Welcome to Your Account, <%= @user.nickname %></h1>
+
+<% if @organization %>
+  <h2>Your Organization:</h2>
+  Name: <%= @organization.name %>
+  Address: <%= @organization.address %>
+  Phone: <%= @organization.phone %>
+  Email: <%= @organization.email %>
+  Website: <%= @organization.website %>
+  Description: <%= @organization.description %>
+<% else %>
+  <a href="/orgs/new">Add An Organization</a>
+<% end %>
