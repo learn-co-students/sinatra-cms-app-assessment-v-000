@@ -18,7 +18,7 @@ describe ApplicationController do
       expect(last_response.status).to eq(200)
     end
 
-    it 'signup directs user to user index' do
+    it 'signup directs user to orgs index' do
       params = {
         :first_name => "Frank",
         :last_name => "Mccallion",
@@ -28,7 +28,7 @@ describe ApplicationController do
         :password => "password"
       }
       post '/signup', params
-      expect(last_response.location).to include("/user")
+      expect(last_response.location).to include("/orgs")
     end
 
     it 'does not let a user sign up without a first_name' do
@@ -107,7 +107,7 @@ describe ApplicationController do
       }
       post '/signup', params
       get '/signup'
-      expect (last_response.location).to include('/user')
+      expect (last_response.location).to include('/orgs')
     end
 
   end
