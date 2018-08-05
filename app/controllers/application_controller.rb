@@ -13,6 +13,12 @@ class ApplicationController < Sinatra::Base
     erb :'/index'
   end
 
+  get '/developer' do
+    @users = User.all
+    @orgs = Organization.all
+    erb :'/users/developer'
+  end
+
   helpers do
 
     def logged_in?
