@@ -15,6 +15,7 @@ class OrgsController < ApplicationController
   post '/orgs/new' do
     @org = Organization.create(params)
     @org.user_id = current_user.id
+    @org.save
     redirect '/account'
   end
 

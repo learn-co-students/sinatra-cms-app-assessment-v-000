@@ -2,12 +2,25 @@
 
 <% if @organization %>
   <h2>Your Organization:</h2>
-  Name: <%= @organization.name %>
-  Address: <%= @organization.address %>
-  Phone: <%= @organization.phone %>
-  Email: <%= @organization.email %>
-  Website: <%= @organization.website %>
-  Description: <%= @organization.description %>
+  <p>
+    Name: <%= @organization.name %>
+  </p>
+  <p>
+    Address: <%= @organization.address %>
+  </p>
+  <p>
+    Phone: <%= @organization.phone %>
+  </p>
+  <p>
+    Email: <%= @organization.email %>
+  </p>
+  <p>
+    Website: <%= @organization.website %>
+  </p>
+  <p>
+    Description: <%= @organization.description %>
+  </p>
+
 <% else %>
   <a href="/orgs/new">Add An Organization</a>
 <% end %>
