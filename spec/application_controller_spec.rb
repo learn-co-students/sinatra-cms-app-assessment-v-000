@@ -7,7 +7,7 @@ describe ApplicationController do
     it 'loads the homepage' do
       get '/'
       expect(last_response.status).to eq(200)
-      expect(last_response.body).to include("Welcome to DBCA Admin Panel!")
+      expect(last_response.body).to include("DBCA Index Page")
     end
   end
 
