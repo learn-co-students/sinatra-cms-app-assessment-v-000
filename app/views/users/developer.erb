@@ -1,19 +1,18 @@
 <h1><%= current_user.nickname %>, Welcome to the Developer Page</h1>
 
 <% @users.each do |u| %>
-  <h2>Users:</h2>
-  <p>
+  <h2>User:</h2>
+  <div style="margin-left: 25px;">
     <strong>Name:</strong> <%= u.first_name %> <%= u.last_name %>
     <br />
     <strong>AKA:</strong> <%= u.nickname %>, <%= u.title %>
     <br />
     <strong>Contact:</strong> <%= u.email %>
-  <p>
-<% end %>
-
-<% @orgs.each do |o| %>
-  <h2>Organizations:</h2>
-  <p>
-    <strong>Name:</strong> <%= o.name %>
-  </p>
+  </div>
+  <div style="margin-left: 25px;">
+    <% u.organizations.each do |o| %>
+    <h3>Organizations:</h3>
+      <%= o.name %>
+    <% end %>
+  </div>
 <% end %>
