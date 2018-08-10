@@ -21,8 +21,6 @@ For this assessment you'll be creating any sort of CRUD app. The app should be a
  - [Todo List](http://todomvc.com). Each task is part of a list
  - Collection of useful Ruby resources
 
-If you are unsure about a domain or can't come up with an idea, feel free to reach out to fullstack@learn.co for some advice.
-
 ### Domains To Avoid
 
  As we spent a lot of time working with domains similiar to these during the Sinatra curriculum we do not accept these domain designs. 
