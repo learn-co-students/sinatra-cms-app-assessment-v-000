@@ -12,6 +12,10 @@ class OrgsController < ApplicationController
     end
   end
 
+  get '/orgs/:id/show' do
+
+  end
+
   post '/orgs/new' do
     @org = Organization.create(params)
     @org.user_id = current_user.id

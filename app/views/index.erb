@@ -1,1 +1,7 @@
-<h1>DBCA Index Page</h1>
+<h1>DBCA Home Page</h1>
+
+<% @orgs.each do |o| %>
+  <p>
+    <a href="/orgs/<%= o.id %>/show"><%= o.name %></a>
+  </p>
+<% end %>

@@ -10,6 +10,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/' do
+    @orgs = Organization.all
     erb :'/index'
   end
 
