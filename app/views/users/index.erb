@@ -24,8 +24,12 @@
           <br />
           <%= o.description %>
         </p>
+        <p>
+          <a href="/orgs/<%= o.id %>/edit">Edit <%= o.name %></a>
+        </p>
       </th>
     <% end %>
   </tr>
 </table>
+<hr />
 <a href="/orgs/new">Add An Organization</a>

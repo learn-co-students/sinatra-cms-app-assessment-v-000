@@ -1,0 +1,28 @@
+<h1>Edit <%= @org.name %></h1>
+
+
+<form action="/orgs/<%= @org.id %>/edit" method="POST">
+  <input type="text" name="name" placeholder="<%= @org.name %>">
+  <input type="text" name="address" placeholder="<%= @org.address %>">
+  <input type="text" name="phone" placeholder="<%= @org.phone %>">
+  <input type="text" name="email" placeholder="<%= @org.email %>">
+  <input type="text" name="website" placeholder="<%= @org.website %>">
+  <input type="text" name="description" placeholder="<%= @org.description %>">
+
+  <input id="submit" type="submit" value="Save Changes">
+</form>
+
+
+
+<!--<p>
+  <%= @org.address %>
+  <br />
+  <%= @org.phone %>
+  <br />
+  <%= @org.email %>
+  <br />
+  <%= @org.website %>
+</p>
+<p>
+  <%= @org.description %>
+</p>-->
