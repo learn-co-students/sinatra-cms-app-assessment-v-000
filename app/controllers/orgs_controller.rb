@@ -37,9 +37,19 @@ class OrgsController < ApplicationController
   end
 
   post '/orgs/new' do
-    @org = Organization.create(params)
+
+    @org = Organization.create("name" => params[:name], "address" => params[:address], "phone" => params[:phone], "email" => params[:email], "website" => params[:website], "description" => params[:description])
     @org.user_id = current_user.id
     @org.save
+
+    if !params["category"]["name"].empty?
+      Category.create("name" => params[:category][:name])
+    end
+
+
+
+    @org.save
+
     redirect '/account'
   end
 

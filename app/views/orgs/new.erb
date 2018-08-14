@@ -1,12 +1,30 @@
 <h1>Add New Organization</h1>
 
 <form action="/orgs/new" method="POST">
-  <input type="text" name="name" placeholder="Organization Name">
-  <input type="text" name="address" placeholder="Organization Address">
-  <input type="text" name="phone" placeholder="Organization Phone Number">
-  <input type="text" name="email" placeholder="Organization Email">
-  <input type="text" name="website" placeholder="Organization Website">
-  <input type="text" name="description" placeholder="Organization Description">
-
-  <input id="submit" type="submit" value="Submit">
+  <strong>Organization Name:</strong>
+  <input type="text" name="name" placeholder="Enter Name">
+  <br /><br />
+  <strong>Address:</strong>
+  <input type="text" name="address" placeholder="Enter Address">
+  <br /><br />
+  <strong>Phone:</strong>
+  <input type="text" name="phone" placeholder="Enter Phone">
+  <br /><br />
+  <strong>Email:</strong>
+  <input type="text" name="email" placeholder="Enter Email">
+  <br /><br />
+  <strong>Website:</strong>
+  <input type="text" name="website" placeholder="Enter Website">
+  <br /><br />
+  <strong>Description:</strong>
+  <input type="text" name="description" placeholder="Enter Description">
+  <br /><br />
+  <h2>Category:</h2>
+  <% Category.all.each do |c| %>
+    <input id="category_<%= c.id %>" type="checkbox" name="category_id" value="<% c.id %>">
+    <label><%= c.name %></label>
+  <% end %>
+  <h3>Or, create new category:</h3>
+  <input id="new_category" type="text" name="category[name]">
+  <input id="submit" type="submit" value="Create New Organization">
 </form>

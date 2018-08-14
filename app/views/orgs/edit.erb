@@ -2,13 +2,30 @@
 
 
 <form action="/orgs/<%= @org.id %>/edit" method="POST">
-  <input type="text" name="name" placeholder="<%= @org.name %>">
-  <input type="text" name="address" placeholder="<%= @org.address %>">
-  <input type="text" name="phone" placeholder="<%= @org.phone %>">
-  <input type="text" name="email" placeholder="<%= @org.email %>">
-  <input type="text" name="website" placeholder="<%= @org.website %>">
-  <input type="text" name="description" placeholder="<%= @org.description %>">
-
+  <strong>Organization Name:</strong> <%= @org.name %>
+  <br />
+  <input type="text" name="name" placeholder="Edit Name">
+  <br /><br />
+  <strong>Address:</strong> <%= @org.address %>
+  <br />
+  <input type="text" name="address" placeholder="Edit Address">
+  <br /><br />
+  <strong>Phone:</strong> <%= @org.phone %>
+  <br />
+  <input type="text" name="phone" placeholder="Edit Phone">
+  <br /><br />
+  <strong>Email:</strong> <%= @org.email %>
+  <br />
+  <input type="text" name="email" placeholder="Edit Email">
+  <br /><br />
+  <strong>Website:</strong> <%= @org.website %>
+  <br />
+  <input type="text" name="website" placeholder="Edit Website">
+  <br /><br />
+  <strong>Description:</strong> <%= @org.description %>
+  <br />
+  <input type="text" name="description" placeholder="Edit Description">
+  <br /><br />
   <input id="submit" type="submit" value="Save Changes">
 </form>
 
