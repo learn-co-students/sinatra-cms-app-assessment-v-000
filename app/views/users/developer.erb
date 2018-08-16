@@ -26,7 +26,10 @@
     <br />
     <strong>User:</strong> <%= o.user %>
     <br />
-    <strong>Category:</strong> <%= o.category %>
+    <strong>Category:</strong>
+      <% if o.category %>
+        <%= o.category.name %>
+      <% end %>
     <br />
     <strong>Location:</strong> <%= o.location %>
     <br />
