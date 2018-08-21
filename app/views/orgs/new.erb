@@ -21,7 +21,7 @@
   <br /><br />
   <h2>Category:</h2>
   <% Category.all.each do |c| %>
-    <input id="category_<%= c.id %>" type="checkbox" name="category_id" value="<% c.id %>">
+    <input id="<%= c.name %>" type="checkbox" name="category_id" value="<%= c.id %>">
     <label><%= c.name %></label>
   <% end %>
   <h3>Or, create new category:</h3>

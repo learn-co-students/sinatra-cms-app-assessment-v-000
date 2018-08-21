@@ -41,6 +41,7 @@ class OrgsController < ApplicationController
     @org = Organization.create("name" => params[:name], "address" => params[:address], "phone" => params[:phone], "email" => params[:email], "website" => params[:website], "description" => params[:description])
     @org.user_id = current_user.id
 
+    # If both an existing category is selected and a new one is entered - the new category will take precedence
     if !params["category"]["name"].empty?
       cat = Category.find_by(:name => params[:category][:name])
       if cat
@@ -49,6 +50,9 @@ class OrgsController < ApplicationController
         cat = Category.create("name" => params[:category][:name])
         @org.category_id = cat.id
       end
+    elsif !params["category_id"].empty?
+      @org.category_id = params["category_id"]
+
     end
     binding.pry
     @org.save
