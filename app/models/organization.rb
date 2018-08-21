@@ -2,7 +2,7 @@ class Organization < ActiveRecord::Base
 
   belongs_to :user
   belongs_to :category
-  belongs_to :location
+
 
   def slug
     name.downcase.gsub(" ","-")
