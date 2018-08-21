@@ -14,6 +14,9 @@ class OrgsController < ApplicationController
 
   get '/orgs/:id/show' do
     @org = Organization.find(params[:id])
+    @org.aggregate_rank = @org.aggregate_rank + 1
+    @org.daily_rank = @org.daily_rank + 1
+    @org.save
     erb :"orgs/show"
   end
 
@@ -46,7 +49,10 @@ class OrgsController < ApplicationController
       "description" => params[:description],
       "account" => params[:account],
       "aggregate_rank" => 1,
-      "daily_rank" => 1)
+      "daily_rank" => 1,
+      "city" => params[:city],
+      "state" => params[:state],
+      "zip" => params[:zip])
 
     @org.user_id = current_user.id
 
