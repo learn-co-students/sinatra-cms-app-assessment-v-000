@@ -38,7 +38,7 @@ class OrgsController < ApplicationController
 
   post '/orgs/new' do
 
-    @org = Organization.create("name" => params[:name], "address" => params[:address], "phone" => params[:phone], "email" => params[:email], "website" => params[:website], "description" => params[:description])
+    @org = Organization.create("name" => params[:name], "address" => params[:address], "phone" => params[:phone], "email" => params[:email], "website" => params[:website], "description" => params[:description], "account" => params[:account], "aggregate_rank" => 1, "daily_rank" => 1)
     @org.user_id = current_user.id
 
     # If both an existing category is selected and a new one is entered - the new category will take precedence
@@ -54,7 +54,7 @@ class OrgsController < ApplicationController
       @org.category_id = params["category_id"]
 
     end
-    binding.pry
+
     @org.save
 
     redirect '/account'
