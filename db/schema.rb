@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180803233457) do
+ActiveRecord::Schema.define(version: 20180821123559) do
 
   create_table "categories", force: :cascade do |t|
     t.text "name"
@@ -41,14 +41,6 @@ ActiveRecord::Schema.define(version: 20180803233457) do
     t.text    "description"
     t.integer "aggregate_rank"
     t.integer "daily_rank"
-    t.integer "tag1"
-    t.integer "tag2"
-    t.integer "tag3"
-    t.integer "tag4"
-  end
-
-  create_table "tags", force: :cascade do |t|
-    t.text "name"
   end
 
   create_table "users", force: :cascade do |t|

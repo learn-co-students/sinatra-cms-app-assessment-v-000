@@ -24,7 +24,10 @@
     <br />
     <strong>Website:</strong> <%= o.website %>
     <br />
-    <strong>User:</strong> <%= o.user %>
+    <strong>User:</strong>
+      <% if o.user %>
+        <%= o.user.nickname %>
+      <% end %>
     <br />
     <strong>Category:</strong>
       <% if o.category %>

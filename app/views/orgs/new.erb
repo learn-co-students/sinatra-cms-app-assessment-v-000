@@ -18,14 +18,18 @@
   <br /><br />
   <strong>Description:</strong>
   <input type="text" name="description" placeholder="Enter Description">
-  <br /><br />
-  <h2>Category:</h2>
+
+  <br /><br /><hr />
+
+  <h2>Create New Category:</h2>
+  <input id="new_category" type="text" name="category[name]">
+  <h3>Or, select one of the following:</h3>
   <% Category.all.each do |c| %>
     <input id="<%= c.name %>" type="checkbox" name="category_id" value="<%= c.id %>">
     <label><%= c.name %></label>
   <% end %>
-  <h3>Or, create new category:</h3>
-  <input id="new_category" type="text" name="category[name]">
-  <br />
+
+  <br /><br /><hr />
+
   <input id="submit" type="submit" value="Create New Organization">
 </form>
