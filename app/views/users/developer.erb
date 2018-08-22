@@ -49,12 +49,20 @@
     <br />
     <strong>Daily Rank:</strong> <%= o.daily_rank %>
     <br />
-    <a href="/orgs/<%= o.id %>/edit">Edit</a>
+
     <a href="/orgs/<%= o.id %>/delete">Delete</a>
   </div>
 <% end %>
-
-<% @cats.each do |c| %>
-  <h2>Category</h2>
-  <%= c.name %>
-<% end %>
+<h2>Categories:</h2>
+<table border="1">
+  <tr>
+    <% @cats.each do |c| %>
+      <td>
+        <%= c.name %>
+        <br /><br />
+        <a href="/cats/<%= c.id %>/delete">Delete</a>
+      </td>
+    <% end %>
+  </tr>
+</table>
+<br /><br /><br />

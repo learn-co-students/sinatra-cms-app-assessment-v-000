@@ -47,11 +47,11 @@ class UsersController < ApplicationController
 
   get '/users/:id/delete' do
     @user = User.find(params[:id])
-    if @user == current_user
-      redirect '/developer'
-    else @user && current_user.email == "fkmccallion@hotmail.com"
+    if @user && current_user.id == 1
       @user.delete
       redirect '/developer'
+    else
+      redirect '/account'
     end
   end
 
