@@ -45,6 +45,49 @@ class UsersController < ApplicationController
     end
   end
 
+  get '/users/:id/delete' do
+    @user = User.find(params[:id])
+    if @user == current_user
+      redirect '/developer'
+    else @user && current_user.email == "fkmccallion@hotmail.com"
+      @user.delete
+      redirect '/developer'
+    end
+  end
+
+  get '/users/:id/edit' do
+    @user = User.find(params[:id])
+    erb :"users/edit"
+  end
+
+  post '/users/:id/edit' do
+    @user = User.find(params[:id])
+    if @user && (@user == current_user || current_user.email == "fkmccallion@hotmail.com")
+      params.each_pair do |k,v|
+        if !(v.empty? || k == "id")
+          case k
+          when "first_name"
+            @user.first_name = v
+          when "last_name"
+            @user.last_name = v
+          when "nickname"
+            @user.nickname = v
+          when "title"
+            @user.title = v
+          when "email"
+            @user.email = v
+          end
+        end
+      end
+    end
+    @user.save
+    if current_user.email == "fkmccallion@hotmail.com"
+      redirect '/developer'
+    else
+      redirect '/account'
+    end
+  end
+
   get '/logout' do
     session.destroy
     redirect '/login'

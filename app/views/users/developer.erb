@@ -8,6 +8,9 @@
     <strong>AKA:</strong> <%= u.nickname %>, <%= u.title %>
     <br />
     <strong>Contact:</strong> <%= u.email %>
+    <br />
+    <a href="/users/<%= u.id %>/edit">Edit</a>
+    <a href="/users/<%= u.id %>/delete">Delete</a>
   </div>
 <% end %>
 

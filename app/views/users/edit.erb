@@ -1,0 +1,27 @@
+<h1>Hello, <%= current_user.nickname %>
+
+<h2>Edit User</h2>
+
+<form action="/users/<%= @user.id %>/edit" method="POST">
+  <strong>First Name:</strong> <%= @user.first_name %>
+  <br />
+  <input type="text" name="first_name" placeholder="Edit First Name">
+  <br /><br />
+  <strong>Last Name:</strong> <%= @user.last_name %>
+  <br />
+  <input type="text" name="last_name" placeholder="Edit Last Name">
+  <br /><br />
+  <strong>Nickname:</strong> <%= @user.nickname %>
+  <br />
+  <input type="text" name="nickname" placeholder="Edit Nickname">
+  <br /><br />
+  <strong>Title:</strong> <%= @user.title %>
+  <br />
+  <input type="text" name="title" placeholder="Edit Title">
+  <br /><br />
+  <strong>Email:</strong> <%= @user.email %>
+  <br />
+  <input type="text" name="email" placeholder="Edit Email">
+  <br /><br />
+  <input id="submit" type="submit" value="Save Changes">
+</form>
