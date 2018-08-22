@@ -17,6 +17,7 @@ class ApplicationController < Sinatra::Base
   get '/developer' do
     @users = User.all
     @orgs = Organization.all
+    @cats = Category.all
     erb :'/users/developer'
   end
 

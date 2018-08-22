@@ -53,3 +53,8 @@
     <a href="/orgs/<%= o.id %>/delete">Delete</a>
   </div>
 <% end %>
+
+<% @cats.each do |c| %>
+  <h2>Category</h2>
+  <%= c.name %>
+<% end %>
