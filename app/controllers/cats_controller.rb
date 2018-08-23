@@ -10,4 +10,9 @@ class CatsController < ApplicationController
     end
   end
 
+  get '/cats/:id/index' do
+    @orgs = Organization.where("category_id = ?", params[:id])
+    binding.pry
+  end
+
 end

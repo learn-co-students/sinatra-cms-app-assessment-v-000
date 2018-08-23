@@ -22,6 +22,14 @@ class OrgsController < ApplicationController
 
   get '/orgs/:id/edit' do
     @org = Organization.find(params[:id])
+    # In the case that a category no longer exists
+    if Category.exists?(@org.category_id)
+      @cat = Category.find(@org.category_id)
+    else
+      @org.category_id = nil
+      @org.save
+    end
+
     erb :"orgs/edit"
   end
 
@@ -41,7 +49,7 @@ class OrgsController < ApplicationController
 
   post '/orgs/new' do
 
-    @org = Organization.create("name" => params[:name],
+    @org = Organization.new("name" => params[:name],
       "address" => params[:address],
       "phone" => params[:phone],
       "email" => params[:email],
@@ -65,9 +73,8 @@ class OrgsController < ApplicationController
         cat = Category.create("name" => params[:category][:name])
         @org.category_id = cat.id
       end
-    elsif !params["category_id"].empty?
+    elsif params.key?("category_id")
       @org.category_id = params["category_id"]
-
     end
 
     @org.save
@@ -79,7 +86,7 @@ class OrgsController < ApplicationController
     @org = Organization.find(params[:id])
     if @org && @org.user == current_user
       params.each_pair do |k,v|
-        if !(v.empty? || k == "id")
+        if !(v.empty? || k == "id" || k =="category")
           case k
           when "name"
             @org.name = v
@@ -93,10 +100,32 @@ class OrgsController < ApplicationController
             @org.website = v
           when "description"
             @org.description = v
+          when "city"
+            @org.city = v
+          when "state"
+            @org.state = v
+          when "zip"
+            @org.zip = v
+          when "account"
+            @org.account = v
           end
         end
       end
     end
+
+    # If both an existing category is selected and a new one is entered - the new category will take precedence
+    if !params["category"]["name"].empty?
+      cat = Category.find_by(:name => params[:category][:name])
+      if cat
+        @org.category_id = cat.id
+      else
+        cat = Category.create("name" => params[:category][:name])
+        @org.category_id = cat.id
+      end
+    elsif params.key?("category_id")
+      @org.category_id = params["category_id"]
+    end
+
     @org.save
 
     redirect '/account'

@@ -11,6 +11,7 @@ class ApplicationController < Sinatra::Base
 
   get '/' do
     @orgs = Organization.all
+    @cats = Category.all
     erb :'/index'
   end
 

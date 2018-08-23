@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
 
+  # Developer user_id currently set to 1.  This may need to change for other database instances
   get '/signup' do
     if logged_in?
       redirect '/account'
@@ -62,7 +63,7 @@ class UsersController < ApplicationController
 
   post '/users/:id/edit' do
     @user = User.find(params[:id])
-    if @user && (@user == current_user || current_user.email == "fkmccallion@hotmail.com")
+    if @user && (@user == current_user || current_user.id == 1)
       params.each_pair do |k,v|
         if !(v.empty? || k == "id")
           case k
@@ -81,7 +82,7 @@ class UsersController < ApplicationController
       end
     end
     @user.save
-    if current_user.email == "fkmccallion@hotmail.com"
+    if current_user.id == 1
       redirect '/developer'
     else
       redirect '/account'

@@ -10,6 +10,18 @@
   <br />
   <input type="text" name="address" placeholder="Edit Address">
   <br /><br />
+  <strong>City:</strong> <%= @org.city %>
+  <br />
+  <input type="text" name="city" placeholder="Edit City">
+  <br /><br />
+  <strong>State:</strong> <%= @org.state %>
+  <br />
+  <input type="text" name="state" placeholder="Edit State">
+  <br /><br />
+  <strong>Zip:</strong> <%= @org.zip %>
+  <br />
+  <input type="text" name="zip" placeholder="Edit Zip">
+  <br /><br />
   <strong>Phone:</strong> <%= @org.phone %>
   <br />
   <input type="text" name="phone" placeholder="Edit Phone">
@@ -26,6 +38,28 @@
   <br />
   <input type="text" name="description" placeholder="Edit Description">
   <br /><br />
+  <strong>Category:</strong>
+  <% if defined? @cat %>
+    <%= @cat.name %>
+  <% end %>
+  <h2>Create New Category:</h2>
+  <input id="new_category" type="text" name="category[name]">
+  <h3>Or, select one of the following:</h3>
+  <% Category.all.each do |c| %>
+    <input id="<%= c.name %>" type="radio" name="category_id" value="<%= c.id %>"><label><%= c.name %></label>
+  <% end %>
+
+  <br /><br /><hr />
+
+  <h2>Account Type:</h2>
+  <input type="radio" name="account" value="General"><label>General</label>
+  <input type="radio" name="account" value="Colonel"><label>Colonel</label>
+  <input type="radio" name="account" value="Major"><label>Major</label>
+  <input type="radio" name="account" value="Captain"><label>Captain</label>
+  <input type="radio" name="account" value="Lieutenant"><label>Lieutenant</label>
+
+  <br /><br /><hr />
+
   <input id="submit" type="submit" value="Save Changes">
 </form>
 
