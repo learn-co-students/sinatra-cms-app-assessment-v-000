@@ -15,6 +15,8 @@ class Organization < ActiveRecord::Base
       3
     when "Lieutenant"
       2
+    else
+      1
     end
   end
 
