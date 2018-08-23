@@ -50,13 +50,13 @@ Unlike the rest of the curriculum, if you have any questions about your assessme
 
 ## If you're a Learn-Verified Premium student:
 
-We'll send an email to you soon to schedule a pairing process. If you don't hear from us in 48 hours after submission, get in touch!
+After project submission, watch for an email from Learn with instructions to schedule an assessment. If you don't receive the email within a day or so, reach out to your [section lead](http://help.learn.co/instructional-support/receiving-course-support/who-are-the-section-leads).
 
 ### Be Prepared to:
 
 1. Confirm your application meets the requirements above. We'll go through your app and ask you to show us how it meets the requirements above. 5-10 mins.
 2. Explain your code from execution point to exit point. We're making sure you wrote it and understand how it works. 10-15 mins.
-3. Live coding, doing a refactoring exercise to make sure you're comfortable working with your code. 10-15 mins.
+3. Live code.  This could mean refactoring or adding a feature as an exercise to make sure you're comfortable working with your code. 10-15 mins.
 
 ### What to expect from the pairing session
 
@@ -78,18 +78,18 @@ Project reviews are focused on preparing you for technical interviews. Treat pro
 
 #### Work Together.
 - Trust yourself.
-- Trust us  - our goal is to help you be successful in achieving your goals.
+- Trust us - our goal is to help you be successful in achieving your goals.
 - We understand that this process can be stressful. We’re here to help you through.
 
 #### Pursue mastery.
 - Use the best technical vocabulary you can.
-- Explain the details - this is your application, you'll be expected to have a solid understand of how it works"
+- Explain the details - this is your application, you'll be expected to have a solid understand of how it works.
 - Ask questions! Curiosity and willingness to learn are hugely valued in our industry.  If you haven’t heard of something, that’s okay - use this opportunity to learn about it!
 
 
 ### What won't happen:
 
-- You won't be told you're ever wrong
+- You won't ever be told you're wrong
 - You won't be yelled at, belittled, or scolded
 - You won't be put on the spot without support
 - There's nothing you can do to instantly fail or blow it.
