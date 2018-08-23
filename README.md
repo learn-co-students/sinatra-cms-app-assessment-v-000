@@ -4,6 +4,8 @@
 
 For this assessment you'll be creating any sort of CRUD app. The app should be a custom app that is created to track something important to you. Whether that's your golf club collection, or a travel app. These types of apps are generally referred to as CRUD (Create Read Update Delete apps) or simple Content Management Systems.
 
+For this assessment you'll be creating a CRUD MVC app using Sinatra.  The app should be a custom app that is created to track something important to you, whether that's your golf club collection, video games, or travel destinations.  Recall that CRUD and MVC stand for "Create Read Update Destroy" and "Model View Controller".
+
 ## Requirements
 
 1. Build an MVC Sinatra Application.
@@ -13,7 +15,7 @@ For this assessment you'll be creating any sort of CRUD app. The app should be a
 5. Must have user accounts. The user that created a given piece of content should be the only person who can modify that content
 6. Must have the abilty to create, read, update and destroy any instance of the resource that belongs to a user.
 7. Ensure that any instance of the resource that belongs to a user can be edited or deleted only by that user.
-8. You should also have validations for user input to ensure that bad data isn't added to the database. The fields in your signup form should be required and the user attribute that is used to login a user should be a unique value in the DB before creating the user. 
+8. You should also have validations for user input to ensure that bad data isn't added to the database. The fields in your signup form should be required and the user attribute that is used to login a user should be a unique value in the DB before creating the user.
 
 ### Example Domains
 
@@ -23,13 +25,13 @@ For this assessment you'll be creating any sort of CRUD app. The app should be a
 
 ### Domains To Avoid
 
- As we spent a lot of time working with domains similiar to these during the Sinatra curriculum we do not accept these domain designs. 
-  - Twitter Clone 
+ As we spent a lot of time working with domains similiar to these during the Sinatra curriculum we do not accept these domain designs.
+  - Twitter Clone
   - Blog Application
-  
+
 ### Recomendations
 
- You do not have to make your routes any more complicated than `http://yourapp.com/posts/1`. We want to see you build a great CRUD application but we are not requiring you to build the next AirBnB. 
+ You do not have to make your routes any more complicated than `http://yourapp.com/posts/1`. We want to see you build a great CRUD application but we are not requiring you to build the next AirBnB.
 
 ## Instructions
 
@@ -58,20 +60,20 @@ We'll send an email to you soon to schedule a pairing process. If you don't hear
 
 ### What to expect from the pairing session
 
-Project reviews are focused on preparing you for technical interviews. Treat project reviews as if they were technical interviews, in both attitude and technical presentation. 
+Project reviews are focused on preparing you for technical interviews. Treat project reviews as if they were technical interviews, in both attitude and technical presentation.
 
 #### Be scrappy.
-- If you make a mistake, correct yourself. 
+- If you make a mistake, correct yourself.
 - Think on your feet. We will expect you to be able to explain development concepts to us, as well as expanding on concepts that you have already implemented, but you’ll also have the opportunity to look things up while you're live coding.
 
 #### Make no little plans.
-- You're going to learn a ton. We will give pointers and show you ways to improve your code. This isn't telling you that your code is wrong, it's simply us teaching. 
+- You're going to learn a ton. We will give pointers and show you ways to improve your code. This isn't telling you that your code is wrong, it's simply us teaching.
 - Approach live coding with a constructive attitude. You might feel nervous or uncertain, but as long as you are familiar with the section material you should be able to reason your way to a solution.
-- Be proud of your project and your code, and show confidence in it. 
+- Be proud of your project and your code, and show confidence in it.
 
 #### Radiate positivity.
-- Present yourself and your project in the best way possible. 
-- Be open to feedback, both positive and constructive. 
+- Present yourself and your project in the best way possible.
+- Be open to feedback, both positive and constructive.
 - If the instructor asks you to complete additional features, or you missed a project requirement, treat this as a learning experience. Becoming  a developer is complex and challenging, and it’s our job to find the holes in your knowledge and help you fill them. This is to help you become a better developer, not to delay your progress in the program.
 
 #### Work Together.
