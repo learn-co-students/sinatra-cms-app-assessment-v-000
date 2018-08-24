@@ -2,7 +2,7 @@
 
 ## Overview
 
-For this assessment you'll be creating a [CRUD] [MVC] app using Sinatra.  This app should be a custom app that is created to track something important to you, whether that's your golf club collection, video games, or travel destinations.  Essentially, you're building a simple Content Management System [CMS] using the tools you've learned thus far.
+For this assessment you'll be creating a [CRUD], [MVC] app using Sinatra.  This app should be a custom app that is created to track something important to you, whether that's your golf club collection, video games, or travel destinations.  Essentially, you're building a simple Content Management System ([CMS]) using the tools you've learned thus far.
 
 ## Requirements
 
@@ -19,7 +19,6 @@ For this assessment you'll be creating a [CRUD] [MVC] app using Sinatra.  This a
 
  - [Golf Club Organizer]
  - [Todo List]. Each task is part of a list
- - ~~Collection of useful Ruby resources~~
 
 ### Domains To Avoid
 
@@ -91,6 +90,8 @@ Project reviews are focused on preparing you for technical interviews. Treat pro
 - You won't be yelled at, belittled, or scolded
 - You won't be put on the spot without support
 - There's nothing you can do to instantly fail or blow it.
+
+#### Resources
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/sinatra-cms-app-assessment'>Sinatra Assessment</a> on Learn.co and start learning to code for free.</p>
 
