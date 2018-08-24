@@ -97,6 +97,7 @@ Project reviews are focused on preparing you for technical interviews. Treat pro
 <p class='util--hide'>View <a href='https://learn.co/lessons/sinatra-cms-app-assessment'>Sinatra Portfolio Project</a> on Learn.co and start learning to code for free.</p>
 
 [CRUD]: https://learn.co/tracks/full-stack-web-development-v6/orms-and-activerecord/activerecord/activerecord-crud-lab
+[CMS]: http://www.businessdictionary.com/definition/content-management-system-CMS.html
 [MVC]: https://learn.co/tracks/full-stack-web-development-v6/sinatra/mvc-and-forms/intro-to-mvc
 [section lead]: http://help.learn.co/instructional-support/receiving-course-support/who-are-the-section-leads
 [Golf Club Organizer]: https://github.com/learn-co-curriculum/example-sinatra-assessment
