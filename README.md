@@ -4,7 +4,7 @@
 
 ~~For this assessment you'll be creating any sort of CRUD app. The app should be a custom app that is created to track something important to you. Whether that's your golf club collection, or a travel app. These types of apps are generally referred to as CRUD (Create Read Update Delete apps) or simple Content Management Systems.~~
 
-For this assessment you'll be creating a [CRUD](https://learn.co/tracks/full-stack-web-development-v6/orms-and-activerecord/activerecord/activerecord-crud-lab) [MVC](https://learn.co/tracks/full-stack-web-development-v6/sinatra/mvc-and-forms/intro-to-mvc) app using Sinatra.  This app should be a custom app that is created to track something important to you, whether that's your golf club collection, video games, or travel destinations.  Essentially, you're building a simple Content Management System using the tools you've learned thus far.
+For this assessment you'll be creating a [CRUD] [MVC] app using Sinatra.  This app should be a custom app that is created to track something important to you, whether that's your golf club collection, video games, or travel destinations.  Essentially, you're building a simple Content Management System using the tools you've learned thus far.
 
 ## Requirements
 
@@ -19,8 +19,8 @@ For this assessment you'll be creating a [CRUD](https://learn.co/tracks/full-sta
 
 ### Example Domains
 
- - [Golf Club Organizer](https://github.com/learn-co-curriculum/example-sinatra-assessment)
- - [Todo List](http://todomvc.com). Each task is part of a list
+ - [Golf Club Organizer]
+ - [Todo List]. Each task is part of a list
  - ~~Collection of useful Ruby resources~~
 
 ### Domains To Avoid
@@ -41,16 +41,16 @@ For this assessment you'll be creating a [CRUD](https://learn.co/tracks/full-sta
 4. While you're working on it, record a 30 min coding session with your favorite screen capture tool. During the session, either think out loud or not. It's up to you. You don't need to submit the video, but we may ask for it at a later time.
 5. Make sure to create a good README.md with a short description, install instructions, a contributors guide and a link to the license for your code.
 6. Make sure to check each box in your spec.md (replace the space between the square braces with an x) and explain next to each one how you've met the requirement *before* you submit your project.
-7. [Fill out this checklist.](https://docs.google.com/forms/d/e/1FAIpQLSdIrS7g6y_B4dAY7HGS4yAndg9bfHuw7GmsiwA6MQXXqNrDjA/viewform?entry.237262577&entry.835010005&entry.301147721) QUESTION: Who owns this form??
+7. [Fill out this checklist.] QUESTION: Who owns this form??
 8. Prepare a short video demo with narration describing how a user would interact with your working application.
 9. Write a blog post about the project and process.
 10. When done, submit your GitHub repo's url, a link to your video demo, and a link to your blog post in the corresponding text boxes in the right rail. Hit "I'm done" to wrap it up.
 
-Unlike the rest of the curriculum, if you have any questions about your assessment or need help with it, please *don’t* use the Ask-A-Question feature. Rather than working with Technical Coaches, please reach out to your [section lead](http://help.learn.co/instructional-support/receiving-course-support/who-are-the-section-leads).
+Unlike the rest of the curriculum, if you have any questions about your assessment or need help with it, please *don’t* use the Ask-A-Question feature. Rather than working with Technical Coaches, please reach out to your [section lead].
 
 ## If you're a Learn-Verified Premium student:
 
-After project submission, watch for an email from Learn with instructions to schedule an assessment. If you don't receive the email within a day or so, reach out to your [section lead](http://help.learn.co/instructional-support/receiving-course-support/who-are-the-section-leads).
+After project submission, watch for an email from Learn with instructions to schedule an assessment. If you don't receive the email within a day or so, reach out to your [section lead].
 
 ### Be Prepared to:
 
@@ -97,3 +97,10 @@ Project reviews are focused on preparing you for technical interviews. Treat pro
 <p class='util--hide'>View <a href='https://learn.co/lessons/sinatra-cms-app-assessment'>Sinatra Assessment</a> on Learn.co and start learning to code for free.</p>
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/sinatra-cms-app-assessment'>Sinatra Portfolio Project</a> on Learn.co and start learning to code for free.</p>
+
+[CRUD]: https://learn.co/tracks/full-stack-web-development-v6/orms-and-activerecord/activerecord/activerecord-crud-lab
+[MVC]: https://learn.co/tracks/full-stack-web-development-v6/sinatra/mvc-and-forms/intro-to-mvc
+[section lead]: http://help.learn.co/instructional-support/receiving-course-support/who-are-the-section-leads
+[Golf Club Organizer]: https://github.com/learn-co-curriculum/example-sinatra-assessment
+[Todo List]: http://todomvc.com
+[Fill out this checklist.]: https://docs.google.com/forms/d/e/1FAIpQLSdIrS7g6y_B4dAY7HGS4yAndg9bfHuw7GmsiwA6MQXXqNrDjA/viewform?entry.237262577&entry.835010005&entry.301147721
