@@ -2,7 +2,7 @@
 
 ## Overview
 
-~~For this assessment you'll be creating any sort of CRUD app. The app should be a custom app that is created to track something important to you. Whether that's your golf club collection, or a travel app. These types of apps are generally referred to as CRUD (Create Read Update Delete apps) or simple Content Management Systems.~~
+~~For this assessment you'll be creating any sort of CRUD app. The app should be a custom app that is created to track something important to you. Whether that's your golf club collection, or a travel app. An app like this is generally referred to as a CRUD (Create Read Update Delete apps) app or a simple Content Management Systems [CMS].~~
 
 For this assessment you'll be creating a [CRUD] [MVC] app using Sinatra.  This app should be a custom app that is created to track something important to you, whether that's your golf club collection, video games, or travel destinations.  Essentially, you're building a simple Content Management System using the tools you've learned thus far.
 
@@ -99,6 +99,7 @@ Project reviews are focused on preparing you for technical interviews. Treat pro
 <p class='util--hide'>View <a href='https://learn.co/lessons/sinatra-cms-app-assessment'>Sinatra Portfolio Project</a> on Learn.co and start learning to code for free.</p>
 
 [CRUD]: https://learn.co/tracks/full-stack-web-development-v6/orms-and-activerecord/activerecord/activerecord-crud-lab
+[CMS]: http://www.businessdictionary.com/definition/content-management-system-CMS.html
 [MVC]: https://learn.co/tracks/full-stack-web-development-v6/sinatra/mvc-and-forms/intro-to-mvc
 [section lead]: http://help.learn.co/instructional-support/receiving-course-support/who-are-the-section-leads
 [Golf Club Organizer]: https://github.com/learn-co-curriculum/example-sinatra-assessment
