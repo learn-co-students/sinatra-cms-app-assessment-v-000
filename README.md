@@ -45,7 +45,7 @@ For this assessment you'll be creating a [CRUD], [MVC] app using Sinatra.  This 
 
 Unlike the rest of the curriculum, if you have any questions about your assessment or need help with it, please *don’t* use the Ask-A-Question feature. Rather than working with Technical Coaches, please reach out to your [section lead].
 
-## If you're a Learn-Verified Premium student:
+## Helpful Hint:
 
 After project submission, watch for an email from Learn with instructions to schedule an assessment. If you don't receive the email within a day or so, reach out to your [section lead].
 
