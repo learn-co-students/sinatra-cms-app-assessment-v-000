@@ -20,6 +20,8 @@ class UsersController < ApplicationController
   post '/signup' do
     if params[:first_name].empty? || params[:last_name].empty? || params[:email].empty? || params[:title].empty? || params[:password].empty?
       redirect '/signup'
+    elsif User.find_by(:email => params[:email])
+      redirect '/login'
     else
       @user = User.create(params)
       session[:user_id] = @user.id
