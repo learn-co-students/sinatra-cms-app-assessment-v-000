@@ -1,0 +1,37 @@
+<h1>Welcome to Your Account, <%= current_user.nickname %></h1>
+<a href="/users/<%= current_user.id %>/edit">Edit Your Account</a>
+<table>
+  <tr>
+    <% @organization.each do |o| %>
+      <th style="padding: 25px;text-align: left;">
+        <h2>Your Organization:</h2>
+        <p>
+          Name: <%= o.name %>
+        </p>
+        <p>
+          Address: <%= o.address %>
+        </p>
+        <p>
+          Phone: <%= o.phone %>
+        </p>
+        <p>
+          Email: <%= o.email %>
+        </p>
+        <p>
+          Website: <%= o.website %>
+        </p>
+        <p>
+          Description:
+          <br />
+          <%= o.description %>
+        </p>
+        <p>
+          <a href="/orgs/<%= o.id %>/edit">Edit</a>
+          <a href="/orgs/<%= o.id %>/delete">Delete</a>
+        </p>
+      </th>
+    <% end %>
+  </tr>
+</table>
+<hr />
+<a href="/orgs/new">Add An Organization</a>

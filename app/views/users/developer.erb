@@ -1,0 +1,68 @@
+<h1><%= current_user.nickname %>, Welcome to the Developer Page</h1>
+
+<% @users.each do |u| %>
+  <h2>User:</h2>
+  <div style="margin-left: 25px;">
+    <strong>Name:</strong> <%= u.first_name %> <%= u.last_name %>
+    <br />
+    <strong>AKA:</strong> <%= u.nickname %>, <%= u.title %>
+    <br />
+    <strong>Contact:</strong> <%= u.email %>
+    <br />
+    <a href="/users/<%= u.id %>/edit">Edit</a>
+    <a href="/users/<%= u.id %>/delete">Delete</a>
+  </div>
+<% end %>
+
+<% @orgs.each do |o| %>
+  <h2>Organization:</h2>
+  <div style="margin-left: 25px;">
+    <strong>Name:</strong> <%= o.name %>
+    <br />
+    <strong>Address:</strong> <%= o.address %>
+    <br />
+    <strong>City:</strong> <%= o.city %>
+    <br />
+    <strong>State:</strong> <%= o.state %>
+    <br />
+    <strong>Zip:</strong> <%= o.zip %>
+    <br />
+    <strong>Phone Number:</strong> <%= o.phone %>
+    <br />
+    <strong>Email:</strong> <%= o.email %>
+    <br />
+    <strong>Website:</strong> <%= o.website %>
+    <br />
+    <strong>User:</strong>
+      <% if o.user %>
+        <%= o.user.nickname %>
+      <% end %>
+    <br />
+    <strong>Category:</strong>
+      <% if o.category %>
+        <%= o.category.name %>
+      <% end %>
+    <br />
+    <strong>Account:</strong> <%= o.account %>
+    <br />
+    <strong>Ag Rank:</strong> <%= o.aggregate_rank %>
+    <br />
+    <strong>Daily Rank:</strong> <%= o.daily_rank %>
+    <br />
+
+    <a href="/orgs/<%= o.id %>/delete">Delete</a>
+  </div>
+<% end %>
+<h2>Categories:</h2>
+<table border="1">
+  <tr>
+    <% @cats.each do |c| %>
+      <td>
+        <%= c.name %>
+        <br /><br />
+        <a href="/cats/<%= c.id %>/delete">Delete</a>
+      </td>
+    <% end %>
+  </tr>
+</table>
+<br /><br /><br />

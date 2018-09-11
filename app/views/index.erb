@@ -1,0 +1,23 @@
+<h1>DBCA Home Page</h1>
+
+<table>
+  <tr>
+    <td style="padding:25px; vertical-align:top;">
+      <h3>Organizations</h3>
+      <% @orgs.sort_by { |org| -(org.daily_rank * org.account_rank + org.aggregate_rank) }.each do |o| %>
+        <p>
+          <a href="/orgs/<%= o.id %>/show"><%= o.name %></a>
+          <!--<%= o.daily_rank %> * <%= o.account_rank %> + <%= o.aggregate_rank %> = <%= o.daily_rank * o.account_rank + o.aggregate_rank %>-->
+        </p>
+      <% end %>
+    </td>
+    <td style="padding:25px; vertical-align:top;">
+      <h3>Categories</h3>
+      <% @cats.each do |c| %>
+        <p>
+          <a href="/cats/<%= c.id %>/index"><%= c.name %></a>
+        </p>
+      <% end %>
+    </td>
+  </tr>
+</table>

@@ -1,0 +1,8 @@
+<h1>Category: <%= @cat.name %></h1>
+
+<% @orgs.sort_by { |org| -(org.daily_rank * org.account_rank + org.aggregate_rank) }.each do |o| %>
+  <p>
+    <a href="/orgs/<%= o.id %>/show"><%= o.name %></a>
+    <!--<%= o.daily_rank %> * <%= o.account_rank %> + <%= o.aggregate_rank %> = <%= o.daily_rank * o.account_rank + o.aggregate_rank %>-->
+  </p>
+<% end %>
