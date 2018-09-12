@@ -66,7 +66,7 @@ You should also have validations for user input to ensure that bad data isn't ad
 
 ## <a id="support">Helpful Hints:</a>
 
-* For project support, you can reach out to [your Section Lead](http://help.learn.co/instructional-support/receiving-course-support/who-are-the-section-leads) responsible for this section and/or schedule up to four 30-minute [Project Support sessions](https://theflatironschool.typeform.com/to/B9BrgH).
+* Please do not use the Ask-A-Question feature for help on your portfolio projects.  For project support, you can reach out to [your Section Lead](http://help.learn.co/instructional-support/receiving-course-support/who-are-the-section-leads) responsible for this section and/or schedule up to four 30-minute [Project Support sessions](https://theflatironschool.typeform.com/to/B9BrgH).
 * After project submission, watch for an email from Learn with instructions to schedule an assessment. If you don't receive the email within a day or so, reach out to [your Section Lead](http://help.learn.co/instructional-support/receiving-course-support/who-are-the-section-leads).
 
 ## <a id="success">Practicing for Success on Learn</a>
