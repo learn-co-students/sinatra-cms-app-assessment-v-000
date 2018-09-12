@@ -39,12 +39,14 @@ What won't happen:
 
 1. Build an [MVC] Sinatra Application.
 2. Use [ActiveRecord] with Sinatra.
-3. Use Multiple Models.
-4. Use at least one `has_many` relationship on a User model and one `belongs_to` relationship on another model
-5. Must have user accounts. The user that created a given piece of content should be the only person who can modify that content
-6. Must have the ability to create, read, update and destroy any instance of the resource that belongs to a user.
-7. Ensure that any instance of the resource that belongs to a user can be edited or deleted only by that user.
+3. Use multiple models.
+4. Use at least one `has_many` relationship on a User model and one `belongs_to` relationship on another model.
+5. Must have user accounts - users must be able to sign up, sign in, and sign out.
+6. Logged in users must have the ability to create, read, update and destroy any instance of the resource that belongs to a user.
+7. Ensure that any instance of a resource that belongs to a user can be edited or deleted only by that user.
 8. You should also have validations for user input to ensure that bad data isn't added to the database. The fields in your signup form should be required and the user attribute that is used to login a user should be a unique value in the DB before creating the user.
+
+You should also have validations for user input to ensure that bad data isn't added to the database. The fields in your signup form should be required and the user attribute that is used to login a user should be a unique value in the DB before creating the user.
 
 
 
@@ -116,3 +118,4 @@ What won't happen:
 [Golf Club Organizer]: https://github.com/learn-co-curriculum/example-sinatra-assessment
 [Todo List]: http://todomvc.com
 [Fill out this checklist.]: https://docs.google.com/forms/d/e/1FAIpQLSdIrS7g6y_B4dAY7HGS4yAndg9bfHuw7GmsiwA6MQXXqNrDjA/viewform?entry.237262577&entry.835010005&entry.301147721
+[ActiveRecord]:https://learn.co/tracks/full-stack-web-development-v6/sinatra/activerecord/activerecord-setup-in-sinatra
