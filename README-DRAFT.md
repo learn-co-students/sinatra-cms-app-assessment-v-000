@@ -37,7 +37,7 @@ What won't happen:
 
 ## <a id="requirements">Project Requirements</a>
 
-1. Build an [MVC] Sinatra Application.
+1. Build an [MVC] Sinatra application.
 2. Use [ActiveRecord] with Sinatra.
 3. Use multiple models.
 4. Use at least one `has_many` relationship on a User model and one `belongs_to` relationship on another model.
@@ -46,11 +46,11 @@ What won't happen:
 7. Once logged in, a user must have the ability to create, read, update and destroy the resource that `belongs_to` user.
 8. Ensure that users can edit and delete only their own resources - not resources belonging to other users.
 9. Validate user input so bad data cannot be persisted to the database.
-10. Display validation failures to user with error [message].
+10. Display validation failures to user with error [messages].
 
 ## <a id="instructions">Instructions</a>
 
-1. Create a new repository on GitHub for your Sinatra Application.
+1. Create a new repository on GitHub for your Sinatra application.
 2. When you create the Sinatra app for your assessment, add the [spec.md] file from this repo to the root directory of the project, commit it to Git and push it up to GitHub.
 3. Build your application. Make sure to commit early and commit often. Commit messages should be meaningful (clearly describe what you're doing in the commit) and accurate (there should be nothing in the commit that doesn't match the description in the commit message). Good rule of thumb is to commit every 3-7 mins of actual coding time. Most of your commits should have under 15 lines of code and a 2 line commit is perfectly acceptable.
 4. While you're working on it, record a 30 min coding session with your favorite screen capture tool. During the session, either think out loud or not. It's up to you. You don't need to submit the video, but we may ask for it at a later time.
@@ -111,7 +111,7 @@ When you submit your project, watch for a new window to open that will allow you
 [Fill out this checklist.]: https://docs.google.com/forms/d/e/1FAIpQLSdIrS7g6y_B4dAY7HGS4yAndg9bfHuw7GmsiwA6MQXXqNrDjA/viewform?entry.237262577&entry.835010005&entry.301147721
 [ActiveRecord]: https://learn.co/tracks/full-stack-web-development-v6/sinatra/activerecord/activerecord-setup-in-sinatra
 [section lead]: http://help.learn.co/instructional-support/receiving-course-support/who-are-the-section-leads
-[message]: https://github.com/SFEley/sinatra-flash
+[messages]: https://github.com/SFEley/sinatra-flash
 [spec.md]: https://github.com/learn-co-students/sinatra-cms-app-assessment-v-000/blob/master/spec.md
 [license]: https://opensource.org/licenses/MIT
 [project support sessions]: https://theflatironschool.typeform.com/to/B9BrgH
