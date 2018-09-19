@@ -9,7 +9,7 @@
 - [Practicing for Success on Learn](#success)
 - [Resources](#resources)
 
-For this assessment you'll be creating a [CRUD], [MVC] app using Sinatra.  This app should be a custom app that is created to track something important to you, whether that's your golf club collection, video games, or travel destinations.  Essentially, you're building a simple Content Management System ([CMS]) using the tools you've learned thus far.
+For this assessment you'll be creating a [CRUD], [MVC] app using Sinatra.  This app should be a custom app that is created to track something important to you, whether that's your golf club collection, video games, or travel destinations.  Essentially, you're building a simple Content Management System ([CMS]) using the tools you've learned thus far. [Learn.co]
 
 ## <a id="expectations">What to expect from the Project Review</a>
 
@@ -37,7 +37,7 @@ What won't happen:
 
 ## <a id="requirements">Project Requirements</a>
 
-1. Build an [MVC] Sinatra Application.
+1. Build an [MVC][] Sinatra Application.
 2. Use [ActiveRecord] with Sinatra.
 3. Use multiple models.
 4. Use at least one `has_many` relationship on a User model and one `belongs_to` relationship on another model.
@@ -49,17 +49,18 @@ What won't happen:
 
 ## <a id="instructions">Instructions</a>
 
-1. Watch this
+1. Create a new repository on GitHub for your Sinatra Application.
+2. When you create the Sinatra app for your assessment, add the spec.md file from this repo to the root directory of the project, commit it to Git and push it up to GitHub.
+3. Build your application. Make sure to commit early and commit often. Commit messages should be meaningful (clearly describe what you're doing in the commit) and accurate (there should be nothing in the commit that doesn't match the description in the commit message). Good rule of thumb is to commit every 3-7 mins of actual coding time. Most of your commits should have under 15 lines of code and a 2 line commit is perfectly acceptable.
+4. While you're working on it, record a 30 min coding session with your favorite screen capture tool. During the session, either think out loud or not. It's up to you. You don't need to submit the video, but we may ask for it at a later time.
+5. Make sure to create a good README.md with a short description, install instructions, a contributors guide and a link to the license for your code.
+6. Make sure to check each box in your spec.md (replace the space between the square braces with an x) and explain next to each one how you've met the requirement *before* you submit your project.
+7. [Fill out this checklist.] QUESTION: Who owns this form??
+8. Prepare a short video demo with narration describing how a user would interact with your working application.
+9. Write a blog post about the project and process.
+10. When done, submit your GitHub repo's url, a link to your video demo, and a link to your blog post in the corresponding text boxes in the right rail. Hit "I'm done" to wrap it up.
 
-2. Build your application.
-
-3. Documentation
-
-4. Submission
-    - [Submit this checklist](https://docs.google.com/forms/d/1ItDHkNbtHJP8T2G28Nqc3Ad8MppbPDpqv9AijAOCFDA/) after confirming all requirements are met.
-    - Prepare a video demo (narration helps!) describing how a user would interact with your working gem. Some common video recording tools used are [Zoom](https://zoom.us/), [Quicktime](https://www.apple.com/quicktime/download/), and [Nimbus](https://chrome.google.com/webstore/detail/nimbus-screenshot-screen/bpconcjcammlapcogcnnelfmaeghhagj?hl=en). After you create your demo, publish it on a service like [YouTube](https://www.youtube.com/) or [Google Drive](https://www.google.com/drive/).
-    - Write a blog post about the project and process.
-    - On Learn, submit links to the GitHub repository for your app, your video demo (not your 30-minute coding session), and your blog post each to the corresponding textbox in the right rail, and hit "I'm done" to wrap it up.  
+Unlike the rest of the curriculum, if you have any questions about your assessment or need help with it, you may _not_ use the Ask-A-Question feature.  For project support, you can reach out to your [section lead] responsible for this section and/or schedule up to four 30-minute [Project Support sessions](https://theflatironschool.typeform.com/to/B9BrgH).
 
 ## <a id="support">Helpful Hints:</a>
 
@@ -95,19 +96,9 @@ What won't happen:
 
 ## <a id="resources">Resources</a>
 
-- [Bundler](https://bundler.io/v1.12/guides/creating_gem.html)
-- [Git Repository Basics](https://learn.co/tracks/full-stack-web-development-v5/git-and-github/git/git-repository-basics)
-- [Environments, Requiring Files, Bundler, and Gems](https://www.youtube.com/watch?v=XBgZLm-sdl8)
-- [Video- CLI Data Gem Walkthrough](https://www.youtube.com/watch?v=_lDExWIhYKI)
-- [Video- CLI Data Gem Walkthrough: Creating a CLI Scraper Gem](https://www.youtube.com/watch?v=Y5X6NRQi0bU)
-- [Video- Common Anti-Patterns in CLI Data Gem](https://www.youtube.com/watch?v=cbMa87oWv08)
-- [Video- Student Example 1: Refactoring CLI Data Gem](https://www.youtube.com/watch?v=JEL_PXr74qQ)
-- [Video- Student Example 2: Refactoring CLI Data Gem](https://www.youtube.com/watch?v=Lt0oyHiKWIw)
-- [How to build a ruby gem](http://guides.rubygems.org/make-your-own-gem/)
-- [How to publish your gem](http://guides.rubygems.org/publishing/)
 
+<p class='util--hide'>View [CLI Data Gem Project] on [Learn.co] and start learning to code for free.</p>
 
-<p class='util--hide'>View <a href='https://learn.co/lessons/cli-data-gem-assessment'>CLI Data Gem Project</a> on Learn.co and start learning to code for free.</p>
 [CRUD]: https://learn.co/tracks/full-stack-web-development-v6/orms-and-activerecord/activerecord/activerecord-crud-lab
 [CMS]: http://www.businessdictionary.com/definition/content-management-system-CMS.html
 [MVC]: https://learn.co/tracks/full-stack-web-development-v6/sinatra/mvc-and-forms/intro-to-mvc
@@ -115,4 +106,8 @@ What won't happen:
 [Golf Club Organizer]: https://github.com/learn-co-curriculum/example-sinatra-assessment
 [Todo List]: http://todomvc.com
 [Fill out this checklist.]: https://docs.google.com/forms/d/e/1FAIpQLSdIrS7g6y_B4dAY7HGS4yAndg9bfHuw7GmsiwA6MQXXqNrDjA/viewform?entry.237262577&entry.835010005&entry.301147721
-[ActiveRecord]:https://learn.co/tracks/full-stack-web-development-v6/sinatra/activerecord/activerecord-setup-in-sinatra
+[ActiveRecord]: https://learn.co/tracks/full-stack-web-development-v6/sinatra/activerecord/activerecord-setup-in-sinatra
+[section lead]: http://help.learn.co/instructional-support/receiving-course-support/who-are-the-section-leads
+[Byron]:https://laurennicoleroth.smugmug.com/Byron/i-KgvCcgX/A
+[CLI Data Gem Project]: https://learn.co/lessons/cli-data-gem-assessment
+[Learn.co]: https://learn.co
