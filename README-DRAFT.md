@@ -17,9 +17,9 @@ Project reviews are focused on preparing you for [technical interviews](https://
 
 During your project review, be prepared to:
 
-1. Go through your app and show us how it meets the requirements. 5-10 mins.
-2. Explain your code from execution point to exit point. We're making sure you wrote it and understand how it works. 10-15 mins.
-3. Live code.  This could mean refactoring or adding a feature as an exercise to make sure you're comfortable working with your code. 10-15 mins.
+1. Go through your app and show us how it meets the requirements. 10-15 min.
+2. Explain your code from execution point to exit point. We're making sure you wrote it and understand how it works. 10-15 min.
+3. Live code.  This could mean refactoring or adding a feature as an exercise to make sure you're comfortable working with your code. 10-15 min.
 
 Project reviews are focused on preparing you for technical interviews. Treat project reviews as if they were technical interviews, in both attitude and presentation.
 
@@ -42,13 +42,10 @@ What won't happen:
 3. Use multiple models.
 4. Use at least one `has_many` relationship on a User model and one `belongs_to` relationship on another model.
 5. Must have user accounts - users must be able to sign up, sign in, and sign out.
-6. Logged in users must have the ability to create, read, update and destroy any instance of the resource that belongs to a user.
-7. Ensure that any instance of a resource that belongs to a user can be edited or deleted only by that user.
-8. You should also have validations for user input to ensure that bad data isn't added to the database. The fields in your signup form should be required and the user attribute that is used to login a user should be a unique value in the DB before creating the user.
-
-You should also have validations for user input to ensure that bad data isn't added to the database. The fields in your signup form should be required and the user attribute that is used to login a user should be a unique value in the DB before creating the user.
-
-
+6. Validate uniqueness of user login attribute (username or email).
+7. Once logged in, must have the ability to create, read, update and destroy any instance of the resource that belongs to a user.
+8. Ensure that any instance of a resource that belongs to a user can be edited or deleted only by that user.
+9. Validate user input so bad data cannot be persisted to the database.
 
 ## <a id="instructions">Instructions</a>
 
@@ -66,7 +63,7 @@ You should also have validations for user input to ensure that bad data isn't ad
 
 ## <a id="support">Helpful Hints:</a>
 
-* Please do not use the Ask-A-Question feature for help on your portfolio projects.  For project support, you can reach out to [your Section Lead](http://help.learn.co/instructional-support/receiving-course-support/who-are-the-section-leads) responsible for this section and/or schedule up to four 30-minute [Project Support sessions](https://theflatironschool.typeform.com/to/B9BrgH).
+* Please do _not_ use the Ask-A-Question feature for help on your portfolio projects.  For project support, you can reach out to [your Section Lead](http://help.learn.co/instructional-support/receiving-course-support/who-are-the-section-leads) responsible for this section and/or schedule up to four 30-minute [Project Support sessions](https://theflatironschool.typeform.com/to/B9BrgH).
 * After project submission, watch for an email from Learn with instructions to schedule an assessment. If you don't receive the email within a day or so, reach out to [your Section Lead](http://help.learn.co/instructional-support/receiving-course-support/who-are-the-section-leads).
 
 ## <a id="success">Practicing for Success on Learn</a>
