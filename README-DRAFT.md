@@ -92,8 +92,7 @@ After project submission, watch for an email from Learn with instructions to sch
 
 ## <a id="resources">Resources</a>
 
-
-<p class='util--hide'>View [CLI Data Gem Project] on [Learn.co] and start learning to code for free.</p>
+<p class='util--hide'>View [CLI Data Gem Project](https://learn.co/lessons/cli-data-gem-assessment) on [Learn.co](https://learn.co) and start learning to code for free.</p>
 
 [CRUD]: https://learn.co/tracks/full-stack-web-development-v6/orms-and-activerecord/activerecord/activerecord-crud-lab
 [CMS]: http://www.businessdictionary.com/definition/content-management-system-CMS.html
@@ -106,5 +105,3 @@ After project submission, watch for an email from Learn with instructions to sch
 [ActiveRecord]: https://learn.co/tracks/full-stack-web-development-v6/sinatra/activerecord/activerecord-setup-in-sinatra
 [section lead]: http://help.learn.co/instructional-support/receiving-course-support/who-are-the-section-leads
 [Byron]:https://laurennicoleroth.smugmug.com/Byron/i-KgvCcgX/A
-[CLI Data Gem Project]: https://learn.co/lessons/cli-data-gem-assessment
-[Learn.co]: https://learn.co
