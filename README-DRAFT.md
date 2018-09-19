@@ -98,6 +98,7 @@ When you submit your project, watch for a new window to open that will allow you
 [Example Domain - Golf Club Organizer]
 [RESTful Routing]
 [Securing Passwords in Sinatra]
+[Mechanics of Sessions]
 
 [CRUD]: https://learn.co/tracks/full-stack-web-development-v6/orms-and-activerecord/activerecord/activerecord-crud-lab
 [CMS]: http://www.businessdictionary.com/definition/content-management-system-CMS.html
@@ -116,3 +117,4 @@ When you submit your project, watch for a new window to open that will allow you
 [Example Domain - Golf Club Organizer]: https://github.com/learn-co-curriculum/example-sinatra-assessment
 [RESTful Routing]: https://learn.co/tracks/full-stack-web-development-v6/sinatra/activerecord/sinatra-restful-routes
 [Securing Passwords in Sinatra]: https://learn.co/tracks/full-stack-web-development-v6/sinatra/activerecord/securing-passwords-in-sinatra
+[Mechanics of Sessions]: https://learn.co/tracks/full-stack-web-development-v6/sinatra/sessions/mechanics-of-sessions
