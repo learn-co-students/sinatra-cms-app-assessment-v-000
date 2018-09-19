@@ -60,9 +60,11 @@ What won't happen:
 8. Write a blog post about the project and process.
 9. When done, submit your GitHub repo's url, a link to your video demo, and a link to your blog post in the corresponding text boxes in the right rail. Hit "I'm done" to wrap it up.
 
-Unlike the rest of the curriculum, if you have any questions about your project or need help with it, you may _not_ use the Ask-A-Question feature.  For project support, you may schedule up to four 30-minute [project support sessions].  
+You may not use a blog application or Twitter clone for your project, as we have used these as examples in the curriculum.
 
-After project submission, watch for an email from Learn with instructions to schedule an assessment. If you don't receive the email within a day or so, reach out to your [section lead].
+Unlike the rest of the curriculum, if you have any questions about your project or need help with it, you may _not_ use the Ask-A-Question feature.  For project support, you may schedule up to four 30-minute [project support sessions].  You can also reach out to your [section lead].  
+
+When you submit your project, watch for a new window to open that will allow you to schedule your assessment.
 
 ## <a id="success">Practicing for Success on Learn</a>
 
@@ -93,6 +95,9 @@ After project submission, watch for an email from Learn with instructions to sch
 
 ## <a id="resources">Resources</a>
 
+[Example Domain - Golf Club Organizer]
+[RESTful Routing]
+
 [CRUD]: https://learn.co/tracks/full-stack-web-development-v6/orms-and-activerecord/activerecord/activerecord-crud-lab
 [CMS]: http://www.businessdictionary.com/definition/content-management-system-CMS.html
 [technical interviews]: https://www.brightnetwork.co.uk/career-path-guides/technology-it-software-development/five-ways-stand-out-your-technology/what-expect-technical-interview/
@@ -107,3 +112,5 @@ After project submission, watch for an email from Learn with instructions to sch
 [spec.md]: https://github.com/learn-co-students/sinatra-cms-app-assessment-v-000/blob/master/spec.md
 [license]: https://opensource.org/licenses/MIT
 [project support sessions]: https://theflatironschool.typeform.com/to/B9BrgH
+[Example Domain - Golf Club Organizer]: https://github.com/learn-co-curriculum/example-sinatra-assessment
+[RESTful Routing]: https://learn.co/tracks/full-stack-web-development-v6/sinatra/activerecord/sinatra-restful-routes
