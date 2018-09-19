@@ -58,7 +58,7 @@ What won't happen:
 6. Make sure to check each box in your spec.md (replace the space between the square braces with an x) and explain next to each one how you've met the requirement *before* you submit your project.
 7. Prepare a short video demo with narration describing how a user would interact with your working application.
 8. Write a blog post about the project and process.
-9. When done, submit your GitHub repo's url, a link to your video demo, and a link to your blog post in the corresponding text boxes in the right rail. Hit "I'm done" to wrap it up.
+9. When done, submit your GitHub repo's URL, a link to your video demo, and a link to your blog post in the corresponding text boxes in the right rail. Hit "I'm done" to wrap it up.
 
 You may not use a blog application or Twitter clone for your project, as we have used these as examples in the curriculum.
 
