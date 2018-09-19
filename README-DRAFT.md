@@ -9,11 +9,11 @@
 - [Practicing for Success on Learn](#success)
 - [Resources](#resources)
 
-For this assessment you'll be creating a [CRUD], [MVC] app using Sinatra.  This app should be a custom app that is created to track something important to you, whether that's your golf club collection, video games, or travel destinations.  Essentially, you're building a simple Content Management System ([CMS]) using the tools you've learned thus far. [Learn.co]
+For this assessment you'll be creating a [CRUD], [MVC] app using Sinatra.  This app should be a custom app that is created to track something important to you, whether that's your golf club collection, video games, or travel destinations.  Essentially, you're building a simple Content Management System ([CMS]) using the tools you've learned thus far.
 
 ## <a id="expectations">What to expect from the Project Review</a>
 
-Project reviews are focused on preparing you for [technical interviews](https://www.brightnetwork.co.uk/career-path-guides/technology-it-software-development/five-ways-stand-out-your-technology/what-expect-technical-interview/). Treat project reviews as if they were technical interviews, in both attitude and technical presentation.
+Project reviews are focused on preparing you for [technical interviews]. Treat project reviews as if they were technical interviews, in both attitude and technical presentation.
 
 During your project review, be prepared to:
 
@@ -53,19 +53,15 @@ What won't happen:
 2. When you create the Sinatra app for your assessment, add the spec.md file from this repo to the root directory of the project, commit it to Git and push it up to GitHub.
 3. Build your application. Make sure to commit early and commit often. Commit messages should be meaningful (clearly describe what you're doing in the commit) and accurate (there should be nothing in the commit that doesn't match the description in the commit message). Good rule of thumb is to commit every 3-7 mins of actual coding time. Most of your commits should have under 15 lines of code and a 2 line commit is perfectly acceptable.
 4. While you're working on it, record a 30 min coding session with your favorite screen capture tool. During the session, either think out loud or not. It's up to you. You don't need to submit the video, but we may ask for it at a later time.
-5. Make sure to create a good README.md with a short description, install instructions, a contributors guide and a link to the license for your code.
+5. Make sure to create a good README.md with a short description, install instructions, a contributor's guide and a link to the license for your code.
 6. Make sure to check each box in your spec.md (replace the space between the square braces with an x) and explain next to each one how you've met the requirement *before* you submit your project.
-7. [Fill out this checklist.] QUESTION: Who owns this form??
-8. Prepare a short video demo with narration describing how a user would interact with your working application.
-9. Write a blog post about the project and process.
-10. When done, submit your GitHub repo's url, a link to your video demo, and a link to your blog post in the corresponding text boxes in the right rail. Hit "I'm done" to wrap it up.
+7. Prepare a short video demo with narration describing how a user would interact with your working application.
+8. Write a blog post about the project and process.
+9. When done, submit your GitHub repo's url, a link to your video demo, and a link to your blog post in the corresponding text boxes in the right rail. Hit "I'm done" to wrap it up.
 
 Unlike the rest of the curriculum, if you have any questions about your assessment or need help with it, you may _not_ use the Ask-A-Question feature.  For project support, you can reach out to your [section lead] responsible for this section and/or schedule up to four 30-minute [Project Support sessions](https://theflatironschool.typeform.com/to/B9BrgH).
 
-## <a id="support">Helpful Hints:</a>
-
-* Please do _not_ use the Ask-A-Question feature for help on your portfolio projects.  For project support, you can reach out to [your Section Lead](http://help.learn.co/instructional-support/receiving-course-support/who-are-the-section-leads) responsible for this section and/or schedule up to four 30-minute [Project Support sessions](https://theflatironschool.typeform.com/to/B9BrgH).
-* After project submission, watch for an email from Learn with instructions to schedule an assessment. If you don't receive the email within a day or so, reach out to [your Section Lead](http://help.learn.co/instructional-support/receiving-course-support/who-are-the-section-leads).
+After project submission, watch for an email from Learn with instructions to schedule an assessment. If you don't receive the email within a day or so, reach out to your [section lead].
 
 ## <a id="success">Practicing for Success on Learn</a>
 
@@ -101,6 +97,7 @@ Unlike the rest of the curriculum, if you have any questions about your assessme
 
 [CRUD]: https://learn.co/tracks/full-stack-web-development-v6/orms-and-activerecord/activerecord/activerecord-crud-lab
 [CMS]: http://www.businessdictionary.com/definition/content-management-system-CMS.html
+[technical interviews]: https://www.brightnetwork.co.uk/career-path-guides/technology-it-software-development/five-ways-stand-out-your-technology/what-expect-technical-interview/
 [MVC]: https://learn.co/tracks/full-stack-web-development-v6/sinatra/mvc-and-forms/intro-to-mvc
 [section lead]: http://help.learn.co/instructional-support/receiving-course-support/who-are-the-section-leads
 [Golf Club Organizer]: https://github.com/learn-co-curriculum/example-sinatra-assessment
