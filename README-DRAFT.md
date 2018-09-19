@@ -62,7 +62,7 @@ What won't happen:
 
 You may not use a blog application or Twitter clone for your project, as we have used these as examples in the curriculum.
 
-Unlike the rest of the curriculum, if you have any questions about your project or need help with it, you may _not_ use the Ask-A-Question feature.  For project support, you may schedule up to four 30-minute [project support sessions].  You can also reach out to your [section lead].  
+Unlike the rest of the curriculum, if you have any questions about your project or need help with it, you may _not_ use the Ask-A-Question feature.  For project support, you may schedule up to four 30-minute [project support sessions].  You can also attend [study groups], collaborate with students in [slack], or reach out to your [section lead].  
 
 When you submit your project, watch for a new window to open that will allow you to schedule your assessment.
 
@@ -110,10 +110,12 @@ When you submit your project, watch for a new window to open that will allow you
 [Todo List]: http://todomvc.com
 [Fill out this checklist.]: https://docs.google.com/forms/d/e/1FAIpQLSdIrS7g6y_B4dAY7HGS4yAndg9bfHuw7GmsiwA6MQXXqNrDjA/viewform?entry.237262577&entry.835010005&entry.301147721
 [ActiveRecord]: https://learn.co/tracks/full-stack-web-development-v6/sinatra/activerecord/activerecord-setup-in-sinatra
+[slack]: https://learn-co.slack.com
 [section lead]: http://help.learn.co/instructional-support/receiving-course-support/who-are-the-section-leads
 [messages]: https://github.com/SFEley/sinatra-flash
 [spec.md]: https://github.com/learn-co-students/sinatra-cms-app-assessment-v-000/blob/master/spec.md
 [license]: https://opensource.org/licenses/MIT
+[study groups]: https://learn.co/study-groups
 [project support sessions]: https://theflatironschool.typeform.com/to/B9BrgH
 [Example Domain - Golf Club Organizer]: https://github.com/learn-co-curriculum/example-sinatra-assessment
 [RESTful Routing]: https://learn.co/tracks/full-stack-web-development-v6/sinatra/activerecord/sinatra-restful-routes
