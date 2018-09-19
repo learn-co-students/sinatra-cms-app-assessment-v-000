@@ -13,15 +13,13 @@ For this assessment you'll be creating a [CRUD], [MVC] app using Sinatra.  This 
 
 ## <a id="expectations">What to expect from the Project Review</a>
 
-Project reviews are focused on preparing you for [technical interviews]. Treat project reviews as if they were technical interviews, in both attitude and technical presentation.
-
 During your project review, be prepared to:
 
 1. Go through your app and show us how it meets the requirements. ~10-15 min.
 2. Explain your code from execution point to exit point. We're making sure you wrote it and understand how it works. ~10-15 min.
 3. Live code.  This could mean refactoring or adding a feature as an exercise to make sure you're comfortable working with your code. ~10-15 min.
 
-Project reviews are focused on preparing you for technical interviews. Treat project reviews as if they were technical interviews, in both attitude and presentation.
+Project reviews are focused on preparing you for [technical interviews]. Treat project reviews as if they were technical interviews, in both attitude and technical presentation.
 
 If any requirements are missing or if significant gaps in understanding are found, be prepared to do any or all of the following:
 
