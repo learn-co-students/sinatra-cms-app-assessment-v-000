@@ -96,14 +96,10 @@ When you submit your project, watch for a new window to open that will allow you
 ## <a id="resources">Resources</a>
 
 [Example Domain - Golf Club Organizer]<br>
-[RESTful Routing]
-
-[Securing Passwords in Sinatra]
-
-[Mechanics of Sessions]
-
-[Video: Sinatra app from scratch]
-
+[RESTful Routing]<br>
+[Securing Passwords in Sinatra]<br>
+[Mechanics of Sessions]<br>
+[Video: Sinatra app from scratch]<br>
 
 [CRUD]: https://learn.co/tracks/full-stack-web-development-v6/orms-and-activerecord/activerecord/activerecord-crud-lab
 [CMS]: http://www.businessdictionary.com/definition/content-management-system-CMS.html
