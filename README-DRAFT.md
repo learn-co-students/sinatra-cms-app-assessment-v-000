@@ -17,9 +17,9 @@ Project reviews are focused on preparing you for [technical interviews]. Treat p
 
 During your project review, be prepared to:
 
-1. Go through your app and show us how it meets the requirements. 10-15 min.
-2. Explain your code from execution point to exit point. We're making sure you wrote it and understand how it works. 10-15 min.
-3. Live code.  This could mean refactoring or adding a feature as an exercise to make sure you're comfortable working with your code. 10-15 min.
+1. Go through your app and show us how it meets the requirements. ~10-15 min.
+2. Explain your code from execution point to exit point. We're making sure you wrote it and understand how it works. ~10-15 min.
+3. Live code.  This could mean refactoring or adding a feature as an exercise to make sure you're comfortable working with your code. ~10-15 min.
 
 Project reviews are focused on preparing you for technical interviews. Treat project reviews as if they were technical interviews, in both attitude and presentation.
 
@@ -97,6 +97,7 @@ When you submit your project, watch for a new window to open that will allow you
 
 [Example Domain - Golf Club Organizer]
 [RESTful Routing]
+[Securing Passwords in Sinatra]
 
 [CRUD]: https://learn.co/tracks/full-stack-web-development-v6/orms-and-activerecord/activerecord/activerecord-crud-lab
 [CMS]: http://www.businessdictionary.com/definition/content-management-system-CMS.html
@@ -114,3 +115,4 @@ When you submit your project, watch for a new window to open that will allow you
 [project support sessions]: https://theflatironschool.typeform.com/to/B9BrgH
 [Example Domain - Golf Club Organizer]: https://github.com/learn-co-curriculum/example-sinatra-assessment
 [RESTful Routing]: https://learn.co/tracks/full-stack-web-development-v6/sinatra/activerecord/sinatra-restful-routes
+[Securing Passwords in Sinatra]: https://learn.co/tracks/full-stack-web-development-v6/sinatra/activerecord/securing-passwords-in-sinatra
