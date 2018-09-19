@@ -43,9 +43,10 @@ What won't happen:
 4. Use at least one `has_many` relationship on a User model and one `belongs_to` relationship on another model.
 5. Must have user accounts - users must be able to sign up, sign in, and sign out.
 6. Validate uniqueness of user login attribute (username or email).
-7. Once logged in, must have the ability to create, read, update and destroy any instance of the resource that belongs to a user.
-8. Ensure that any instance of a resource that belongs to a user can be edited or deleted only by that user.
+7. Once logged in, a user must have the ability to create, read, update and destroy the resource that `belongs_to` user.
+8. Ensure that users can edit and delete only their own resources - not resources belonging to other users.
 9. Validate user input so bad data cannot be persisted to the database.
+10. Display validation failures to user with error [message].
 
 ## <a id="instructions">Instructions</a>
 
@@ -102,6 +103,7 @@ After project submission, watch for an email from Learn with instructions to sch
 [Fill out this checklist.]: https://docs.google.com/forms/d/e/1FAIpQLSdIrS7g6y_B4dAY7HGS4yAndg9bfHuw7GmsiwA6MQXXqNrDjA/viewform?entry.237262577&entry.835010005&entry.301147721
 [ActiveRecord]: https://learn.co/tracks/full-stack-web-development-v6/sinatra/activerecord/activerecord-setup-in-sinatra
 [section lead]: http://help.learn.co/instructional-support/receiving-course-support/who-are-the-section-leads
+[message]: https://github.com/SFEley/sinatra-flash
 [spec.md]: https://github.com/learn-co-students/sinatra-cms-app-assessment-v-000/blob/master/spec.md
 [license]: https://opensource.org/licenses/MIT
 [project support sessions]: https://theflatironschool.typeform.com/to/B9BrgH
