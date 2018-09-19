@@ -37,7 +37,7 @@ What won't happen:
 
 ## <a id="requirements">Project Requirements</a>
 
-1. Build an [MVC][] Sinatra Application.
+1. Build an [MVC] Sinatra Application.
 2. Use [ActiveRecord] with Sinatra.
 3. Use multiple models.
 4. Use at least one `has_many` relationship on a User model and one `belongs_to` relationship on another model.
@@ -50,16 +50,16 @@ What won't happen:
 ## <a id="instructions">Instructions</a>
 
 1. Create a new repository on GitHub for your Sinatra Application.
-2. When you create the Sinatra app for your assessment, add the spec.md file from this repo to the root directory of the project, commit it to Git and push it up to GitHub.
+2. When you create the Sinatra app for your assessment, add the [spec.md] file from this repo to the root directory of the project, commit it to Git and push it up to GitHub.
 3. Build your application. Make sure to commit early and commit often. Commit messages should be meaningful (clearly describe what you're doing in the commit) and accurate (there should be nothing in the commit that doesn't match the description in the commit message). Good rule of thumb is to commit every 3-7 mins of actual coding time. Most of your commits should have under 15 lines of code and a 2 line commit is perfectly acceptable.
 4. While you're working on it, record a 30 min coding session with your favorite screen capture tool. During the session, either think out loud or not. It's up to you. You don't need to submit the video, but we may ask for it at a later time.
-5. Make sure to create a good README.md with a short description, install instructions, a contributor's guide and a link to the license for your code.
+5. Make sure to create a good README.md with a short description, install instructions, a contributor's guide and a link to the [license] for your code.
 6. Make sure to check each box in your spec.md (replace the space between the square braces with an x) and explain next to each one how you've met the requirement *before* you submit your project.
 7. Prepare a short video demo with narration describing how a user would interact with your working application.
 8. Write a blog post about the project and process.
 9. When done, submit your GitHub repo's url, a link to your video demo, and a link to your blog post in the corresponding text boxes in the right rail. Hit "I'm done" to wrap it up.
 
-Unlike the rest of the curriculum, if you have any questions about your assessment or need help with it, you may _not_ use the Ask-A-Question feature.  For project support, you can reach out to your [section lead] responsible for this section and/or schedule up to four 30-minute [Project Support sessions](https://theflatironschool.typeform.com/to/B9BrgH).
+Unlike the rest of the curriculum, if you have any questions about your project or need help with it, you may _not_ use the Ask-A-Question feature.  For project support, you may schedule up to four 30-minute [project support sessions].  
 
 After project submission, watch for an email from Learn with instructions to schedule an assessment. If you don't receive the email within a day or so, reach out to your [section lead].
 
@@ -102,3 +102,6 @@ After project submission, watch for an email from Learn with instructions to sch
 [Fill out this checklist.]: https://docs.google.com/forms/d/e/1FAIpQLSdIrS7g6y_B4dAY7HGS4yAndg9bfHuw7GmsiwA6MQXXqNrDjA/viewform?entry.237262577&entry.835010005&entry.301147721
 [ActiveRecord]: https://learn.co/tracks/full-stack-web-development-v6/sinatra/activerecord/activerecord-setup-in-sinatra
 [section lead]: http://help.learn.co/instructional-support/receiving-course-support/who-are-the-section-leads
+[spec.md]: https://github.com/learn-co-students/sinatra-cms-app-assessment-v-000/blob/master/spec.md
+[license]: https://opensource.org/licenses/MIT
+[project support sessions]: https://theflatironschool.typeform.com/to/B9BrgH
