@@ -95,8 +95,7 @@ When you submit your project, watch for a new window to open that will allow you
 
 ## <a id="resources">Resources</a>
 
-[Example Domain - Golf Club Organizer]
-
+[Example Domain - Golf Club Organizer]<br>
 [RESTful Routing]
 
 [Securing Passwords in Sinatra]
