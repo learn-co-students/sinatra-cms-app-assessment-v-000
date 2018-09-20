@@ -60,6 +60,8 @@ What won't happen:
 
 You may not use a blog application or Twitter clone for your project, as we have used these as examples in the curriculum.
 
+## <a id="support">Project Support</a>
+
 Unlike the rest of the curriculum, if you have any questions about your project or need help with it, you may _not_ use the Ask-A-Question feature.  For project support, you may schedule up to four 30-minute [project support sessions].  You can also attend [study groups], collaborate with students in [slack], or reach out to your [section lead].  
 
 When you submit your project, watch for a new window to open that will allow you to schedule your assessment.
@@ -89,7 +91,6 @@ When you submit your project, watch for a new window to open that will allow you
 #### Pursue mastery.
 - Use the best technical vocabulary you can. We’ll help you with the words you can’t remember, or if you’re unsure about how something is pronounced.
 - Ask questions! Curiosity and willingness to learn are hugely valued in our industry. If you haven’t heard of something, that’s okay - use this opportunity to learn about it!
-
 
 ## <a id="resources">Resources</a>
 
