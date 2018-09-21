@@ -29,6 +29,7 @@ My take:
 
   - As a section lead, I've answered this question so many times, along with several others, that I've got answers prepared and kept in an [faq repo].  Is this something worth sharing?  Adding to the curriculum?  Adding as a linked resource?  If we do standardize and add it, is it curriculum or something for help.learn.co?
   - I recommend the Corneal gem to students.  Is this something we should add to the curriculum?  Or keep as an 'extra' resource?  Should we demand students build from scratch?
+  - We already have a wiki page for [Student Resources] and one for [Common Issues] maintained by TCLs
 
 IMHO:
 
@@ -36,3 +37,5 @@ IMHO:
 
 
 [faq repo]: https://github.com/howardbdev/portfolio-project-faqs
+[Student Resources]: https://github.com/flatiron-labs/technical-coach-resources/blob/master/support_coach/resources.md
+[Common Issues]: https://github.com/flatiron-labs/technical-coach-resources/blob/master/support_coach/common-issues.md
