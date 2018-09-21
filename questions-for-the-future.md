@@ -19,6 +19,8 @@ My take:
 
   My solution: I would recommend updating Sinatra Playlister to use `sinatra-flash` and adding flash messages to the example project (or replacing it with a new one)
 
+  *UPDATE FOR NOW 2018/09/21* Change this to an optional requirement.. then will look into curriculum and see if there's any action we want or need to take around flash messages.
+
 #### 2.  Getting Started
 
 The question: How much help should we provide for students getting started with their Sinatra project, and how opinionated should we be?
