@@ -60,12 +60,6 @@ What won't happen:
 
 You may not use a blog application or Twitter clone for your project, as we have used these as examples in the curriculum.
 
-## <a id="support">Project Support</a>
-
-Unlike the rest of the curriculum, if you have any questions about your project or need help with it, you may _not_ use the Ask-A-Question feature.  For project support, you may schedule up to four 30-minute [project support sessions].  You can also attend [study groups], collaborate with students in [slack], or reach out to your [section lead].  
-
-When you submit your project, watch for a new window to open that will allow you to schedule your assessment.
-
 ## <a id="success">Practicing for Success on Learn</a>
 
 #### Be scrappy.
