@@ -5,7 +5,6 @@
 - [What to Expect from the Project Review](#expectations)
 - [Project Requirements](#requirements)
 - [Instructions](#instructions)
-- [Support](#support)
 - [Practicing for Success on Learn](#success)
 - [Resources](#resources)
 
