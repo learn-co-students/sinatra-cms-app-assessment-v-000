@@ -1,0 +1,30 @@
+<h1> Welcome <%= @user.username %></h1>
+
+
+<p> Here is a recap of your previous transactions: <p><br>
+
+<ul>
+    <% @user.transactions.each do |transaction| %>
+        <li> 
+        <a href="/transactions/<%=transaction.id%>">
+        <%=transaction.currency%>: $<%=transaction.price %>
+        </li>
+    <% end %>
+</ul><br>
+
+
+<form action='/transactions/new'>
+  <input type="submit" value="New Transaction">
+</form><br>
+
+<form action="/users/<%=current_user.slug%>">
+  <input type="submit" value="My Transactions">
+</form><br>
+
+<form action="/transactions">
+  <input type="submit" value="Recent Transactions">
+</form><br>
+
+<form action="/logout">
+  <input type="submit" value="Logout">
+</form>
