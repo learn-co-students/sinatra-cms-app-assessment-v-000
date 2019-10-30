@@ -1,0 +1,14 @@
+<h1>Insert the form to create a new instance of your model.</h1>
+
+<form class="" action="/sneakers" method="post">
+  <label for="name">Name:</label>
+  <input type="text" name="sneaker[name]" value=""><br/>
+  <label for="year">Year:</label>
+  <input type="text" name="sneaker[year]" value=""><br/>
+  <select name="sneaker[user_id]">
+    <% @users.each do |user| %>
+      <option value="<%= user.id %>"><%= user.name %></option>
+    <% end %>
+  </select>
+  <input type="submit">
+</form>

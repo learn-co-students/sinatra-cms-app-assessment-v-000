@@ -1,0 +1,10 @@
+<h1>Welcome to your Account Settings! <%= @user.name %></h1>
+<h2></h2>
+<p>Wanna change your name or password?</p>
+<form class="" action="/users/id" method="put">
+  <label for="Name">Name:</label>
+  <input type="text" name="Change name!" value=""><br/>
+  <label for="Password">Password:</label>
+  <input type="text" name="Change password" value=""><br/>
+  <input type="submit">
+</form>
