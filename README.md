@@ -8,7 +8,7 @@
 - [Practicing for Success on Learn](#success)
 - [Resources](#resources)
 
-For this assessment you'll be creating a [CRUD], [MVC] app using Sinatra.  This app should be a custom app that is created to track something important to you, whether that's your golf club collection, video games, or travel destinations.  Essentially, you're building a simple Content Management System ([CMS]) using the tools you've learned thus far.
+For this assessment you'll be creating a [CRUD], [MVC] app using Sinatra.  This app should be a custom app that is created to track something important to you, whether that's your golf club collection, video games, or travel destinations.  Essentially, you're building a simple [Content Management System (CMS)](https://kinsta.com/knowledgebase/content-management-system/#build-website-cms) using the tools you've learned thus far.
 
 ## <a id="expectations">What to expect from the Project Review</a>
 
