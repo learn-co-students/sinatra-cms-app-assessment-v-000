@@ -110,7 +110,7 @@ You may not use a blog application or Twitter clone for your project, as we have
 [study groups]: https://learn.co/study-groups
 [project support sessions]: https://theflatironschool.typeform.com/to/B9BrgH
 [Example Domain - Golf Club Organizer]: https://github.com/learn-co-curriculum/example-sinatra-assessment
-[RESTful Routing]: https://learn.co/tracks/full-stack-web-development-v6/sinatra/activerecord/sinatra-restful-routes
-[Securing Passwords in Sinatra]: https://learn.co/tracks/full-stack-web-development-v6/sinatra/activerecord/securing-passwords-in-sinatra
-[Mechanics of Sessions]: https://learn.co/tracks/full-stack-web-development-v6/sinatra/sessions/mechanics-of-sessions
-[Video: Sinatra app from scratch]: https://learn.co/tracks/full-stack-web-development-v6/sinatra/activerecord/video-review-authentication
+[RESTful Routing]: https://github.com/learn-co-curriculum/sinatra-restful-routes-readme
+[Securing Passwords in Sinatra]: https://github.com/learn-co-students/sinatra-password-security-flatiron-staff
+[Mechanics of Sessions]: https://github.com/learn-co-curriculum/sinatra-mechanics-of-sessions-readme
+[Video: Sinatra app from scratch]: https://github.com/learn-co-curriculum/sinatra-video-review-authentication
