@@ -87,28 +87,19 @@ You may not use a blog application or Twitter clone for your project, as we have
 
 ## <a id="resources">Resources</a>
 
-[Example Domain - Golf Club Organizer]<br>
-[RESTful Routing]<br>
-[Securing Passwords in Sinatra]<br>
-[Mechanics of Sessions]<br>
-[Video: Sinatra app from scratch]<br>
+- [Example Domain - Golf Club Organizer]
+- [RESTful Routing]
+- [Securing Passwords in Sinatra]
+- [Mechanics of Sessions]
+- [Video: Sinatra app from scratch]
 
-[CRUD]: https://learn.co/tracks/full-stack-web-development-v6/orms-and-activerecord/activerecord/activerecord-crud-lab
-[CMS]: http://www.businessdictionary.com/definition/content-management-system-CMS.html
+[CRUD]: https://github.com/learn-co-curriculum/active-record-crud-operations-lab
 [technical interviews]: https://www.brightnetwork.co.uk/career-path-guides/technology-it-software-development/five-ways-stand-out-your-technology/what-expect-technical-interview/
-[MVC]: https://learn.co/tracks/full-stack-web-development-v6/sinatra/mvc-and-forms/intro-to-mvc
-[section lead]: http://help.learn.co/instructional-support/receiving-course-support/who-are-the-section-leads
-[Golf Club Organizer]: https://github.com/learn-co-curriculum/example-sinatra-assessment
-[Todo List]: http://todomvc.com
-[Fill out this checklist.]: https://docs.google.com/forms/d/e/1FAIpQLSdIrS7g6y_B4dAY7HGS4yAndg9bfHuw7GmsiwA6MQXXqNrDjA/viewform?entry.237262577&entry.835010005&entry.301147721
-[ActiveRecord]: https://learn.co/tracks/full-stack-web-development-v6/sinatra/activerecord/activerecord-setup-in-sinatra
-[slack]: https://learn-co.slack.com
-[section lead]: http://help.learn.co/instructional-support/receiving-course-support/who-are-the-section-leads
+[MVC]: https://github.com/learn-co-curriculum/sinatra-intro-to-mvc
+[ActiveRecord]: https://github.com/learn-co-curriculum/sinatra-activerecord-setup
 [messages]: https://github.com/SFEley/sinatra-flash
 [spec.md]: https://github.com/learn-co-students/sinatra-cms-app-assessment-v-000/blob/master/spec.md
 [license]: https://opensource.org/licenses/MIT
-[study groups]: https://learn.co/study-groups
-[project support sessions]: https://theflatironschool.typeform.com/to/B9BrgH
 [Example Domain - Golf Club Organizer]: https://github.com/learn-co-curriculum/example-sinatra-assessment
 [RESTful Routing]: https://github.com/learn-co-curriculum/sinatra-restful-routes-readme
 [Securing Passwords in Sinatra]: https://github.com/learn-co-students/sinatra-password-security-flatiron-staff
